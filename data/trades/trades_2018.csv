@@ -1,0 +1,657 @@
+trade_id,date,team,direction,asset_type,player_name,player_age,player_position,pick_year,pick_round,pick_condition,cash,cap_space,notes
+1,2019-06-26,Cleveland Cavaliers,Outgoing,Cap Space,,,,,,,,-1290000,-$1.29M CAP SPACE
+1,2019-06-26,Cleveland Cavaliers,Incoming,Player,Kevin Porter Jr.,19,PG,,,,,,"Salary: $1,290,960"
+1,2019-06-26,Detroit Pistons,Incoming,Cap Space,,,,,,,,1290000,+$1.29M CAP SPACE
+1,2019-06-26,Detroit Pistons,Incoming,Cash,,,,,,5000000,,$5 Million
+1,2019-06-26,Detroit Pistons,Incoming,Pick,,,,2020,2,UTH pick,,
+1,2019-06-26,Detroit Pistons,Incoming,Pick,,,,2021,0,POR pick,,round 0 probably meant 2nd
+1,2019-06-26,Detroit Pistons,Incoming,Pick,,,,2023,2,POR pick,,
+1,2019-06-26,Detroit Pistons,Incoming,Pick,,,,2024,2,"MIA pick, Top-55 protected",,
+2,2019-06-26,Dallas Mavericks,Incoming,Player,Isaiah Roby,21,PF,,,,,,
+2,2019-06-26,Dallas Mavericks,Incoming,Pick,,,,2020,2,UTH pick,,
+2,2019-06-26,Dallas Mavericks,Incoming,Pick,,,,2021,2,POR pick,,
+2,2019-06-26,Detroit Pistons,Incoming,Player,Deividas Sirvydis,19,SF,,,,,,
+3,2019-06-24,Atlanta Hawks,Incoming,Cap Space,,,,,,,,660000,+$0.66M CAP SPACE
+3,2019-06-24,Atlanta Hawks,Incoming,Player,Evan Turner,30,SF,,,,,,"Salary: $18,606,557"
+3,2019-06-24,Portland Trail Blazers,Outgoing,Cap Space,,,,,,,,-660000,-$0.66M CAP SPACE
+3,2019-06-24,Portland Trail Blazers,Incoming,Player,Kent Bazemore,29,SG,,,,,,"Salary: $19,269,662"
+4,2019-06-21,LA Clippers,Outgoing,Cap Space,,,,,,,,-1980000,-$1.98M CAP SPACE
+4,2019-06-21,LA Clippers,Incoming,Pick,,,,2019,1,Mfiondu Kabengele,,,"Salary: $1,977,000"
+4,2019-06-21,Brooklyn Nets,Incoming,Cap Space,,,,,,,,1980000,+$1.98M CAP SPACE
+4,2019-06-21,Brooklyn Nets,Incoming,Pick,,,,2019,2,Jalen Hands,,
+4,2019-06-21,Brooklyn Nets,Incoming,Pick,,,,2020,1,,,
+5,2019-06-21,Detroit Pistons,Outgoing,Cap Space,,,,,,,,-800000,-$0.80M CAP SPACE
+5,2019-06-21,Detroit Pistons,Incoming,Player,Tony Snell,27,SG,,,,,,"Salary: $10,807,143"
+5,2019-06-21,Detroit Pistons,Incoming,Pick,,,,2019,1,,,
+5,2019-06-21,Milwaukee Bucks,Incoming,Cap Space,,,,,,,,800000,+$0.80M CAP SPACE
+5,2019-06-21,Milwaukee Bucks,Incoming,Player,Jon Leuer,30,PF,,,,,,"Salary: $10,002,681"
+6,2019-06-21,Boston Celtics,Outgoing,Cap Space,,,,,,,,-840000,-$0.84M CAP SPACE
+6,2019-06-21,Boston Celtics,Incoming,Pick,,,,2019,1,,,,"Salary: $3,421,506"
+6,2019-06-21,Boston Celtics,Incoming,Pick,,,,2019,1,Carsen Edwards,,
+6,2019-06-21,Philadelphia 76ers,Incoming,Cap Space,,,,,,,,840000,+$0.84M CAP SPACE
+6,2019-06-21,Philadelphia 76ers,Incoming,Pick,,,,2019,1,Matisse Thybulle,,,"Salary: $2,582,160"
+7,2019-06-21,Philadelphia 76ers,Incoming,Cap Space,,,,,,,,6000000,+$6.00M CAP SPACE
+7,2019-06-21,Philadelphia 76ers,Incoming,Cash,,,,,,2000000,,$2 Million
+7,2019-06-21,Washington Wizards,Outgoing,Cap Space,,,,,,,,-6000000,-$6.00M CAP SPACE
+7,2019-06-21,Washington Wizards,Incoming,Player,Jonathon Simmons,29,SF,,,,,,"Salary: $6,000,000"
+7,2019-06-21,Washington Wizards,Incoming,Pick,,,,2019,2,Admiral Schofield,,
+8,2019-06-21,Los Angeles Lakers,Outgoing,Cap Space,,,,,,,,-900000,-$0.90M CAP SPACE
+8,2019-06-21,Los Angeles Lakers,Incoming,Pick,,,,2019,2,Talen Horton-Tucker,,,"Salary: $898,310"
+8,2019-06-21,Orlando Magic,Incoming,Cap Space,,,,,,,,900000,+$0.90M CAP SPACE
+8,2019-06-21,Orlando Magic,Incoming,Cash,,,,,,,,2226778,$2,226,778
+8,2019-06-21,Orlando Magic,Incoming,Pick,,,,2020,2,LAL pick unprotected,,
+9,2019-06-21,Golden State Warriors,Incoming,Cap Space,,,,,,,,900000,+$0.90M CAP SPACE
+9,2019-06-21,Golden State Warriors,Incoming,Cash,,,,,,2000000,,$2 Million
+9,2019-06-21,Utah Jazz,Outgoing,Cap Space,,,,,,,,-900000,-$0.90M CAP SPACE
+9,2019-06-21,Utah Jazz,Incoming,Pick,,,,2019,2,Miye Oni,,,"Salary: $898,310"
+10,2019-06-21,Indiana Pacers,Incoming,Cash,,,,,,1000000,,$1 Million
+10,2019-06-21,Indiana Pacers,Incoming,Pick,,,,2021,2,unprotected,,
+10,2019-06-21,Utah Jazz,Incoming,Pick,,,,2019,2,Jarrell Brantley,,
+11,2019-06-20,New York Knicks,Outgoing,Cap Space,,,,,,,,-900000,-$0.90M CAP SPACE
+11,2019-06-20,New York Knicks,Incoming,Pick,,,,2019,2,Ignas Brazdeikis,,,"Salary: $898,310"
+11,2019-06-20,Sacramento Kings,Incoming,Cap Space,,,,,,,,900000,+$0.90M CAP SPACE
+11,2019-06-20,Sacramento Kings,Incoming,Cash,,,,,,1000000,,$1 Million
+11,2019-06-20,Sacramento Kings,Incoming,Pick,,,,2019,2,Kyle Guy,,
+12,2019-06-20,Denver Nuggets,Incoming,Pick,,,,2019,2,Bol Bol,,
+12,2019-06-20,Miami Heat,Incoming,Cash,,,,,,,,1200000,$1.2 Million
+12,2019-06-20,Miami Heat,Incoming,Pick,,,,2022,2,lower of DEN/PHI (swap w/MIN),,
+13,2019-06-20,Golden State Warriors,Outgoing,Cap Space,,,,,,,,-900000,-$0.90M CAP SPACE
+13,2019-06-20,Golden State Warriors,Incoming,Pick,,,,2019,2,Alen Smailagic,,,"Salary: $898,310"
+13,2019-06-20,New Orleans Pelicans,Incoming,Cap Space,,,,,,,,900000,+$0.90M CAP SPACE
+13,2019-06-20,New Orleans Pelicans,Incoming,Cash,,,,,,,,,Cash Considerations
+13,2019-06-20,New Orleans Pelicans,Incoming,Pick,,,,2022,2,,,
+13,2019-06-20,New Orleans Pelicans,Incoming,Pick,,,,2023,2,,,
+14,2019-06-20,Indiana Pacers,Incoming,Pick,,,,,,Three 2nd Round Picks,,
+14,2019-06-20,Miami Heat,Incoming,Pick,,,,2019,2,KZ Okpala,,
+15,2019-06-20,Atlanta Hawks,Incoming,Cash,,,,,,,,1300000,$1.3 Million
+15,2019-06-20,Atlanta Hawks,Incoming,Pick,,,,2024,2,,,
+15,2019-06-20,Golden State Warriors,Incoming,Pick,,,,2019,2,Eric Paschall,,
+16,2017-07-14,New York Knicks,Incoming,Other,,,,,,,,,Rights To Hire Scott Perry As General Manager
+16,2017-07-14,Sacramento Kings,Incoming,Pick,,,,2019,2,,,
+17,2019-06-19,Atlanta Hawks,Incoming,Cash,,,,,,,,1880000,$1.88 Million
+17,2019-06-19,Atlanta Hawks,Incoming,Pick,,,,2024,2,,,
+17,2019-06-19,Miami Heat,Incoming,Pick,,,,2019,2,,,
+18,2019-02-07,Houston Rockets,Incoming,Cap Space,,,,,,,,3060000,+$3.06M CAP SPACE
+18,2019-02-07,Houston Rockets,Incoming,Pick,,,,,,2nd Round Pick,,
+18,2019-02-07,Indiana Pacers,Outgoing,Cap Space,,,,,,,,-3060000,-$3.06M CAP SPACE
+18,2019-02-07,Indiana Pacers,Incoming,Player,Wade Baldwin,22,PG,,,,,,"Salary: $1,544,951"
+18,2019-02-07,Indiana Pacers,Incoming,Player,Nik Stauskas,25,SG,,,,,,"Salary: $1,512,601"
+18,2019-02-07,Indiana Pacers,Incoming,Player,Maaty Leunen,33,PF,,,,,,
+19,2019-02-07,Atlanta Hawks,Outgoing,Cap Space,,,,,,,,-650000,-$0.65M CAP SPACE
+19,2019-02-07,Atlanta Hawks,Incoming,Player,Shelvin Mack,28,PG,,,,,,"Salary: $2,029,463"
+19,2019-02-07,Memphis Grizzlies,Incoming,Cap Space,,,,,,,,650000,+$0.65M CAP SPACE
+19,2019-02-07,Memphis Grizzlies,Incoming,Player,Tyler Dorsey,22,SG,,,,,,"Salary: $1,378,242"
+20,2019-02-07,Toronto Raptors,Incoming,Cap Space,,,,,,,,1510000,+$1.51M CAP SPACE
+20,2019-02-07,Toronto Raptors,Incoming,Cash,,,,,,110000,,$110,000
+20,2019-02-07,Brooklyn Nets,Outgoing,Cap Space,,,,,,,,-1510000,-$1.51M CAP SPACE
+20,2019-02-07,Brooklyn Nets,Incoming,Player,Greg Monroe,28,C,,,,,,"Salary: $1,512,601"
+20,2019-02-07,Brooklyn Nets,Incoming,Pick,,,,2021,2,,,
+21,2019-02-07,Orlando Magic,Outgoing,Cap Space,,,,,,,,-2340000,-$2.34M CAP SPACE
+21,2019-02-07,Orlando Magic,Incoming,Player,Markelle Fultz,20,PG,,,,,,"Salary: $8,339,880"
+21,2019-02-07,Philadelphia 76ers,Incoming,Cap Space,,,,,,,,2340000,+$2.34M CAP SPACE
+21,2019-02-07,Philadelphia 76ers,Incoming,Player,Jonathon Simmons,29,SF,,,,,,"Salary: $6,000,000"
+21,2019-02-07,Philadelphia 76ers,Incoming,Pick,,,,2019,2,,,
+21,2019-02-07,Philadelphia 76ers,Incoming,Pick,,,,2020,1,top-20 protected (else 2022 2nd),,
+22,2019-02-07,LA Clippers,Outgoing,Cap Space,,,,,,,,-40000,-$0.04M CAP SPACE
+22,2019-02-07,LA Clippers,Incoming,Player,Michael Beasley,30,SF,,,,,,"Salary: $3,500,000"
+22,2019-02-07,LA Clippers,Incoming,Player,Ivica Zubac,21,C,,,,,,"Salary: $1,544,951"
+22,2019-02-07,Los Angeles Lakers,Incoming,Cap Space,,,,,,,,40000,+$0.04M CAP SPACE
+22,2019-02-07,Los Angeles Lakers,Incoming,Player,Mike Muscala,27,C,,,,,,"Salary: $5,000,000"
+23,2019-02-07,Memphis Grizzlies,Outgoing,Cap Space,,,,,,,,-2000000,-$2.00M CAP SPACE
+23,2019-02-07,Memphis Grizzlies,Incoming,Player,Jonas Valanciunas,26,C,,,,,,"Salary: $16,539,326"
+23,2019-02-07,Memphis Grizzlies,Incoming,Player,C.J. Miles,31,SF,,,,,,"Salary: $8,333,333"
+23,2019-02-07,Memphis Grizzlies,Incoming,Player,Delon Wright,26,PG,,,,,,"Salary: $2,536,898"
+23,2019-02-07,Memphis Grizzlies,Incoming,Pick,,,,2024,2,,,
+23,2019-02-07,Toronto Raptors,Incoming,Cap Space,,,,,,,,2000000,+$2.00M CAP SPACE
+23,2019-02-07,Toronto Raptors,Incoming,Player,Marc Gasol,34,C,,,,,,"Salary: $25,406,736"
+24,2019-02-07,LA Clippers,Outgoing,Cap Space,,,,,,,,-3670000,-$3.67M CAP SPACE
+24,2019-02-07,LA Clippers,Incoming,Player,Garrett Temple,32,SG,,,,,,"Salary: $8,000,000"
+24,2019-02-07,LA Clippers,Incoming,Player,JaMychal Green,28,PF,,,,,,"Salary: $7,666,667"
+24,2019-02-07,Memphis Grizzlies,Incoming,Cap Space,,,,,,,,3670000,+$3.67M CAP SPACE
+24,2019-02-07,Memphis Grizzlies,Incoming,Player,Avery Bradley,28,PG,,,,,,"Salary: $12,000,000"
+25,2019-02-07,Washington Wizards,Incoming,Cap Space,,,,,,,,2470000,+$2.47M CAP SPACE
+25,2019-02-07,Washington Wizards,Incoming,Player,Wesley Johnson,31,SF,,,,,,"Salary: $6,134,520"
+25,2019-02-07,New Orleans Pelicans,Outgoing,Cap Space,,,,,,,,-2470000,-$2.47M CAP SPACE
+25,2019-02-07,New Orleans Pelicans,Incoming,Player,Markieff Morris,29,PF,,,,,,"Salary: $8,600,000"
+25,2019-02-07,New Orleans Pelicans,Incoming,Cash,,,,,,,,,Cash
+25,2019-02-07,New Orleans Pelicans,Incoming,Pick,,,,2023,2,,,
+26,2019-02-07,Cleveland Cavaliers,Outgoing,Cap Space,,,,,,,,-5560000,-$5.56M CAP SPACE
+26,2019-02-07,Cleveland Cavaliers,Incoming,Player,Brandon Knight,27,PG,,,,,,"Salary: $14,631,250"
+26,2019-02-07,Cleveland Cavaliers,Incoming,Player,Marquese Chriss,21,SF,,,,,,"Salary: $3,206,160"
+26,2019-02-07,Cleveland Cavaliers,Incoming,Pick,,,,2019,1,Dylan Windler,,
+26,2019-02-07,Cleveland Cavaliers,Outgoing,Player,Nik Stauskas,,,,,,
+26,2019-02-07,Cleveland Cavaliers,Outgoing,Player,Wade Baldwin,,,,,,
+26,2019-02-07,Cleveland Cavaliers,Outgoing,Player,Alec Burks,,,,,,
+26,2019-02-07,Houston Rockets,Incoming,Cap Space,,,,,,,,5840000,+$5.84M CAP SPACE
+26,2019-02-07,Houston Rockets,Incoming,Player,Iman Shumpert,28,SG,,,,,,"Salary: $11,011,236"
+26,2019-02-07,Houston Rockets,Incoming,Player,Nik Stauskas,25,SG,,,,,,"Salary: $1,512,601"
+26,2019-02-07,Houston Rockets,Incoming,Player,Wade Baldwin,22,PG,,,,,,"Salary: $1,512,601"
+26,2019-02-07,Houston Rockets,Outgoing,Player,Brandon Knight,,,,,,
+26,2019-02-07,Houston Rockets,Outgoing,Player,Marquese Chriss,,,,,,
+26,2019-02-07,Houston Rockets,Outgoing,Pick,,,,2019,1,,,
+26,2019-02-07,Houston Rockets,Outgoing,Pick,,,,2020,2,,,
+26,2019-02-07,Sacramento Kings,Outgoing,Cap Space,,,,,,,,-280000,-$0.28M CAP SPACE
+26,2019-02-07,Sacramento Kings,Incoming,Player,Alec Burks,27,SG,,,,,,"Salary: $11,286,515"
+26,2019-02-07,Sacramento Kings,Incoming,Pick,,,,2020,2,lesser of Rockets/Warriors,,
+26,2019-02-07,Sacramento Kings,Outgoing,Player,Iman Shumpert,,,,,,
+27,2019-02-07,Dallas Mavericks,Incoming,Cap Space,,,,,,,,10290000,+$10.29M CAP SPACE
+27,2019-02-07,Dallas Mavericks,Incoming,Player,Zach Randolph,37,PF,,,,,,"Salary: $11,692,308"
+27,2019-02-07,Dallas Mavericks,Incoming,Player,Justin Jackson,23,SF,,,,,,"Salary: $2,807,880"
+27,2019-02-07,Sacramento Kings,Outgoing,Cap Space,,,,,,,,-10290000,-$10.29M CAP SPACE
+27,2019-02-07,Sacramento Kings,Incoming,Player,Harrison Barnes,26,PF,,,,,,"Salary: $24,793,702"
+28,2019-02-07,Atlanta Hawks,Outgoing,Cap Space,,,,,,,,-1350000,-$1.35M CAP SPACE
+28,2019-02-07,Atlanta Hawks,Incoming,Player,Jabari Bird,24,SG,,,,,,"Salary: $1,349,383"
+28,2019-02-07,Atlanta Hawks,Incoming,Cash,,,,,,,,,Cash
+28,2019-02-07,Boston Celtics,Incoming,Cap Space,,,,,,,,1350000,+$1.35M CAP SPACE
+28,2019-02-07,Boston Celtics,Incoming,Pick,,,,2020,2,heavily protected,,
+29,2019-02-07,Portland Trail Blazers,Incoming,Cap Space,,,,,,,,200000,+$0.20M CAP SPACE
+29,2019-02-07,Portland Trail Blazers,Incoming,Player,Skal Labissiere,22,PF,,,,,,"Salary: $1,544,951"
+29,2019-02-07,Sacramento Kings,Outgoing,Cap Space,,,,,,,,-200000,-$0.20M CAP SPACE
+29,2019-02-07,Sacramento Kings,Incoming,Player,Caleb Swanigan,21,PF,,,,,,"Salary: $1,740,000"
+30,2019-02-07,Detroit Pistons,Incoming,Cap Space,,,,,,,,1140000,+$1.14M CAP SPACE
+30,2019-02-07,Detroit Pistons,Incoming,Player,Thon Maker,21,C,,,,,,"Salary: $2,799,720"
+30,2019-02-07,Detroit Pistons,Outgoing,Player,Stanley Johnson,,,,,,
+30,2019-02-07,Milwaukee Bucks,Outgoing,Cap Space,,,,,,,,-4250000,-$4.25M CAP SPACE
+30,2019-02-07,Milwaukee Bucks,Incoming,Player,Nikola Mirotic,27,PF,,,,,,"Salary: $12,500,000"
+30,2019-02-07,Milwaukee Bucks,Outgoing,Player,Thon Maker,,,,,,
+30,2019-02-07,Milwaukee Bucks,Outgoing,Player,Jason Smith,,,,,,
+30,2019-02-07,Milwaukee Bucks,Outgoing,Pick,,,,2019,2,,,
+30,2019-02-07,Milwaukee Bucks,Outgoing,Pick,,,,2020,2,,,
+30,2019-02-07,Milwaukee Bucks,Outgoing,Pick,,,,2020,2,,,
+30,2019-02-07,Milwaukee Bucks,Outgoing,Pick,,,,2021,2,,,
+30,2019-02-07,New Orleans Pelicans,Incoming,Cap Space,,,,,,,,3110000,+$3.11M CAP SPACE
+30,2019-02-07,New Orleans Pelicans,Incoming,Player,Jason Smith,32,PF,,,,,,"Salary: $5,450,000"
+30,2019-02-07,New Orleans Pelicans,Incoming,Player,Stanley Johnson,22,SF,,,,,,"Salary: $3,940,402"
+30,2019-02-07,New Orleans Pelicans,Incoming,Pick,,,,2019,2,,,
+30,2019-02-07,New Orleans Pelicans,Incoming,Pick,,,,2020,2,Washington pick,,
+30,2019-02-07,New Orleans Pelicans,Incoming,Pick,,,,2020,2,Milwaukee pick,,
+30,2019-02-07,New Orleans Pelicans,Incoming,Pick,,,,2021,2,Washington pick,,
+30,2019-02-07,New Orleans Pelicans,Outgoing,Player,Nikola Mirotic,,,,,,
+31,2019-02-07,Houston Rockets,Incoming,Cap Space,,,,,,,,1620000,+$1.62M CAP SPACE
+31,2019-02-07,Houston Rockets,Incoming,Pick,,,,2021,2,rights to swap,,
+31,2019-02-07,Philadelphia 76ers,Outgoing,Cap Space,,,,,,,,-1620000,-$1.62M CAP SPACE
+31,2019-02-07,Philadelphia 76ers,Incoming,Player,James Ennis,28,SF,,,,,,"Salary: $1,621,415"
+31,2019-02-07,Philadelphia 76ers,Incoming,Pick,,,,2021,2,rights to swap,,
+32,2019-02-06,LA Clippers,Incoming,Cap Space,,,,,,,,6620000,+$6.62M CAP SPACE
+32,2019-02-06,LA Clippers,Incoming,Player,Wilson Chandler,31,SF,,,,,,"Salary: $12,800,562"
+32,2019-02-06,LA Clippers,Incoming,Player,Mike Muscala,27,C,,,,,,"Salary: $5,000,000"
+32,2019-02-06,LA Clippers,Incoming,Player,Landry Shamet,21,SG,,,,,,"Salary: $1,703,640"
+32,2019-02-06,LA Clippers,Incoming,Pick,,,,2020,1,top-14 protected,,
+32,2019-02-06,LA Clippers,Incoming,Pick,,,,2021,1,unprotected Miami pick,,
+32,2019-02-06,LA Clippers,Incoming,Pick,,,,2021,2,Detroit pick,,
+32,2019-02-06,LA Clippers,Incoming,Pick,,,,2023,2,Detroit pick,,
+32,2019-02-06,Philadelphia 76ers,Outgoing,Cap Space,,,,,,,,-6620000,-$6.62M CAP SPACE
+32,2019-02-06,Philadelphia 76ers,Incoming,Player,Tobias Harris,26,PF,,,,,,"Salary: $14,800,000"
+32,2019-02-06,Philadelphia 76ers,Incoming,Player,Boban Marjanovic,30,C,,,,,,"Salary: $7,000,000"
+32,2019-02-06,Philadelphia 76ers,Incoming,Player,Mike Scott,30,PF,,,,,,"Salary: $4,320,500"
+33,2019-02-06,Miami Heat,Incoming,Cap Space,,,,,,,,5090000,+$5.09M CAP SPACE
+33,2019-02-06,Miami Heat,Incoming,Player,Ryan Anderson,30,PF,,,,,,"Salary: $20,421,546"
+33,2019-02-06,Phoenix Suns,Outgoing,Cap Space,,,,,,,,-5090000,-$5.09M CAP SPACE
+33,2019-02-06,Phoenix Suns,Incoming,Player,Tyler Johnson,26,SG,,,,,,"Salary: $19,245,370"
+33,2019-02-06,Phoenix Suns,Incoming,Player,Wayne Ellington,31,SG,,,,,,"Salary: $6,270,000"
+33,2019-02-06,Phoenix Suns,Incoming,Cash,,,,,,,,1800000,$1.8 Million
+34,2019-02-06,Detroit Pistons,Incoming,Cap Space,,,,,,,,1010000,+$1.01M CAP SPACE
+34,2019-02-06,Detroit Pistons,Incoming,Player,Sviatoslav Mykhailiuk,21,SG,,,,,,"Salary: $1,487,694"
+34,2019-02-06,Detroit Pistons,Incoming,Pick,,,,2021,2,,,
+34,2019-02-06,Los Angeles Lakers,Outgoing,Cap Space,,,,,,,,-1010000,-$1.01M CAP SPACE
+34,2019-02-06,Los Angeles Lakers,Incoming,Player,Reggie Bullock,27,SF,,,,,,"Salary: $2,500,000"
+35,2019-02-06,Chicago Bulls,Outgoing,Cap Space,,,,,,,,-3520000,-$3.52M CAP SPACE
+35,2019-02-06,Chicago Bulls,Incoming,Player,Otto Porter Jr.,25,SF,,,,,,"Salary: $26,011,913"
+35,2019-02-06,Washington Wizards,Incoming,Cap Space,,,,,,,,3520000,+$3.52M CAP SPACE
+35,2019-02-06,Washington Wizards,Incoming,Player,Jabari Parker,23,PF,,,,,,"Salary: $20,000,000"
+35,2019-02-06,Washington Wizards,Incoming,Player,Bobby Portis,23,PF,,,,,,"Salary: $2,494,346"
+35,2019-02-06,Washington Wizards,Incoming,Pick,,,,2023,2,top-36 protected,,
+36,2019-02-06,Philadelphia 76ers,Outgoing,Cap Space,,,,,,,,-1570000,-$1.57M CAP SPACE
+36,2019-02-06,Philadelphia 76ers,Incoming,Player,Malachi Richardson,23,SG,,,,,,"Salary: $1,569,360"
+36,2019-02-06,Philadelphia 76ers,Incoming,Player,Emir Preldzic,31,SF,,,,,,
+36,2019-02-06,Philadelphia 76ers,Incoming,Pick,,,,2022,2,,,
+36,2019-02-06,Toronto Raptors,Incoming,Cap Space,,,,,,,,1570000,+$1.57M CAP SPACE
+36,2019-02-06,Toronto Raptors,Incoming,Cash,,,,,,,,,Cash Considerations
+37,2019-02-04,Cleveland Cavaliers,Incoming,Cap Space,,,,,,,,420000,+$0.42M CAP SPACE
+37,2019-02-04,Cleveland Cavaliers,Incoming,Player,Wade Baldwin,22,PG,,,,,,"Salary: $1,544,951"
+37,2019-02-04,Cleveland Cavaliers,Incoming,Player,Nik Stauskas,25,SG,,,,,,"Salary: $1,512,601"
+37,2019-02-04,Cleveland Cavaliers,Incoming,Pick,,,,2021,2,,,
+37,2019-02-04,Cleveland Cavaliers,Incoming,Pick,,,,2023,2,,,
+37,2019-02-04,Portland Trail Blazers,Outgoing,Cap Space,,,,,,,,-420000,-$0.42M CAP SPACE
+37,2019-02-04,Portland Trail Blazers,Incoming,Player,Rodney Hood,26,SF,,,,,,"Salary: $3,472,887"
+38,2019-02-01,Chicago Bulls,Outgoing,Cap Space,,,,,,,,-1540000,-$1.54M CAP SPACE
+38,2019-02-01,Chicago Bulls,Incoming,Player,Timothe Luwawu-Cabarrot,23,SG,,,,,,"Salary: $1,544,951"
+38,2019-02-01,Chicago Bulls,Incoming,Cash,,,,,,,,2600000,$2.6 Million
+38,2019-02-01,Oklahoma City Thunder,Incoming,Cap Space,,,,,,,,1540000,+$1.54M CAP SPACE
+38,2019-02-01,Oklahoma City Thunder,Incoming,Pick,,,,2020,2,top-55 protected,,
+39,2019-01-31,Dallas Mavericks,Incoming,Cap Space,,,,,,,,6390000,+$6.39M CAP SPACE
+39,2019-01-31,Dallas Mavericks,Incoming,Player,Tim Hardaway Jr.,26,SG,,,,,,"Salary: $19,200,127"
+39,2019-01-31,Dallas Mavericks,Incoming,Player,Courtney Lee,33,SG,,,,,,"Salary: $12,253,780"
+39,2019-01-31,Dallas Mavericks,Incoming,Player,Kristaps Porzingis,23,PF,,,,,,"Salary: $5,697,054"
+39,2019-01-31,Dallas Mavericks,Incoming,Player,Trey Burke,26,PG,,,,,,"Salary: $1,795,015"
+39,2019-01-31,New York Knicks,Outgoing,Cap Space,,,,,,,,-6390000,-$6.39M CAP SPACE
+39,2019-01-31,New York Knicks,Incoming,Player,DeAndre Jordan,30,C,,,,,,"Salary: $22,897,200"
+39,2019-01-31,New York Knicks,Incoming,Player,Wesley Matthews,32,SG,,,,,,"Salary: $18,622,513"
+39,2019-01-31,New York Knicks,Incoming,Player,Dennis Smith Jr.,21,PG,,,,,,"Salary: $3,819,960"
+39,2019-01-31,New York Knicks,Incoming,Pick,,,,2021,1,unprotected,,
+39,2019-01-31,New York Knicks,Incoming,Pick,,,,2023,1,top-10 protected,,
+40,2019-01-22,Chicago Bulls,Outgoing,Cap Space,,,,,,,,-1510000,-$1.51M CAP SPACE
+40,2019-01-22,Chicago Bulls,Incoming,Player,Carmelo Anthony,34,PF,,,,,,"Salary: $1,512,601"
+40,2019-01-22,Chicago Bulls,Incoming,Cash,,,,,,,,1560000,$1.56 Million
+40,2019-01-22,Chicago Bulls,Incoming,Player,Jon Diebler,30,SG,,,,,,
+40,2019-01-22,Houston Rockets,Incoming,Cap Space,,,,,,,,1510000,+$1.51M CAP SPACE
+40,2019-01-22,Houston Rockets,Incoming,Other,TBD,,,,,,,,,TBD
+40,2019-01-22,Houston Rockets,Incoming,Player,Tadija Dragicevic,32,SF,,,,,,
+41,2019-01-07,Chicago Bulls,Outgoing,Cap Space,,,,,,,,-1510000,-$1.51M CAP SPACE
+41,2019-01-07,Chicago Bulls,Incoming,Player,Michael Carter-Williams,27,PG,,,,,,"Salary: $1,512,601"
+41,2019-01-07,Chicago Bulls,Incoming,Cash,,,,,,,,1065966,$1,065,966
+41,2019-01-07,Houston Rockets,Incoming,Cap Space,,,,,,,,1510000,+$1.51M CAP SPACE
+41,2019-01-07,Houston Rockets,Incoming,Pick,,,,2020,2,top-55 protected,,
+42,2019-01-03,Chicago Bulls,Outgoing,Cap Space,,,,,,,,-800000,-$0.80M CAP SPACE
+42,2019-01-03,Chicago Bulls,Incoming,Player,MarShon Brooks,29,SG,,,,,,"Salary: $1,656,092"
+42,2019-01-03,Chicago Bulls,Incoming,Player,Wayne Selden,24,SG,,,,,,"Salary: $1,544,951"
+42,2019-01-03,Chicago Bulls,Incoming,Pick,,,,2019,2,Daniel Gafford,,
+42,2019-01-03,Chicago Bulls,Incoming,Pick,,,,2020,2,,,
+42,2019-01-03,Memphis Grizzlies,Incoming,Cap Space,,,,,,,,800000,+$0.80M CAP SPACE
+42,2019-01-03,Memphis Grizzlies,Incoming,Player,Justin Holiday,29,SG,,,,,,"Salary: $2,402,868"
+43,2018-12-17,Phoenix Suns,Outgoing,Cap Space,,,,,,,,-860000,-$0.86M CAP SPACE
+43,2018-12-17,Phoenix Suns,Incoming,Player,Austin Rivers,26,SG,,,,,,"Salary: $12,650,000"
+43,2018-12-17,Phoenix Suns,Incoming,Player,Kelly Oubre,23,SF,,,,,,"Salary: $3,208,630"
+43,2018-12-17,Washington Wizards,Incoming,Cap Space,,,,,,,,860000,+$0.86M CAP SPACE
+43,2018-12-17,Washington Wizards,Incoming,Player,Trevor Ariza,33,SF,,,,,,"Salary: $15,000,000"
+44,2018-12-07,Cleveland Cavaliers,Outgoing,Cap Space,,,,,,,,-2870000,-$2.87M CAP SPACE
+44,2018-12-07,Cleveland Cavaliers,Incoming,Player,Matthew Dellavedova,18,PG,,,,,,"Salary: $9,607,500"
+44,2018-12-07,Cleveland Cavaliers,Incoming,Player,John Henson,27,PF,,,,,,"Salary: $9,577,466"
+44,2018-12-07,Cleveland Cavaliers,Incoming,Pick,,,,2021,2,,,
+44,2018-12-07,Cleveland Cavaliers,Incoming,Pick,,,,2021,1,protected (1-14 2021, etc) else two 2025 2nds,,
+44,2018-12-07,Cleveland Cavaliers,Incoming,Pick,,,,2021,2,,,
+44,2018-12-07,Cleveland Cavaliers,Incoming,Pick,,,,2022,2,,,
+44,2018-12-07,Cleveland Cavaliers,Outgoing,Player,George Hill,,,,,,
+44,2018-12-07,Cleveland Cavaliers,Outgoing,Player,Sam Dekker,,,,,,
+44,2018-12-07,Milwaukee Bucks,Incoming,Cap Space,,,,,,,,180000,+$0.18M CAP SPACE
+44,2018-12-07,Milwaukee Bucks,Incoming,Player,George Hill,32,PG,,,,,,"Salary: $19,000,000"
+44,2018-12-07,Milwaukee Bucks,Incoming,Player,Jason Smith,32,PF,,,,,,"Salary: $5,450,000"
+44,2018-12-07,Milwaukee Bucks,Incoming,Cash,,,,,,,,,Cash Considerations
+44,2018-12-07,Milwaukee Bucks,Incoming,Pick,,,,2021,2,,,
+44,2018-12-07,Milwaukee Bucks,Incoming,Pick,,,,2022,2,,,
+44,2018-12-07,Milwaukee Bucks,Outgoing,Player,Matthew Dellavedova,,,,,,
+44,2018-12-07,Milwaukee Bucks,Outgoing,Player,John Henson,,,,,,
+44,2018-12-07,Milwaukee Bucks,Outgoing,Pick,,,,2021,2,,,
+44,2018-12-07,Milwaukee Bucks,Outgoing,Pick,,,,2021,1,,,
+44,2018-12-07,Milwaukee Bucks,Outgoing,Pick,,,,2021,2,,,
+44,2018-12-07,Washington Wizards,Incoming,Cap Space,,,,,,,,2690000,+$2.69M CAP SPACE
+44,2018-12-07,Washington Wizards,Incoming,Player,Sam Dekker,24,SF,,,,,,"Salary: $2,760,095"
+44,2018-12-07,Washington Wizards,Outgoing,Pick,,,,2022,2,,,
+44,2018-12-07,Washington Wizards,Outgoing,Player,Jason Smith,,,,,,
+44,2018-12-07,Washington Wizards,Outgoing,Pick,,,,2021,2,,,
+44,2018-12-07,Washington Wizards,Outgoing,Pick,,,,2022,2,,,
+45,2018-11-28,Cleveland Cavaliers,Outgoing,Cap Space,,,,,,,,-3730000,-$3.73M CAP SPACE
+45,2018-11-28,Cleveland Cavaliers,Incoming,Player,Alec Burks,27,SG,,,,,,"Salary: $11,286,515"
+45,2018-11-28,Cleveland Cavaliers,Incoming,Pick,,,,2020,2,,,
+45,2018-11-28,Cleveland Cavaliers,Incoming,Pick,,,,2021,2,,,
+45,2018-11-28,Utah Jazz,Incoming,Cap Space,,,,,,,,3730000,+$3.73M CAP SPACE
+45,2018-11-28,Utah Jazz,Incoming,Player,Kyle Korver,37,SG,,,,,,"Salary: $7,560,000"
+46,2018-11-10,Minnesota Timberwolves,Outgoing,Cap Space,,,,,,,,-1120000,-$1.12M CAP SPACE
+46,2018-11-10,Minnesota Timberwolves,Incoming,Player,Robert Covington,27,PF,,,,,,"Salary: $10,464,092"
+46,2018-11-10,Minnesota Timberwolves,Incoming,Player,Jerryd Bayless,30,PG,,,,,,"Salary: $8,575,916"
+46,2018-11-10,Minnesota Timberwolves,Incoming,Player,Dario Saric,24,PF,,,,,,"Salary: $2,526,840"
+46,2018-11-10,Minnesota Timberwolves,Incoming,Pick,,,,2022,2,,,
+46,2018-11-10,Philadelphia 76ers,Incoming,Cap Space,,,,,,,,1120000,+$1.12M CAP SPACE
+46,2018-11-10,Philadelphia 76ers,Incoming,Player,Jimmy Butler,29,SF,,,,,,"Salary: $20,445,779"
+46,2018-11-10,Philadelphia 76ers,Incoming,Player,Justin Patton,21,C,,,,,,
+47,2018-10-15,LA Clippers,Incoming,Cap Space,,,,,,,,850000,+$0.85M CAP SPACE
+47,2018-10-15,LA Clippers,Incoming,Player,Alexis Ajinca,30,C,,,,,,"Salary: $5,285,394"
+47,2018-10-15,New Orleans Pelicans,Outgoing,Cap Space,,,,,,,,-850000,-$0.85M CAP SPACE
+47,2018-10-15,New Orleans Pelicans,Incoming,Player,Wesley Johnson,31,SF,,,,,,"Salary: $6,134,520"
+48,2018-10-15,Milwaukee Bucks,Outgoing,Cap Space,,,,,,,,-3450000,-$3.45M CAP SPACE
+48,2018-10-15,Milwaukee Bucks,Incoming,Player,Jodie Meeks,31,SG,,,,,,"Salary: $3,454,500"
+48,2018-10-15,Milwaukee Bucks,Incoming,Cash,,,,,,,,,Cash
+48,2018-10-15,Milwaukee Bucks,Incoming,Pick,,,,,,2nd Round Pick,,
+48,2018-10-15,Washington Wizards,Incoming,Cap Space,,,,,,,,3450000,+$3.45M CAP SPACE
+48,2018-10-15,Washington Wizards,Incoming,Other,,,,,,,,,Draft Considerations
+49,2018-08-31,Houston Rockets,Incoming,Cap Space,,,,,,,,2580000,+$2.58M CAP SPACE
+49,2018-08-31,Houston Rockets,Incoming,Player,Brandon Knight,26,PG,,,,,,"Salary: $14,631,250"
+49,2018-08-31,Houston Rockets,Incoming,Player,Marquese Chriss,21,SF,,,,,,"Salary: $3,206,160"
+49,2018-08-31,Phoenix Suns,Outgoing,Cap Space,,,,,,,,-2580000,-$2.58M CAP SPACE
+49,2018-08-31,Phoenix Suns,Incoming,Player,Ryan Anderson,30,PF,,,,,,"Salary: $20,421,546"
+49,2018-08-31,Phoenix Suns,Incoming,Player,De'Anthony Melton,20,SG,,,,,,
+50,2018-08-07,Cleveland Cavaliers,Incoming,Player,Sam Dekker,24,SF,,,,,,
+50,2018-08-07,Cleveland Cavaliers,Incoming,Player,Renaldas Seibutis,33,SG,,,,,,
+50,2018-08-07,Cleveland Cavaliers,Incoming,Cash,,,,,,,,,Cash
+50,2018-08-07,LA Clippers,Incoming,Player,Vladimir Veremeenko,34,PF,,,,,,
+51,2018-08-01,Dallas Mavericks,Outgoing,Cap Space,,,,,,,,-1540000,-$1.54M CAP SPACE
+51,2018-08-01,Dallas Mavericks,Incoming,Player,Chinanu Onuaku,21,C,,,,,,"Salary: $1,544,951"
+51,2018-08-01,Dallas Mavericks,Incoming,Cash,,,,,,,,2044951,$2,044,951
+51,2018-08-01,Dallas Mavericks,Incoming,Pick,,,,2020,2,protected top 31-40,,
+51,2018-08-01,Houston Rockets,Incoming,Cap Space,,,,,,,,1540000,+$1.54M CAP SPACE
+51,2018-08-01,Houston Rockets,Incoming,Player,Maaty Leunen,32,PF,,,,,,
+51,2018-08-01,Houston Rockets,Incoming,Pick,,,,2020,2,,,
+52,2018-07-25,Atlanta Hawks,Outgoing,Cap Space,,,,,,,,-9940000,-$9.94M CAP SPACE
+52,2018-07-25,Atlanta Hawks,Incoming,Player,Carmelo Anthony,34,PF,,,,,,"Salary: $27,928,140"
+52,2018-07-25,Atlanta Hawks,Incoming,Player,Justin Anderson,24,SG,,,,,,"Salary: $2,516,048"
+52,2018-07-25,Atlanta Hawks,Incoming,Pick,,,,2022,1,protected top 14 (else 2024 2nd & 2025 2nd),,
+52,2018-07-25,Atlanta Hawks,Outgoing,Player,Mike Muscala,,,,,,
+52,2018-07-25,Atlanta Hawks,Outgoing,Player,Dennis Schröder,,,,,,
+52,2018-07-25,Philadelphia 76ers,Outgoing,Cap Space,,,,,,,,-940000,-$0.94M CAP SPACE
+52,2018-07-25,Philadelphia 76ers,Incoming,Player,Mike Muscala,27,C,,,,,,"Salary: $5,000,000"
+52,2018-07-25,Philadelphia 76ers,Outgoing,Player,Justin Anderson,,,,,,
+52,2018-07-25,Philadelphia 76ers,Outgoing,Player,Timothe Luwawu-Cabarrot,,,,,,
+52,2018-07-25,Oklahoma City Thunder,Incoming,Cap Space,,,,,,,,10880000,+$10.88M CAP SPACE
+52,2018-07-25,Oklahoma City Thunder,Incoming,Player,Dennis Schröder,24,PG,,,,,,"Salary: $15,500,000"
+52,2018-07-25,Oklahoma City Thunder,Incoming,Player,Timothe Luwawu-Cabarrot,23,SG,,,,,,"Salary: $1,544,951"
+52,2018-07-25,Oklahoma City Thunder,Outgoing,Player,Carmelo Anthony,,,,,,
+52,2018-07-25,Oklahoma City Thunder,Outgoing,Pick,,,,2022,1,,,
+53,2018-07-25,San Antonio Spurs,Incoming,Cap Space,,,,,,,,2430000,+$2.43M CAP SPACE
+53,2018-07-25,San Antonio Spurs,Incoming,Player,DeMar DeRozan,28,SF,,,,,,"Salary: $27,739,975"
+53,2018-07-25,San Antonio Spurs,Incoming,Player,Jakob Poeltl,22,C,,,,,,"Salary: $2,947,320"
+53,2018-07-25,San Antonio Spurs,Incoming,Pick,,,,2019,1,Keldon Johnson,,
+53,2018-07-25,Toronto Raptors,Outgoing,Cap Space,,,,,,,,-2430000,-$2.43M CAP SPACE
+53,2018-07-25,Toronto Raptors,Incoming,Player,Kawhi Leonard,27,SF,,,,,,"Salary: $23,114,066"
+53,2018-07-25,Toronto Raptors,Incoming,Player,Danny Green,31,SF,,,,,,"Salary: $10,000,000"
+53,2018-07-25,Toronto Raptors,Incoming,Cash,,,,,,,,5000000,$5 Million
+54,2018-07-23,Dallas Mavericks,Incoming,Player,Maaty Leunen,32,PF,,,,,,
+54,2018-07-23,Dallas Mavericks,Incoming,Cash,,,,,,50000,,$50k
+54,2018-07-23,LA Clippers,Incoming,Player,Johnathan Motley,23,PF,,,,,,
+54,2018-07-23,LA Clippers,Incoming,Player,Renaldas Seibutis,,,,,,,
+55,2018-07-23,Boston Celtics,Incoming,Player,Rodney Purvis,24,G,,,,,,"Salary: $1,378,242"
+55,2018-07-23,Oklahoma City Thunder,Incoming,Player,Abdel Nader,24,SF,,,,,,"Salary: $1,378,242"
+55,2018-07-23,Oklahoma City Thunder,Incoming,Cash,,,,,,450000,,$450k
+56,2018-07-23,Memphis Grizzlies,Incoming,Cap Space,,,,,,,,1040000,+$1.04M CAP SPACE
+56,2018-07-23,Memphis Grizzlies,Incoming,Player,Dakari Johnson,22,C,,,,,,"Salary: $1,378,242"
+56,2018-07-23,Memphis Grizzlies,Incoming,Player,Tyler Harvey,25,SG,,,,,,
+56,2018-07-23,Orlando Magic,Outgoing,Cap Space,,,,,,,,-1040000,-$1.04M CAP SPACE
+56,2018-07-23,Orlando Magic,Incoming,Player,Jarell Martin,24,PF,,,,,,"Salary: $2,416,222"
+56,2018-07-23,Orlando Magic,Incoming,Cash,,,,,,,,,Cash
+57,2018-07-20,Philadelphia 76ers,Incoming,Cap Space,,,,,,,,1600000,+$1.60M CAP SPACE
+57,2018-07-20,Philadelphia 76ers,Incoming,Cash,,,,,,1000000,,$1 Million
+57,2018-07-20,Phoenix Suns,Outgoing,Cap Space,,,,,,,,-1600000,-$1.60M CAP SPACE
+57,2018-07-20,Phoenix Suns,Incoming,Player,Richaun Holmes,24,C,,,,,,"Salary: $1,600,520"
+58,2018-07-20,Phoenix Suns,Incoming,Cap Space,,,,,,,,2070000,+$2.07M CAP SPACE
+58,2018-07-20,Phoenix Suns,Incoming,Player,Darrell Arthur,30,PF,,,,,,"Salary: $7,464,912"
+58,2018-07-20,Brooklyn Nets,Outgoing,Cap Space,,,,,,,,-2070000,-$2.07M CAP SPACE
+58,2018-07-20,Brooklyn Nets,Incoming,Player,Jared Dudley,33,SF,,,,,,"Salary: $9,530,000"
+58,2018-07-20,Brooklyn Nets,Incoming,Pick,,,,2021,2,top-35 protected,,
+59,2018-07-20,Orlando Magic,Incoming,Player,Dakari Johnson,22,C,,,,,,"Salary: $1,378,242"
+59,2018-07-20,Orlando Magic,Incoming,Cash,,,,,,,,1978242,$1,978,242
+59,2018-07-20,Oklahoma City Thunder,Incoming,Player,Rodney Purvis,24,G,,,,,,"Salary: $1,378,242"
+60,2018-07-17,Memphis Grizzlies,Outgoing,Cap Space,,,,,,,,-1000000,-$1.00M CAP SPACE
+60,2018-07-17,Memphis Grizzlies,Incoming,Player,Garrett Temple,32,SG,,,,,,"Salary: $8,000,000"
+60,2018-07-17,Sacramento Kings,Incoming,Cap Space,,,,,,,,1000000,+$1.00M CAP SPACE
+60,2018-07-17,Sacramento Kings,Incoming,Player,Ben McLemore,25,SF,,,,,,"Salary: $5,460,000"
+60,2018-07-17,Sacramento Kings,Incoming,Player,Deyonta Davis,21,C,,,,,,"Salary: $1,544,951"
+60,2018-07-17,Sacramento Kings,Incoming,Cash,,,,,,,,1540000,$1.54 Million
+60,2018-07-17,Sacramento Kings,Incoming,Pick,,,,2021,2,,,
+61,2018-07-13,Denver Nuggets,Incoming,Cap Space,,,,,,,,19680000,+$19.68M CAP SPACE
+61,2018-07-13,Denver Nuggets,Incoming,Player,Isaiah Whitehead,23,PG,,,,,,"Salary: $1,544,951"
+61,2018-07-13,Brooklyn Nets,Outgoing,Cap Space,,,,,,,,-19680000,-$19.68M CAP SPACE
+61,2018-07-13,Brooklyn Nets,Incoming,Player,Kenneth Faried,28,PF,,,,,,"Salary: $13,764,045"
+61,2018-07-13,Brooklyn Nets,Incoming,Player,Darrell Arthur,30,PF,,,,,,"Salary: $7,464,912"
+61,2018-07-13,Brooklyn Nets,Incoming,Pick,,,,2019,1,,,
+61,2018-07-13,Brooklyn Nets,Incoming,Pick,,,,2020,2,,,
+62,2018-07-12,Atlanta Hawks,Outgoing,Cap Space,,,,,,,,-12520000,-$12.52M CAP SPACE
+62,2018-07-12,Atlanta Hawks,Incoming,Player,Jeremy Lin,29,PG,,,,,,"Salary: $12,516,746"
+62,2018-07-12,Atlanta Hawks,Incoming,Pick,,,,2023,2,right to swap,,
+62,2018-07-12,Atlanta Hawks,Incoming,Pick,,,,2025,2,,,
+62,2018-07-12,Brooklyn Nets,Incoming,Cap Space,,,,,,,,12520000,+$12.52M CAP SPACE
+62,2018-07-12,Brooklyn Nets,Incoming,Player,Isaia Cordinier,21,SG,,,,,,
+62,2018-07-12,Brooklyn Nets,Incoming,Pick,,,,2020,2,top-55 protected (Portland's pick),,
+63,2018-07-07,Chicago Bulls,Incoming,Cap Space,,,,,,,,980000,+$0.98M CAP SPACE
+63,2018-07-07,Chicago Bulls,Incoming,Player,Julyan Stone,29,PG,,,,,,"Salary: $1,656,092"
+63,2018-07-07,Chicago Bulls,Outgoing,Player,Jerian Grant,,,,,,
+63,2018-07-07,Orlando Magic,Outgoing,Cap Space,,,,,,,,-1640000,-$1.64M CAP SPACE
+63,2018-07-07,Orlando Magic,Incoming,Player,Timofey Mozgov,31,C,,,,,,"Salary: $16,000,000"
+63,2018-07-07,Orlando Magic,Incoming,Player,Jerian Grant,25,PG,,,,,,"Salary: $2,639,314"
+63,2018-07-07,Orlando Magic,Incoming,Pick,,,,2020,2,,,
+63,2018-07-07,Orlando Magic,Outgoing,Player,Bismack Biyombo,,,,,,
+63,2018-07-07,Orlando Magic,Outgoing,Pick,,,,2019,2,,,
+63,2018-07-07,Charlotte Hornets,Incoming,Cap Space,,,,,,,,660000,+$0.66M CAP SPACE
+63,2018-07-07,Charlotte Hornets,Incoming,Player,Bismack Biyombo,25,C,,,,,,"Salary: $17,000,000"
+63,2018-07-07,Charlotte Hornets,Incoming,Pick,,,,2019,2,Cody Martin,,
+63,2018-07-07,Charlotte Hornets,Outgoing,Player,Julyan Stone,,,,,,
+63,2018-07-07,Charlotte Hornets,Outgoing,Player,Timofey Mozgov,,,,,,
+63,2018-07-07,Charlotte Hornets,Outgoing,Pick,,,,2020,2,,,
+64,2018-07-06,Brooklyn Nets,Outgoing,Cap Space,,,,,,,,-7820000,-$7.82M CAP SPACE
+64,2018-07-06,Brooklyn Nets,Incoming,Player,Dwight Howard,32,C,,,,,,"Salary: $23,819,725"
+64,2018-07-06,Charlotte Hornets,Incoming,Cap Space,,,,,,,,7820000,+$7.82M CAP SPACE
+64,2018-07-06,Charlotte Hornets,Incoming,Player,Timofey Mozgov,31,C,,,,,,"Salary: $16,000,000"
+64,2018-07-06,Charlotte Hornets,Incoming,Cash,,,,,,,,5000000,$5 Million
+64,2018-07-06,Charlotte Hornets,Incoming,Player,Hamidou Diallo,19,SG,,,,,,
+64,2018-07-06,Charlotte Hornets,Incoming,Pick,,,,2021,2,,,
+65,2018-07-06,Denver Nuggets,Incoming,Cap Space,,,,,,,,12800000,+$12.80M CAP SPACE
+65,2018-07-06,Denver Nuggets,Incoming,Pick,,,,2022,2,,,
+65,2018-07-06,Philadelphia 76ers,Outgoing,Cap Space,,,,,,,,-12800000,-$12.80M CAP SPACE
+65,2018-07-06,Philadelphia 76ers,Incoming,Player,Wilson Chandler,31,SF,,,,,,"Salary: $12,800,562"
+65,2018-07-06,Philadelphia 76ers,Incoming,Cash,,,,,,,,,Cash
+65,2018-07-06,Philadelphia 76ers,Incoming,Pick,,,,2021,2,,,
+65,2018-07-06,Philadelphia 76ers,Incoming,Pick,,,,2022,2,,,
+66,2018-07-06,Charlotte Hornets,Incoming,Pick,,,,2019,2,Jalen McDaniels,,
+66,2018-07-06,Oklahoma City Thunder,Incoming,Player,Hamidou Diallo,19,SG,,,,,,
+66,2018-07-06,Oklahoma City Thunder,Outgoing,Pick,,,,2019,2,,,
+66,2018-07-06,Charlotte Hornets,Incoming,Cash,,,,,,,,,Cash Considerations
+66,2018-07-06,Charlotte Hornets,Outgoing,Player,Hamidou Diallo,,,,,,
+67,2018-07-06,Los Angeles Lakers,Incoming,Player,Isaac Bonga,18,SF,,,,,,
+67,2018-07-06,Philadelphia 76ers,Incoming,Cash,,,,,,,,,Cash
+67,2018-07-06,Philadelphia 76ers,Incoming,Pick,,,,2019,2,,,
+68,2018-06-26,LA Clippers,Outgoing,Cap Space,,,,,,,,-920000,-$0.92M CAP SPACE
+68,2018-06-26,LA Clippers,Incoming,Player,Marcin Gortat,34,C,,,,,,"Salary: $13,565,218"
+68,2018-06-26,Washington Wizards,Incoming,Cap Space,,,,,,,,920000,+$0.92M CAP SPACE
+68,2018-06-26,Washington Wizards,Incoming,Player,Austin Rivers,25,SG,,,,,,"Salary: $12,650,000"
+69,2018-06-21,Atlanta Hawks,Incoming,Player,Trae Young,19,PG,,,,,,
+69,2018-06-21,Atlanta Hawks,Incoming,Pick,,,,2019,1,Cam Reddish,,
+69,2018-06-21,Dallas Mavericks,Incoming,Player,Luka Doncic,19,PG,,,,,,
+70,2018-06-21,LA Clippers,Incoming,Player,Shai Gilgeous-Alexander,19,PG,,,,,,
+70,2018-06-21,Charlotte Hornets,Incoming,Player,Miles Bridges,20,SF,,,,,,
+70,2018-06-21,Charlotte Hornets,Incoming,Pick,,,,2020,2,,,
+70,2018-06-21,Charlotte Hornets,Incoming,Pick,,,,2021,2,,,
+71,2018-06-21,Dallas Mavericks,Incoming,Player,Ray Spalding,21,PF,,,,,,
+71,2018-06-21,Dallas Mavericks,Incoming,Player,Kostas Antetokounmpo,20,PF,,,,,,
+71,2018-06-21,Philadelphia 76ers,Incoming,Player,Shake Milton,21,SG,,,,,,
+72,2018-06-21,Denver Nuggets,Incoming,Player,Jarred Vanderbilt,19,PF,,,,,,
+72,2018-06-21,Orlando Magic,Incoming,Player,Justin Jackson,21,SF,,,,,,
+72,2018-06-21,Orlando Magic,Incoming,Pick,,,,2019,2,,,
+73,2018-06-21,Portland Trail Blazers,Incoming,Player,Gary Trent Jr.,19,SG,,,,,,
+73,2018-06-21,Sacramento Kings,Incoming,Cash,,,,,,,,1500000,$1.5 Million
+73,2018-06-21,Sacramento Kings,Incoming,Pick,,,,2019,2,Justin James,,
+73,2018-06-21,Sacramento Kings,Incoming,Pick,,,,2020,2,protected,,
+74,2018-06-21,Atlanta Hawks,Incoming,Pick,,,,2019,2,,,
+74,2018-06-21,Atlanta Hawks,Incoming,Pick,,,,2023,2,,,
+74,2018-06-21,Charlotte Hornets,Incoming,Player,Devonte' Graham,23,PG,,,,,,
+75,2018-06-21,Philadelphia 76ers,Incoming,Player,Zhaire Smith,19,SG,,,,,,
+75,2018-06-21,Philadelphia 76ers,Incoming,Pick,,,,2021,1,unprotected,,
+75,2018-06-21,Phoenix Suns,Incoming,Player,Mikal Bridges,21,SF,,,,,,
+76,2018-06-21,Detroit Pistons,Incoming,Player,Khyri Thomas,22,SG,,,,,,
+76,2018-06-21,Philadelphia 76ers,Incoming,Pick,,,,,,Two Future 2nd Round Picks,,
+77,2018-06-21,Houston Rockets,Incoming,Player,Vincent Edwards,22,SF,,,,,,
+77,2018-06-21,Utah Jazz,Incoming,Cash,,,,,,,,1500000,$1.5 Million
+78,2018-02-08,Dallas Mavericks,Incoming,Cap Space,,,,,,,,1110000,+$1.11M CAP SPACE
+78,2018-02-08,Dallas Mavericks,Incoming,Player,Doug McDermott,26,SF,,,,,,"Salary: $3,294,994"
+78,2018-02-08,Dallas Mavericks,Outgoing,Player,Devin Harris,,,,,,
+78,2018-02-08,Denver Nuggets,Outgoing,Cap Space,,,,,,,,-1020000,-$1.02M CAP SPACE
+78,2018-02-08,Denver Nuggets,Incoming,Player,Devin Harris,34,PG,,,,,,"Salary: $4,402,546"
+78,2018-02-08,Denver Nuggets,Incoming,Pick,,,,2018,2,,,
+78,2018-02-08,Denver Nuggets,Outgoing,Player,Emmanuel Mudiay,,,,,,
+78,2018-02-08,Denver Nuggets,Outgoing,Pick,,,,2018,2,,,
+78,2018-02-08,New York Knicks,Outgoing,Cap Space,,,,,,,,-90000,-$0.09M CAP SPACE
+78,2018-02-08,New York Knicks,Incoming,Player,Emmanuel Mudiay,21,PG,,,,,,"Salary: $3,381,480"
+78,2018-02-08,New York Knicks,Incoming,Pick,,,,2018,2,,,
+78,2018-02-08,New York Knicks,Outgoing,Player,Doug McDermott,,,,,,
+78,2018-02-08,New York Knicks,Outgoing,Pick,,,,2018,2,,,
+79,2018-02-08,Orlando Magic,Incoming,Cap Space,,,,,,,,3330000,+$3.33M CAP SPACE
+79,2018-02-08,Orlando Magic,Incoming,Pick,,,,2018,2,Jarred Vanderbilt,,
+79,2018-02-08,Phoenix Suns,Outgoing,Cap Space,,,,,,,,-3330000,-$3.33M CAP SPACE
+79,2018-02-08,Phoenix Suns,Incoming,Player,Elfrid Payton,23,PG,,,,,,"Salary: $3,332,340"
+80,2018-02-08,Cleveland Cavaliers,Incoming,Cap Space,,,,,,,,2330000,+$2.33M CAP SPACE
+80,2018-02-08,Cleveland Cavaliers,Incoming,Pick,,,,2024,2,,,
+80,2018-02-08,Miami Heat,Outgoing,Cap Space,,,,,,,,-2330000,-$2.33M CAP SPACE
+80,2018-02-08,Miami Heat,Incoming,Player,Dwyane Wade,36,SG,,,,,,"Salary: $2,328,652"
+81,2018-02-08,Cleveland Cavaliers,Outgoing,Cap Space,,,,,,,,-3150000,-$3.15M CAP SPACE
+81,2018-02-08,Cleveland Cavaliers,Incoming,Player,George Hill,31,PG,,,,,,"Salary: $20,000,000"
+81,2018-02-08,Cleveland Cavaliers,Incoming,Player,Rodney Hood,25,SF,,,,,,"Salary: $2,386,864"
+81,2018-02-08,Cleveland Cavaliers,Incoming,Player,Arturas Gudaitis,24,C,,,,,,
+81,2018-02-08,Cleveland Cavaliers,Incoming,Pick,,,,2024,2,,,
+81,2018-02-08,Cleveland Cavaliers,Outgoing,Player,Iman Shumpert,,,,,,
+81,2018-02-08,Cleveland Cavaliers,Outgoing,Player,Dimitrios Agravanis,,,,,,
+81,2018-02-08,Cleveland Cavaliers,Outgoing,Pick,,,,2020,2,,,
+81,2018-02-08,Cleveland Cavaliers,Outgoing,Player,Jae Crowder,,,,,,
+81,2018-02-08,Cleveland Cavaliers,Outgoing,Player,Derrick Rose,,,,,,
+81,2018-02-08,Cleveland Cavaliers,Outgoing,Pick,,,,2024,2,,,
+81,2018-02-08,Sacramento Kings,Outgoing,Cap Space,,,,,,,,-840000,-$0.84M CAP SPACE
+81,2018-02-08,Sacramento Kings,Incoming,Player,Joe Johnson,36,SG,,,,,,"Salary: $10,505,000"
+81,2018-02-08,Sacramento Kings,Incoming,Player,Iman Shumpert,27,SG,,,,,,"Salary: $10,337,079"
+81,2018-02-08,Sacramento Kings,Incoming,Cash,,,,,,,,2100000,$2.1 Million
+81,2018-02-08,Sacramento Kings,Incoming,Cash,,,,,,,,1100000,$1.1 Million
+81,2018-02-08,Sacramento Kings,Incoming,Player,Dimitrios Agravanis,23,PF,,,,,,
+81,2018-02-08,Sacramento Kings,Incoming,Pick,,,,2020,2,,,
+81,2018-02-08,Sacramento Kings,Outgoing,Player,George Hill,,,,,,
+81,2018-02-08,Sacramento Kings,Outgoing,Player,Arturas Gudaitis,,,,,,
+81,2018-02-08,Utah Jazz,Incoming,Cap Space,,,,,,,,3990000,+$3.99M CAP SPACE
+81,2018-02-08,Utah Jazz,Incoming,Player,Jae Crowder,27,SF,,,,,,"Salary: $6,796,117"
+81,2018-02-08,Utah Jazz,Incoming,Player,Derrick Rose,29,PG,,,,,,"Salary: $2,106,470"
+81,2018-02-08,Utah Jazz,Incoming,Pick,,,,2024,2,,,
+81,2018-02-08,Utah Jazz,Outgoing,Player,Rodney Hood,,,,,,
+81,2018-02-08,Utah Jazz,Outgoing,Pick,,,,2024,2,,,
+81,2018-02-08,Utah Jazz,Outgoing,Player,Joe Johnson,,,,,,
+82,2018-02-08,Cleveland Cavaliers,Incoming,Cap Space,,,,,,,,650000,+$0.65M CAP SPACE
+82,2018-02-08,Cleveland Cavaliers,Incoming,Player,Jordan Clarkson,25,SG,,,,,,"Salary: $11,562,500"
+82,2018-02-08,Cleveland Cavaliers,Incoming,Player,Larry Nance Jr.,25,PF,,,,,,"Salary: $1,471,382"
+82,2018-02-08,Los Angeles Lakers,Outgoing,Cap Space,,,,,,,,-650000,-$0.65M CAP SPACE
+82,2018-02-08,Los Angeles Lakers,Incoming,Player,Channing Frye,34,PF,,,,,,"Salary: $7,420,912"
+82,2018-02-08,Los Angeles Lakers,Incoming,Player,Isaiah Thomas,29,PG,,,,,,"Salary: $6,261,395"
+82,2018-02-08,Los Angeles Lakers,Incoming,Pick,,,,2018,1,,,
+83,2018-02-08,Detroit Pistons,Outgoing,Cap Space,,,,,,,,-1700000,-$1.70M CAP SPACE
+83,2018-02-08,Detroit Pistons,Incoming,Player,James Ennis,27,SF,,,,,,"Salary: $3,028,410"
+83,2018-02-08,Memphis Grizzlies,Incoming,Cap Space,,,,,,,,1700000,+$1.70M CAP SPACE
+83,2018-02-08,Memphis Grizzlies,Incoming,Player,Brice Johnson,23,PF,,,,,,"Salary: $1,331,160"
+83,2018-02-08,Memphis Grizzlies,Incoming,Pick,,,,2022,2,,,
+84,2018-02-08,Sacramento Kings,Outgoing,Cap Space,,,,,,,,-950000,-$0.95M CAP SPACE
+84,2018-02-08,Sacramento Kings,Incoming,Player,Bruno Caboclo,22,SF,,,,,,"Salary: $2,451,225"
+84,2018-02-08,Toronto Raptors,Incoming,Cap Space,,,,,,,,950000,+$0.95M CAP SPACE
+84,2018-02-08,Toronto Raptors,Incoming,Player,Malachi Richardson,22,SG,,,,,,"Salary: $1,504,560"
+85,2018-02-08,Chicago Bulls,Outgoing,Cap Space,,,,,,,,-3510000,-$3.51M CAP SPACE
+85,2018-02-08,Chicago Bulls,Incoming,Player,Noah Vonleh,22,PF,,,,,,"Salary: $3,505,233"
+85,2018-02-08,Portland Trail Blazers,Incoming,Cap Space,,,,,,,,3510000,+$3.51M CAP SPACE
+85,2018-02-08,Portland Trail Blazers,Incoming,Other,,,,,,,,,Rights To Milocan Rakovic
+86,2018-02-08,Chicago Bulls,Incoming,Cap Space,,,,,,,,790000,+$0.79M CAP SPACE
+86,2018-02-08,Chicago Bulls,Incoming,Player,Willie Reed,27,C,,,,,,"Salary: $1,471,382"
+86,2018-02-08,Chicago Bulls,Incoming,Pick,,,,2022,2,,,
+86,2018-02-08,Detroit Pistons,Outgoing,Cap Space,,,,,,,,-790000,-$0.79M CAP SPACE
+86,2018-02-08,Detroit Pistons,Incoming,Player,Jameer Nelson,35,PG,,,,,,"Salary: $2,262,871"
+86,2018-02-08,Detroit Pistons,Incoming,Pick,,,,2022,2,,,
+87,2018-02-08,Atlanta Hawks,Outgoing,Cap Space,,,,,,,,-1310000,-$1.31M CAP SPACE
+87,2018-02-08,Atlanta Hawks,Incoming,Player,Sheldon McClellan,25,SG,,,,,,"Salary: $1,312,611"
+87,2018-02-08,Atlanta Hawks,Incoming,Cash,,,,,,,,,Cash
+87,2018-02-08,Washington Wizards,Incoming,Cap Space,,,,,,,,1310000,+$1.31M CAP SPACE
+87,2018-02-08,Washington Wizards,Incoming,Pick,,,,,,2nd Round Pick,,
+88,2018-02-08,Atlanta Hawks,Incoming,Cap Space,,,,,,,,660000,+$0.66M CAP SPACE
+88,2018-02-08,Atlanta Hawks,Incoming,Player,Okaro White,25,PF,,,,,,"Salary: $1,312,611"
+88,2018-02-08,Miami Heat,Outgoing,Cap Space,,,,,,,,-660000,-$0.66M CAP SPACE
+88,2018-02-08,Miami Heat,Incoming,Player,Luke Babbitt,28,SF,,,,,,"Salary: $1,974,159"
+89,2018-02-08,Brooklyn Nets,Outgoing,Cap Space,,,,,,,,-410000,-$0.41M CAP SPACE
+89,2018-02-08,Brooklyn Nets,Incoming,Player,Dante Cunningham,30,PF,,,,,,"Salary: $2,300,000"
+89,2018-02-08,New Orleans Pelicans,Incoming,Cap Space,,,,,,,,410000,+$0.41M CAP SPACE
+89,2018-02-08,New Orleans Pelicans,Incoming,Player,Rashad Vaughn,21,SG,,,,,,"Salary: $1,889,040"
+90,2018-02-07,New York Knicks,Incoming,Cap Space,,,,,,,,1440000,+$1.44M CAP SPACE
+90,2018-02-07,New York Knicks,Incoming,Player,Johnny O'Bryant,24,PF,,,,,,
+90,2018-02-07,New York Knicks,Incoming,Pick,,,,2020,2,,,
+90,2018-02-07,New York Knicks,Incoming,Pick,,,,2021,2,,,
+90,2018-02-07,Charlotte Hornets,Outgoing,Cap Space,,,,,,,,-1440000,-$1.44M CAP SPACE
+90,2018-02-07,Charlotte Hornets,Incoming,Player,Willy Hernangomez,23,C,,,,,,"Salary: $1,435,750"
+91,2018-02-05,Milwaukee Bucks,Incoming,Cap Space,,,,,,,,180000,+$0.18M CAP SPACE
+91,2018-02-05,Milwaukee Bucks,Incoming,Player,Tyler Zeller,28,C,,,,,,"Salary: $1,709,538"
+91,2018-02-05,Brooklyn Nets,Outgoing,Cap Space,,,,,,,,-180000,-$0.18M CAP SPACE
+91,2018-02-05,Brooklyn Nets,Incoming,Player,Rashad Vaughn,21,SG,,,,,,"Salary: $1,889,040"
+91,2018-02-05,Brooklyn Nets,Incoming,Pick,,,,2018,2,protected 31-47,,
+92,2018-02-01,Chicago Bulls,Outgoing,Cap Space,,,,,,,,-1000000,-$1.00M CAP SPACE
+92,2018-02-01,Chicago Bulls,Incoming,Player,Omer Asik,31,C,,,,,,"Salary: $10,595,505"
+92,2018-02-01,Chicago Bulls,Incoming,Player,Tony Allen,36,SG,,,,,,"Salary: $1,471,382"
+92,2018-02-01,Chicago Bulls,Incoming,Player,Jameer Nelson,35,PG,,,,,,"Salary: $1,429,818"
+92,2018-02-01,Chicago Bulls,Incoming,Pick,,,,2018,1,,,
+92,2018-02-01,New Orleans Pelicans,Incoming,Cap Space,,,,,,,,1000000,+$1.00M CAP SPACE
+92,2018-02-01,New Orleans Pelicans,Incoming,Player,Nikola Mirotic,26,PF,,,,,,"Salary: $12,500,000"
+93,2018-01-29,Detroit Pistons,Outgoing,Cap Space,,,,,,,,-610000,-$0.61M CAP SPACE
+93,2018-01-29,Detroit Pistons,Incoming,Player,Blake Griffin,28,C,,,,,,"Salary: $29,512,900"
+93,2018-01-29,Detroit Pistons,Incoming,Player,Willie Reed,27,C,,,,,,"Salary: $1,577,230"
+93,2018-01-29,Detroit Pistons,Incoming,Player,Brice Johnson,23,PF,,,,,,"Salary: $1,331,160"
+93,2018-01-29,LA Clippers,Incoming,Cap Space,,,,,,,,610000,+$0.61M CAP SPACE
+93,2018-01-29,LA Clippers,Incoming,Player,Tobias Harris,25,PF,,,,,,"Salary: $16,000,000"
+93,2018-01-29,LA Clippers,Incoming,Player,Avery Bradley,27,PG,,,,,,"Salary: $8,808,989"
+93,2018-01-29,LA Clippers,Incoming,Player,Boban Marjanovic,29,C,,,,,,"Salary: $7,000,000"
+93,2018-01-29,LA Clippers,Incoming,Pick,,,,2018,1,top-4 protected,,
+93,2018-01-29,LA Clippers,Incoming,Pick,,,,2019,2,,,
+94,2017-12-07,Philadelphia 76ers,Outgoing,Cap Space,,,,,,,,-320000,-$0.32M CAP SPACE
+94,2017-12-07,Philadelphia 76ers,Incoming,Player,Trevor Booker,30,PF,,,,,,"Salary: $9,125,000"
+94,2017-12-07,Brooklyn Nets,Incoming,Cap Space,,,,,,,,320000,+$0.32M CAP SPACE
+94,2017-12-07,Brooklyn Nets,Incoming,Player,Jahlil Okafor,21,C,,,,,,"Salary: $4,995,120"
+94,2017-12-07,Brooklyn Nets,Incoming,Player,Nik Stauskas,24,SG,,,,,,"Salary: $3,807,147"
+94,2017-12-07,Brooklyn Nets,Incoming,Pick,,,,2019,2,Nicolas Claxton,,
+95,2017-11-07,Milwaukee Bucks,Incoming,Cap Space,,,,,,,,3380000,+$3.38M CAP SPACE
+95,2017-11-07,Milwaukee Bucks,Incoming,Player,Eric Bledsoe,27,PG,,,,,,"Salary: $14,500,000"
+95,2017-11-07,Phoenix Suns,Outgoing,Cap Space,,,,,,,,-3380000,-$3.38M CAP SPACE
+95,2017-11-07,Phoenix Suns,Incoming,Player,Greg Monroe,27,C,,,,,,"Salary: $17,884,175"
+95,2017-11-07,Phoenix Suns,Incoming,Pick,,,,2018,1,lottery-protected conditional,,
+95,2017-11-07,Phoenix Suns,Incoming,Pick,,,,2018,2,top-47 protected,,
+96,2017-10-14,Atlanta Hawks,Outgoing,Cap Space,,,,,,,,-3810000,-$3.81M CAP SPACE
+96,2017-10-14,Atlanta Hawks,Incoming,Player,Richard Jefferson,37,SF,,,,,,"Salary: $2,500,000"
+96,2017-10-14,Atlanta Hawks,Incoming,Player,Kay Felder,22,PG,,,,,,"Salary: $1,312,611"
+96,2017-10-14,Atlanta Hawks,Incoming,Cash,,,,,,,,2956529,Cash ($2,956,529)
+96,2017-10-14,Atlanta Hawks,Incoming,Pick,,,,2019,2,,,
+96,2017-10-14,Atlanta Hawks,Incoming,Pick,,,,2020,2,,,
+96,2017-10-14,Cleveland Cavaliers,Incoming,Cap Space,,,,,,,,3810000,+$3.81M CAP SPACE
+96,2017-10-14,Cleveland Cavaliers,Incoming,Player,Dimitrios Agravanis,22,PF,,,,,,
+96,2017-10-14,Cleveland Cavaliers,Incoming,Player,Sergey Gladyr,28,SG,,,,,,
+97,2017-09-25,New York Knicks,Incoming,Cap Space,,,,,,,,2380000,+$2.38M CAP SPACE
+97,2017-09-25,New York Knicks,Incoming,Player,Enes Kanter,25,C,,,,,,"Salary: $20,566,801"
+97,2017-09-25,New York Knicks,Incoming,Player,Doug McDermott,25,SF,,,,,,"Salary: $3,294,994"
+97,2017-09-25,New York Knicks,Incoming,Other,,,,,,,,,Draft Pick TBD
+97,2017-09-25,Oklahoma City Thunder,Outgoing,Cap Space,,,,,,,,-2380000,-$2.38M CAP SPACE
+97,2017-09-25,Oklahoma City Thunder,Incoming,Player,Carmelo Anthony,33,PF,,,,,,"Salary: $26,243,760"
+98,2017-09-25,Atlanta Hawks,Outgoing,Cap Space,,,,,,,,-1580000,-$1.58M CAP SPACE
+98,2017-09-25,Atlanta Hawks,Incoming,Player,DeAndre Liggins,29,SG,,,,,,"Salary: $1,577,230"
+98,2017-09-25,Atlanta Hawks,Incoming,Cash,,,,,,,,,Cash
+98,2017-09-25,LA Clippers,Incoming,Cap Space,,,,,,,,1580000,+$1.58M CAP SPACE
+98,2017-09-25,LA Clippers,Incoming,Pick,,,,2018,2,protected 31-55,,
+99,2017-09-22,Memphis Grizzlies,Incoming,Cap Space,,,,,,,,3410000,+$3.41M CAP SPACE
+99,2017-09-22,Memphis Grizzlies,Incoming,Pick,,,,,,2nd Round Pick,,
+99,2017-09-22,Phoenix Suns,Outgoing,Cap Space,,,,,,,,-3410000,-$3.41M CAP SPACE
+99,2017-09-22,Phoenix Suns,Incoming,Player,Troy Daniels,26,SG,,,,,,"Salary: $3,408,520"
+100,2017-09-01,Chicago Bulls,Incoming,Player,Quincy Pondexter,29,SG,,,,,,
+100,2017-09-01,Chicago Bulls,Incoming,Cash,,,,,,,,,Cash
+100,2017-09-01,Chicago Bulls,Incoming,Pick,,,,2018,2,,,
+100,2017-09-01,New Orleans Pelicans,Incoming,Player,Ater Majok,,PF,,,,,,
+101,2017-08-22,Boston Celtics,Incoming,Player,Kyrie Irving,25,PG,,,,,,
+101,2017-08-22,Cleveland Cavaliers,Incoming,Player,Isaiah Thomas,28,PG,,,,,,
+101,2017-08-22,Cleveland Cavaliers,Incoming,Player,Jae Crowder,27,SF,,,,,,
+101,2017-08-22,Cleveland Cavaliers,Incoming,Player,Ante Zizic,20,C,,,,,,
+101,2017-08-22,Cleveland Cavaliers,Incoming,Pick,,,,2018,1,Collin Sexton,,
+101,2017-08-22,Cleveland Cavaliers,Incoming,Pick,,,,2020,2,,,
+102,2017-07-25,Portland Trail Blazers,Incoming,Cap Space,,,,,,,,12970000,+$12.97M CAP SPACE
+102,2017-07-25,Portland Trail Blazers,Incoming,Player,Andrew Nicholson,27,PF,,,,,,"Salary: $6,362,998"
+102,2017-07-25,Brooklyn Nets,Outgoing,Cap Space,,,,,,,,-12970000,-$12.97M CAP SPACE
+102,2017-07-25,Brooklyn Nets,Incoming,Player,Allen Crabbe,25,SG,,,,,,"Salary: $19,332,500"
+103,2017-07-14,Indiana Pacers,Incoming,Player,Cory Joseph,25,PG,,,,,,
+103,2017-07-14,Toronto Raptors,Incoming,Player,Emir Preldzic,29,SF,,,,,,
+104,2017-07-13,Toronto Raptors,Incoming,Cap Space,,,,,,,,11800000,+$11.80M CAP SPACE
+104,2017-07-13,Toronto Raptors,Incoming,Player,Justin Hamilton,27,C,,,,,,"Salary: $3,000,000"
+104,2017-07-13,Brooklyn Nets,Outgoing,Cap Space,,,,,,,,-11800000,-$11.80M CAP SPACE
+104,2017-07-13,Brooklyn Nets,Incoming,Player,DeMarre Carroll,30,SF,,,,,,"Salary: $14,800,000"
+104,2017-07-13,Brooklyn Nets,Incoming,Pick,,,,2018,1,,,
+104,2017-07-13,Brooklyn Nets,Incoming,Pick,,,,2018,2,,,
+105,2017-07-07,Boston Celtics,Incoming,Player,Marcus Morris,27,SF,,,,,,
+105,2017-07-07,Detroit Pistons,Incoming,Player,Avery Bradley,26,PG,,,,,,
+105,2017-07-07,Detroit Pistons,Incoming,Pick,,,,2019,2,,,
+106,2017-07-07,Dallas Mavericks,Incoming,Player,Josh McRoberts,30,PF,,,,,,
+106,2017-07-07,Dallas Mavericks,Incoming,Cash,,,,,,,,5100000,$5.1 Million
+106,2017-07-07,Dallas Mavericks,Incoming,Pick,,,,2023,2,,,
+106,2017-07-07,Miami Heat,Incoming,Player,A.J. Hammons,24,C,,,,,,
+107,2017-07-06,Indiana Pacers,Incoming,Player,Victor Oladipo,25,SG,,,,,,
+107,2017-07-06,Indiana Pacers,Incoming,Player,Domantas Sabonis,21,PF,,,,,,
+107,2017-07-06,Oklahoma City Thunder,Incoming,Player,Paul George,27,SG,,,,,,
+108,2017-07-04,Atlanta Hawks,Incoming,Player,Jamal Crawford,37,SG,,,,,,
+108,2017-07-04,Atlanta Hawks,Incoming,Player,Diamond Stone,20,C,,,,,,
+108,2017-07-04,Atlanta Hawks,Outgoing,Pick,,,,2019,2,,,
+108,2017-07-04,Atlanta Hawks,Outgoing,Pick,,,,2018,1,,,
+108,2017-07-04,Denver Nuggets,Incoming,Pick,,,,2019,2,,,
+108,2017-07-04,Denver Nuggets,Outgoing,Player,Danilo Gallinari,,,,,,
+108,2017-07-04,LA Clippers,Incoming,Player,Danilo Gallinari,28,PF,,,,,,
+108,2017-07-04,LA Clippers,Incoming,Pick,,,,2018,1,protected,,
+108,2017-07-04,LA Clippers,Outgoing,Player,Jamal Crawford,,,,,,
+108,2017-07-04,LA Clippers,Outgoing,Player,Diamond Stone,,,,,,
+109,2017-07-06,Milwaukee Bucks,Incoming,Player,Sterling Brown,22,SG,,,,,,
+109,2017-07-06,Philadelphia 76ers,Incoming,Cash,,,,,,,,1900000,$1.9 Million
+110,2017-07-06,LA Clippers,Incoming,Player,Jawun Evans,20,PG,,,,,,
+110,2017-07-06,Philadelphia 76ers,Incoming,Cash,,,,,,,,3200000,$3.2 Million

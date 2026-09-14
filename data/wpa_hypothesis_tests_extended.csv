@@ -1,0 +1,18 @@
+hipotese,escopo,teste,grupos,estatistica,p_valor,effect_size,effect_label,significativo
+H1a-binario,"2013-2025 (estendido, pooled)",Mann-Whitney U,Preenche Lacuna (n=250) vs Redundante (n=120),16149.0,0.23304807623057766,-0.0766,desprezível,False
+H1a-binario,2019-2021 (amostra original),Mann-Whitney U,Preenche Lacuna (n=60) vs Redundante (n=30),1143.5,0.037531880842948305,-0.27055555555555566,fraco,True
+H1b-continuo,"2013-2025 (estendido, pooled)",Spearman rho,n=367,-0.12417968080975203,0.017310561306254916,-0.12417968080975203,fraco,True
+H1b-continuo,2013-2018 (posição estática),Spearman rho,n=139,-0.08460443677868727,0.322056357579086,-0.08460443677868727,desprezível,False
+H1b-continuo,2019-2021 (ESPN nativo),Spearman rho,n=90,-0.3131479843438798,0.002653827233958924,-0.3131479843438798,moderado,True
+H1b-continuo,2022-2025 (híbrido),Spearman rho,n=138,0.024464168498102883,0.7757839882560968,0.024464168498102883,desprezível,False
+H1c-robustez,2013-2025 sem 2020 (binário),Mann-Whitney U,Preenche Lacuna (n=234) vs Redundante (n=111),14007.0,0.2387691265668589,-0.0785400785400785,desprezível,False
+H1c-robustez,2013-2025 sem 2020 (contínuo),Spearman rho,n=342,-0.13497802946955917,0.012472492511705366,-0.13497802946955917,fraco,True
+H1d-por_posicao,"posição=Guards (pooled, pseudo-replicado)",Mann-Whitney U,Preenche Lacuna (n=174) vs Redundante (n=126),9861.0,0.13779968574729135,0.10043787629994527,fraco,False
+H1d-por_posicao,"posição=Forwards (pooled, pseudo-replicado)",Mann-Whitney U,Preenche Lacuna (n=147) vs Redundante (n=118),8476.0,0.7513212813125828,0.022714170413928314,desprezível,False
+H1d-por_posicao,"posição=Centers (pooled, pseudo-replicado)",Mann-Whitney U,Preenche Lacuna (n=45) vs Redundante (n=53),1298.0,0.454122632274251,-0.0884696016771489,desprezível,False
+H2-omnibus,"2013-2025 (estendido, pooled)",Kruskal-Wallis H,"Contender (n=115), Intermediario (n=91), Tanking (n=164)",1.069829089142369,0.5857193409036513,0.0,desprezível,False
+H2-omnibus,2019-2021 (amostra original),Kruskal-Wallis H,"Contender (n=28), Intermediario (n=16), Tanking (n=46)",3.2065484861143188,0.2012365407748779,0.01386837340361286,pequeno,False
+H1-exata (one-sided),"2013-2025 (estendido, pooled)","Mann-Whitney U (one-sided, Lacuna>Redundante)",Preenche Lacuna (n=250) > Redundante (n=120),16149.0,0.11652403811528883,-0.0766,desprezível,False
+H2-exata (one-sample),Contender (2013-2025),Wilcoxon signed-rank (H0: mediana=0),n=115,2743.0,0.09850784894237197,0.0191960784313726,delta_WPA_time > 0 (melhora),False
+H2-exata (one-sample),Tanking (2013-2025),Wilcoxon signed-rank (H0: mediana=0),n=164,5168.0,0.00873900833565521,0.01775602869352865,delta_WPA_time <= 0 (neutro ou negativo),True
+H2-exata (Contender>Tanking),"2013-2025 (estendido, pooled)",Mann-Whitney U (one-sided),Contender (n=115) > Tanking (n=164),9303.0,0.5762069089173361,0.013467656415694584,desprezível,False

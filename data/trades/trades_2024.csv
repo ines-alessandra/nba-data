@@ -1,0 +1,484 @@
+trade_id,date,team,direction,asset_type,player_name,player_age,player_position,pick_year,pick_round,pick_condition,cash,cap_space,notes
+1,2025-06-29,Utah Jazz,Incoming,Player,Jusuf Nurkic,30,C,,,,,,,
+1,2025-06-29,Charlotte Hornets,Incoming,Player,Collin Sexton,26,PG,,,,,,,
+1,2025-06-29,Charlotte Hornets,Incoming,Pick,,,,2030,2,most favorable of LAC/UTA,,,
+2,2025-06-28,Oklahoma City Thunder,Incoming,Player,Colby Jones,23,SG,,,,,,,
+2,2025-06-28,Washington Wizards,Incoming,Player,Dillon Jones,23,SF,,,,,,,
+2,2025-06-28,Washington Wizards,Incoming,Pick,,,,,,2nd-round,,,
+3,2025-06-26,LA Clippers,Incoming,Player,Kobe Sanders,23,G,,,,,,,
+3,2025-06-26,New York Knicks,Incoming,Player,Mohamed Diawara,20,PF,,,,,,,
+3,2025-06-26,New York Knicks,Incoming,Player,Luka Mitrovic,32,SF,,,,,,,
+4,2025-07-06,Atlanta Hawks,Incoming,Cash,,,,,,,853000,,$85,3000
+4,2025-07-06,Atlanta Hawks,Incoming,Player,David Roddy,24,PF,,,,,,
+4,2025-07-06,Atlanta Hawks,Incoming,Pick,,,,2031,2,ATL right to swap,,,
+4,2025-07-06,Atlanta Hawks,Outgoing,Player,Clint Capela,,,,,,,,
+4,2025-07-06,Atlanta Hawks,Outgoing,Player,Daeqwon Plowden,,,,,,,,
+4,2025-07-06,Golden State Warriors,Incoming,Player,Alex Toohey,21,F,,,,,,,
+4,2025-07-06,Golden State Warriors,Incoming,Player,Jahmai Mashack,22,F,,,,,,,
+4,2025-07-06,Golden State Warriors,Outgoing,Player,Koby Brea,,,,,,,,
+4,2025-07-06,Houston Rockets,Incoming,Player,Clint Capela,31,C,,,,,,,
+4,2025-07-06,Houston Rockets,Incoming,Player,Kevin Durant,36,SF,,,,,,,
+4,2025-07-06,Houston Rockets,Outgoing,Player,David Roddy,,,,,,,,
+4,2025-07-06,Houston Rockets,Outgoing,Pick,,,,2031,2,,,,
+4,2025-07-06,Houston Rockets,Outgoing,Player,Jahmai Mashack,,,,,,,,
+4,2025-07-06,Houston Rockets,Outgoing,Player,Jalen Green,,,,,,,,
+4,2025-07-06,Houston Rockets,Outgoing,Player,Dillon Brooks,,,,,,,,
+4,2025-07-06,Houston Rockets,Outgoing,Player,Khaman Maluach,,,,,,,,
+4,2025-07-06,Houston Rockets,Outgoing,Pick,,,,2026,2,,,,
+4,2025-07-06,Houston Rockets,Outgoing,Pick,,,,2026,2,,,,
+4,2025-07-06,Houston Rockets,Outgoing,Pick,,,,2030,2,,,,
+4,2025-07-06,Los Angeles Lakers,Incoming,Player,Adou Thiero,21,SF,,,,,,,
+4,2025-07-06,Los Angeles Lakers,Outgoing,Player,Rocco Zikarsky,,,,,,,,
+4,2025-07-06,Minnesota Timberwolves,Incoming,Player,Rocco Zikarsky,18,C,,,,,,,
+4,2025-07-06,Minnesota Timberwolves,Incoming,Cash,,,,,,,,3250000,,
+4,2025-07-06,Minnesota Timberwolves,Incoming,Pick,,,,2026,2,least favorable of GSW/DEN,,,
+4,2025-07-06,Minnesota Timberwolves,Incoming,Pick,,,,2032,2,most favorable of PHX/HOU,,,
+4,2025-07-06,Minnesota Timberwolves,Outgoing,Player,Rasheer Fleming,,,,,,,,
+4,2025-07-06,Phoenix Suns,Incoming,Player,Koby Brea,22,G,,,,,,,
+4,2025-07-06,Phoenix Suns,Incoming,Player,Rasheer Fleming,20,PF,,,,,,,
+4,2025-07-06,Phoenix Suns,Incoming,Player,Daeqwon Plowden,26,G,,,,,,,
+4,2025-07-06,Phoenix Suns,Incoming,Player,Jalen Green,23,SG,,,,,,,
+4,2025-07-06,Phoenix Suns,Incoming,Player,Dillon Brooks,29,SF,,,,,,,
+4,2025-07-06,Phoenix Suns,Incoming,Player,Khaman Maluach,18,C,,,,,,,
+4,2025-07-06,Phoenix Suns,Incoming,Pick,,,,2026,2,second-most favorable of OKC/DAL/PHI,,,
+4,2025-07-06,Phoenix Suns,Outgoing,Player,Alex Toohey,,,,,,,,
+4,2025-07-06,Phoenix Suns,Outgoing,Player,Kevin Durant,,,,,,,,
+4,2025-07-06,Phoenix Suns,Outgoing,Pick,,,,2026,2,,,,
+4,2025-07-06,Phoenix Suns,Outgoing,Pick,,,,2032,2,,,,
+4,2025-07-06,Brooklyn Nets,Incoming,Pick,,,,2026,2,most favorable of BOS/IND or MIA or LAC,,,
+4,2025-07-06,Brooklyn Nets,Incoming,Pick,,,,2030,2,BOS pick,,,
+4,2025-07-06,Brooklyn Nets,Outgoing,Player,Adou Thiero,,,,,,,,
+5,2025-06-26,Boston Celtics,Incoming,Player,Amari Williams,23,C,,,,,,,
+5,2025-06-26,Boston Celtics,Incoming,Player,Max Shulga,23,G,,,,,,,
+5,2025-06-26,Boston Celtics,Incoming,Pick,,,,2026,2,,,,
+5,2025-06-26,Boston Celtics,Incoming,Pick,,,,2027,2,,,,
+5,2025-06-26,Orlando Magic,Incoming,Player,Noah Penda,20,SF,,,,,,,
+6,2025-06-25,Sacramento Kings,Incoming,Player,Nique Clifford,23,SF,,,,,,,
+6,2025-06-25,Oklahoma City Thunder,Incoming,Pick,,,,2027,1,SAS pick protected 1-16 (else two 2nds),,,
+7,2025-06-25,Atlanta Hawks,Incoming,Player,Asa Newell,19,PF,,,,,,,
+7,2025-06-25,Atlanta Hawks,Incoming,Pick,,,,2026,1,most favorable of NOP/MIL,,,
+7,2025-06-25,New Orleans Pelicans,Incoming,Player,Derik Queen,20,C,,,,,,,
+8,2025-06-25,Utah Jazz,Incoming,Player,Walter Clayton Jr.,22,PG,,,,,,,
+8,2025-06-25,Washington Wizards,Incoming,Player,Will Riley,19,SF,,,,,,,
+8,2025-06-25,Washington Wizards,Incoming,Pick,,,,2025,2,2nd-round,,,
+8,2025-06-25,Washington Wizards,Incoming,Pick,,,,2031,2,2nd-round,,,
+8,2025-06-25,Washington Wizards,Incoming,Pick,,,,2032,2,2nd-round,,,
+9,2025-06-25,Memphis Grizzlies,Incoming,Player,Cedric Coward,21,SG,,,,,,,
+9,2025-06-25,Portland Trail Blazers,Incoming,Pick,,,,,,2nd Round,,,
+9,2025-06-25,Portland Trail Blazers,Incoming,Pick,,,,,,2nd Round,,,
+9,2025-06-25,Portland Trail Blazers,Incoming,Player,Hansen Yang,19,C,,,,,,,
+9,2025-06-25,Portland Trail Blazers,Incoming,Pick,,,,2028,1,ORL pick,,,
+10,2025-06-17,Indiana Pacers,Incoming,Pick,,,,2026,1,IND pick,,,
+10,2025-06-17,New Orleans Pelicans,Incoming,Player,Mojave King,23,SG,,,,,,,
+10,2025-06-17,New Orleans Pelicans,Incoming,Pick,,,,2025,1,,,,
+11,2025-06-15,Memphis Grizzlies,Incoming,Player,Kentavious Caldwell-Pope,32,SG,,,,,,,
+11,2025-06-15,Memphis Grizzlies,Incoming,Player,Cole Anthony,25,PG,,,,,,,
+11,2025-06-15,Memphis Grizzlies,Incoming,Pick,,,,2025,1,,,,
+11,2025-06-15,Memphis Grizzlies,Incoming,Pick,,,,2026,1,PHX pick,,,
+11,2025-06-15,Memphis Grizzlies,Incoming,Pick,,,,2028,1,ORL pick,,,
+11,2025-06-15,Memphis Grizzlies,Incoming,Pick,,,,2029,1,MEM right to swap,,,
+11,2025-06-15,Memphis Grizzlies,Incoming,Pick,,,,2030,1,ORL pick,,,
+11,2025-06-15,Orlando Magic,Incoming,Player,Desmond Bane,26,SG,,,,,,,
+12,2025-02-06,Atlanta Hawks,Incoming,Cap Space,,,,,,,,3500000,+$3.50M CAP SPACE
+12,2025-02-06,Atlanta Hawks,Incoming,Player,Alpha Kaba,28,PF,,,,,,
+12,2025-02-06,Atlanta Hawks,Incoming,Pick,,,,2028,2,HOU pick,,,
+12,2025-02-06,Houston Rockets,Outgoing,Cap Space,,,,,,,,-3500000,-$3.50M CAP SPACE
+12,2025-02-06,Houston Rockets,Incoming,Player,Cody Zeller,32,C,,,3500000,,"Incoming ($3,500,000)"
+13,2025-02-06,Milwaukee Bucks,Incoming,Cap Space,,,,,,,,11180000,+$11.18M CAP SPACE
+13,2025-02-06,Milwaukee Bucks,Incoming,Player,Kyle Kuzma,29,PF,,,23522727,,"Incoming ($23,522,727)"
+13,2025-02-06,Milwaukee Bucks,Incoming,Player,Jericho Sims,26,C,,,2092344,,"Incoming ($2,092,344)"
+13,2025-02-06,Milwaukee Bucks,Incoming,Pick,,,,2025,2,2nd most favorable of DET/PHX/GSW,,,
+13,2025-02-06,Milwaukee Bucks,Incoming,Pick,,,,2025,2,protected,,,
+13,2025-02-06,Milwaukee Bucks,Outgoing,Player,Delon Wright,,,,36798721,,"Outgoing: $36,798,721"
+13,2025-02-06,Milwaukee Bucks,Outgoing,Player,Hugo Besson,,,,,,,
+13,2025-02-06,Milwaukee Bucks,Outgoing,Player,Khris Middleton,,,,,,,
+13,2025-02-06,Milwaukee Bucks,Outgoing,Player,AJ Johnson,,,,,,,
+13,2025-02-06,Milwaukee Bucks,Outgoing,Pick,,,,2028,1,,,,
+13,2025-02-06,New York Knicks,Outgoing,Cap Space,,,,,,,,-910000,-$0.91M CAP SPACE
+13,2025-02-06,New York Knicks,Incoming,Player,Delon Wright,32,PG,,,3003427,,"Incoming ($3,003,427)"
+13,2025-02-06,New York Knicks,Incoming,Cash,,,,,,2000000,,$2,000,000
+13,2025-02-06,New York Knicks,Incoming,Player,Hugo Besson,23,PG,,,,,,
+13,2025-02-06,New York Knicks,Outgoing,Player,Jericho Sims,,,,,,,
+13,2025-02-06,New York Knicks,Outgoing,Player,Mathias Lessort,,,,,,,
+13,2025-02-06,San Antonio Spurs,Outgoing,Cap Space,,,,,,,,-2450000,-$2.45M CAP SPACE
+13,2025-02-06,San Antonio Spurs,Incoming,Player,Patrick Baldwin Jr.,22,SF,,,2448840,,"Incoming ($2,448,840)"
+13,2025-02-06,San Antonio Spurs,Incoming,Cash,,,,,,4130000,,$4,130,000
+13,2025-02-06,San Antonio Spurs,Outgoing,Pick,,,,2025,2,,,,
+13,2025-02-06,Washington Wizards,Outgoing,Cap Space,,,,,,,,-7820000,-$7.82M CAP SPACE
+13,2025-02-06,Washington Wizards,Incoming,Player,Khris Middleton,33,SF,,,31000000,,"Incoming ($31,000,000)"
+13,2025-02-06,Washington Wizards,Incoming,Player,AJ Johnson,20,PG,,,2795294,,"Incoming ($2,795,294)"
+13,2025-02-06,Washington Wizards,Incoming,Player,Mathias Lessort,29,SF,,,1000000,,$1,000,000
+13,2025-02-06,Washington Wizards,Incoming,Pick,,,,2028,1,least favorable WAS right to swap between MIL and POR,,,
+13,2025-02-06,Washington Wizards,Outgoing,Player,Kyle Kuzma,,,,25971567,,"Outgoing: $25,971,567"
+13,2025-02-06,Washington Wizards,Outgoing,Pick,,,,2025,2,,,,
+13,2025-02-06,Washington Wizards,Outgoing,Player,Patrick Baldwin Jr.,,,,,,,
+14,2025-02-06,Detroit Pistons,Outgoing,Cap Space,,,,,,,,-7250000,-$7.25M CAP SPACE
+14,2025-02-06,Detroit Pistons,Incoming,Player,Dennis Schröder,31,PG,,,13025250,,"Incoming ($13,025,250)"
+14,2025-02-06,Detroit Pistons,Incoming,Player,Lindy Waters III,27,SF,,,2196970,,"Incoming ($2,196,970)"
+14,2025-02-06,Detroit Pistons,Incoming,Pick,,,,2031,2,,,,
+14,2025-02-06,Detroit Pistons,Outgoing,Player,Kenyon Martin Jr.,,,,,7975000,,"Outgoing: $7,975,000"
+14,2025-02-06,Detroit Pistons,Outgoing,Pick,,,,2028,2,,,,
+14,2025-02-06,Golden State Warriors,Incoming,Cap Space,,,,,,,,5730000,+$5.73M CAP SPACE
+14,2025-02-06,Golden State Warriors,Incoming,Player,Jimmy Butler,35,SF,,,48798677,,"Incoming ($48,798,677)"
+14,2025-02-06,Golden State Warriors,Outgoing,Player,Dennis Schröder,,,,54524256,,"Outgoing: $54,524,256"
+14,2025-02-06,Golden State Warriors,Outgoing,Player,Lindy Waters III,,,,,,,
+14,2025-02-06,Golden State Warriors,Outgoing,Pick,,,,2031,2,,,,
+14,2025-02-06,Golden State Warriors,Outgoing,Player,Andrew Wiggins,,,,,,,
+14,2025-02-06,Golden State Warriors,Outgoing,Player,Kyle Anderson,,,,,,,
+14,2025-02-06,Golden State Warriors,Outgoing,Pick,,,,2025,1,,,,
+14,2025-02-06,Miami Heat,Incoming,Cap Space,,,,,,,,6100000,+$6.10M CAP SPACE
+14,2025-02-06,Miami Heat,Incoming,Player,Andrew Wiggins,29,SF,,,26276786,,"Incoming ($26,276,786)"
+14,2025-02-06,Miami Heat,Incoming,Player,Kyle Anderson,31,PF,,,13025250,,"Incoming ($13,025,250)"
+14,2025-02-06,Miami Heat,Incoming,Player,Davion Mitchell,26,PG,,,6451077,,"Incoming ($6,451,077)"
+14,2025-02-06,Miami Heat,Incoming,Pick,,,,2025,1,protected top-10 (else 2026 top-10, else 2027 unprotected),,,
+14,2025-02-06,Miami Heat,Outgoing,Player,Jimmy Butler,,,,51849830,,"Outgoing: $51,849,830"
+14,2025-02-06,Miami Heat,Outgoing,Pick,,,,2026,2,,,,
+14,2025-02-06,Miami Heat,Outgoing,Player,Josh Richardson,,,,,,,
+14,2025-02-06,Miami Heat,Outgoing,Pick,,,,2031,2,,,,
+14,2025-02-06,Toronto Raptors,Outgoing,Cap Space,,,,,,,,-5090000,-$5.09M CAP SPACE
+14,2025-02-06,Toronto Raptors,Incoming,Player,P.J. Tucker,39,PF,,,11539000,,"Incoming ($11,539,000)"
+14,2025-02-06,Toronto Raptors,Incoming,Cash,,,,,,,,"Cash"
+14,2025-02-06,Toronto Raptors,Incoming,Pick,,,,2026,2,,,,
+14,2025-02-06,Toronto Raptors,Outgoing,Player,Davion Mitchell,,,,6451077,,"Outgoing: $6,451,077"
+14,2025-02-06,Utah Jazz,Incoming,Cap Space,,,,,,,,510000,+$0.51M CAP SPACE
+14,2025-02-06,Utah Jazz,Incoming,Player,Kenyon Martin Jr.,24,SF,,,7975000,,"Incoming ($7,975,000)"
+14,2025-02-06,Utah Jazz,Incoming,Player,Josh Richardson,31,SG,,,3051153,,"Incoming ($3,051,153)"
+14,2025-02-06,Utah Jazz,Incoming,Cash,,,,,,,,"Cash"
+14,2025-02-06,Utah Jazz,Incoming,Pick,,,,2028,2,,,,
+14,2025-02-06,Utah Jazz,Incoming,Pick,,,,2031,2,,,,
+14,2025-02-06,Utah Jazz,Outgoing,Player,P.J. Tucker,,,,11539000,,"Outgoing: $11,539,000"
+15,2025-02-06,Detroit Pistons,Outgoing,Cap Space,,,,,,,,-7980000,-$7.98M CAP SPACE
+15,2025-02-06,Detroit Pistons,Incoming,Player,Kenyon Martin Jr.,24,SF,,,7975000,,"Incoming ($7,975,000)"
+15,2025-02-06,Detroit Pistons,Incoming,Pick,,,,2027,2,MIL pick,,,
+15,2025-02-06,Detroit Pistons,Incoming,Pick,,,,2031,2,DAL pick,,,
+15,2025-02-06,Philadelphia 76ers,Incoming,Cap Space,,,,,,,,7980000,+$7.98M CAP SPACE
+15,2025-02-06,Philadelphia 76ers,Incoming,Cash,,,,,,,,"Cash"
+16,2025-02-06,Memphis Grizzlies,Incoming,Cap Space,,,,,,,,5520000,+$5.52M CAP SPACE
+16,2025-02-06,Memphis Grizzlies,Incoming,Player,Marvin Bagley III,25,PF,,,12500000,,"Incoming ($12,500,000)"
+16,2025-02-06,Memphis Grizzlies,Incoming,Player,Johnny Davis,22,SG,,,5291160,,"Incoming ($5,291,160)"
+16,2025-02-06,Memphis Grizzlies,Incoming,Pick,,,,2025,2,,,,
+16,2025-02-06,Memphis Grizzlies,Incoming,Pick,,,,2028,2,SAC pick,,,
+16,2025-02-06,Memphis Grizzlies,Outgoing,Player,Jake LaRavia,,,,23312965,,"Outgoing: $23,312,965"
+16,2025-02-06,Memphis Grizzlies,Outgoing,Player,Marcus Smart,,,,,,,
+16,2025-02-06,Memphis Grizzlies,Outgoing,Pick,,,,2025,1,,,,
+16,2025-02-06,Sacramento Kings,Incoming,Cap Space,,,,,,,,2070000,+$2.07M CAP SPACE
+16,2025-02-06,Sacramento Kings,Incoming,Player,Jake LaRavia,23,PF,,,3352680,,"Incoming ($3,352,680)"
+16,2025-02-06,Sacramento Kings,Outgoing,Player,Alex Len,,,,5424464,,"Outgoing: $5,424,464"
+16,2025-02-06,Sacramento Kings,Outgoing,Pick,,,,2028,2,,,,
+16,2025-02-06,Sacramento Kings,Outgoing,Player,Colby Jones,,,,,,,
+16,2025-02-06,Washington Wizards,Outgoing,Cap Space,,,,,,,,-7590000,-$7.59M CAP SPACE
+16,2025-02-06,Washington Wizards,Incoming,Player,Marcus Smart,30,PG,,,19960285,,"Incoming ($19,960,285)"
+16,2025-02-06,Washington Wizards,Incoming,Player,Alex Len,31,C,,,3303771,,"Incoming ($3,303,771)"
+16,2025-02-06,Washington Wizards,Incoming,Player,Colby Jones,22,SG,,,2120693,,"Incoming ($2,120,693)"
+16,2025-02-06,Washington Wizards,Incoming,Pick,,,,2025,1,,,,
+16,2025-02-06,Washington Wizards,Outgoing,Player,Marvin Bagley III,,,,17791160,,"Outgoing: $17,791,160"
+16,2025-02-06,Washington Wizards,Outgoing,Player,Johnny Davis,,,,,,,
+16,2025-02-06,Washington Wizards,Outgoing,Pick,,,,2025,2,,,,
+17,2025-02-06,Indiana Pacers,Incoming,Cap Space,,,,,,,,2240000,+$2.24M CAP SPACE
+17,2025-02-06,Indiana Pacers,Incoming,Cash,,,,,,,,"Cash"
+17,2025-02-06,Toronto Raptors,Outgoing,Cap Space,,,,,,,,-2240000,-$2.24M CAP SPACE
+17,2025-02-06,Toronto Raptors,Incoming,Player,James Wiseman,23,C,,,2237691,,"Incoming ($2,237,691)"
+18,2025-02-06,LA Clippers,Outgoing,Cap Space,,,,,,,,-500000,-$0.50M CAP SPACE
+18,2025-02-06,LA Clippers,Incoming,Player,MarJon Beauchamp,24,SG,,,2733720,,"Incoming ($2,733,720)"
+18,2025-02-06,Milwaukee Bucks,Incoming,Cap Space,,,,,,,,500000,+$0.50M CAP SPACE
+18,2025-02-06,Milwaukee Bucks,Incoming,Player,Kevin Porter Jr.,24,PG,,,2237691,,"Incoming ($2,237,691)"
+19,2025-02-06,Atlanta Hawks,Incoming,Cap Space,,,,,,,,1680000,+$1.68M CAP SPACE
+19,2025-02-06,Atlanta Hawks,Incoming,Player,Terance Mann,28,SG,,,11423077,,"Incoming ($11,423,077)"
+19,2025-02-06,Atlanta Hawks,Incoming,Player,Nah'Shon Hyland,24,PG,,,4158440,,"Incoming ($4,158,440)"
+19,2025-02-06,LA Clippers,Outgoing,Cap Space,,,,,,,,-1680000,-$1.68M CAP SPACE
+19,2025-02-06,LA Clippers,Incoming,Player,Bogdan Bogdanovic,32,SG,,,17260000,,"Incoming ($17,260,000)"
+19,2025-02-06,LA Clippers,Incoming,Pick,,,,2025,2,MIN pick,,,
+19,2025-02-06,LA Clippers,Incoming,Pick,,,,2026,2,MEM pick protected,,,
+19,2025-02-06,LA Clippers,Incoming,Pick,,,,2027,2,LAC pick,,,
+20,2025-02-06,Atlanta Hawks,Outgoing,Cap Space,,,,,,,,-3420000,-$3.42M CAP SPACE
+20,2025-02-06,Atlanta Hawks,Incoming,Player,Caris LeVert,30,SG,,,16615384,,"Incoming ($16,615,384)"
+20,2025-02-06,Atlanta Hawks,Incoming,Player,Georges Niang,31,PF,,,8500000,,"Incoming ($8,500,000)"
+20,2025-02-06,Atlanta Hawks,Incoming,Pick,,,,2026,1,ATL right to swap with least favorable of CLE/UTA,,,
+20,2025-02-06,Atlanta Hawks,Incoming,Pick,,,,2027,2,,,,
+20,2025-02-06,Atlanta Hawks,Incoming,Pick,,,,2028,1,ATL right to swap with least favorable of CLE/UTA,,,
+20,2025-02-06,Atlanta Hawks,Incoming,Pick,,,,2029,2,,,,
+20,2025-02-06,Atlanta Hawks,Incoming,Pick,,,,2031,2,,,,
+20,2025-02-06,Cleveland Cavaliers,Incoming,Cap Space,,,,,,,,3420000,+$3.42M CAP SPACE
+20,2025-02-06,Cleveland Cavaliers,Incoming,Player,De'Andre Hunter,27,SF,,,21696429,,"Incoming ($21,696,429)"
+21,2025-02-06,Phoenix Suns,Incoming,Cap Space,,,,,,,,2280000,+$2.28M CAP SPACE
+21,2025-02-06,Phoenix Suns,Incoming,Player,Cody Martin,29,SF,,,8120000,,"Incoming ($8,120,000)"
+21,2025-02-06,Phoenix Suns,Incoming,Player,Vasilije Micic,31,PG,,,7723000,,"Incoming ($7,723,000)"
+21,2025-02-06,Phoenix Suns,Incoming,Pick,,,,2026,2,least favorable of GSW/DEN,,,
+21,2025-02-06,Charlotte Hornets,Outgoing,Cap Space,,,,,,,,-2280000,-$2.28M CAP SPACE
+21,2025-02-06,Charlotte Hornets,Incoming,Player,Jusuf Nurkic,30,C,,,18125000,,"Incoming ($18,125,000)"
+21,2025-02-06,Charlotte Hornets,Incoming,Pick,,,,2026,1,least favorable of PHX/WAS(1-8)/ORL/MEM,,,
+22,2025-02-06,Philadelphia 76ers,Incoming,Cap Space,,,,,,,,3300000,+$3.30M CAP SPACE
+22,2025-02-06,Philadelphia 76ers,Incoming,Player,Jared Butler,24,PG,,,,,,
+22,2025-02-06,Philadelphia 76ers,Incoming,Pick,,,,2027,2,most favorable of GSW/PHX,,,
+22,2025-02-06,Philadelphia 76ers,Incoming,Pick,,,,2028,2,GSW pick,,,
+22,2025-02-06,Philadelphia 76ers,Incoming,Pick,,,,2030,2,most favorable of PHX/POR,,,
+22,2025-02-06,Philadelphia 76ers,Incoming,Pick,,,,2030,2,WAS pick,,,
+22,2025-02-06,Washington Wizards,Outgoing,Cap Space,,,,,,,,-3300000,-$3.30M CAP SPACE
+22,2025-02-06,Washington Wizards,Incoming,Player,Reggie Jackson,34,PG,,,3303771,,"Incoming ($3,303,771)"
+22,2025-02-06,Washington Wizards,Incoming,Pick,,,,2026,1,least favorable of OKC/HOU/LAC,,,
+23,2025-02-06,Los Angeles Lakers,Incoming,Cap Space,,,,,,,,2190000,+$2.19M CAP SPACE
+23,2025-02-06,Los Angeles Lakers,Incoming,Player,Mark Williams,23,C,,,4094280,,"Incoming ($4,094,280)"
+23,2025-02-06,Charlotte Hornets,Outgoing,Cap Space,,,,,,,,-2190000,-$2.19M CAP SPACE
+23,2025-02-06,Charlotte Hornets,Incoming,Player,Dalton Knecht,23,SF,,,3819120,,"Incoming ($3,819,120)"
+23,2025-02-06,Charlotte Hornets,Incoming,Player,Cam Reddish,25,SF,,,2463946,,"Incoming ($2,463,946)"
+23,2025-02-06,Charlotte Hornets,Incoming,Pick,,,,2030,1,CHA right to swap with LAL,,,TRADE RESCINDED
+23,2025-02-06,Charlotte Hornets,Incoming,Pick,,,,2031,1,,,,TRADE RESCINDED
+24,2025-02-06,Toronto Raptors,Outgoing,Cap Space,,,,,,,,-210000,-$0.21M CAP SPACE
+24,2025-02-06,Toronto Raptors,Incoming,Player,Brandon Ingram,27,SF,,,36016200,,"Incoming ($36,016,200)"
+24,2025-02-06,New Orleans Pelicans,Incoming,Cap Space,,,,,,,,210000,+$0.21M CAP SPACE
+24,2025-02-06,New Orleans Pelicans,Incoming,Player,Bruce Brown Jr.,28,SG,,,23000000,,"Incoming ($23,000,000)"
+24,2025-02-06,New Orleans Pelicans,Incoming,Player,Kelly Olynyk,33,PF,,,12804878,,"Incoming ($12,804,878)"
+24,2025-02-06,New Orleans Pelicans,Incoming,Pick,,,,2026,1,IND pick,,,
+24,2025-02-06,New Orleans Pelicans,Incoming,Pick,,,,2031,2,TOR pick,,,
+25,2025-02-05,Sacramento Kings,Outgoing,Cap Space,,,,,,,,-8270000,-$8.27M CAP SPACE
+25,2025-02-05,Sacramento Kings,Incoming,Player,Jonas Valanciunas,32,C,,,9900000,,"Incoming ($9,900,000)"
+25,2025-02-05,Washington Wizards,Incoming,Cap Space,,,,,,,,8270000,+$8.27M CAP SPACE
+25,2025-02-05,Washington Wizards,Incoming,Player,Sidy Cissoko,20,SG,,,1627899,,"Incoming ($1,627,899)"
+25,2025-02-05,Washington Wizards,Incoming,Pick,,,,2028,2,DEN pick,,,
+25,2025-02-05,Washington Wizards,Incoming,Pick,,,,2029,2,SAC pick,,,
+26,2025-02-05,Oklahoma City Thunder,Outgoing,Cap Space,,,,,,,,-2090000,-$2.09M CAP SPACE
+26,2025-02-05,Oklahoma City Thunder,Incoming,Player,Daniel Theis,32,C,,,2087519,,"Incoming ($2,087,519)"
+26,2025-02-05,Oklahoma City Thunder,Incoming,Pick,,,,2031,2,least favorable of NOP/ORL,,,
+26,2025-02-05,New Orleans Pelicans,Incoming,Cap Space,,,,,,,,2090000,+$2.09M CAP SPACE
+26,2025-02-05,New Orleans Pelicans,Incoming,Cash,,,,,,,,"Cash"
+27,2025-02-05,Boston Celtics,Incoming,Cap Space,,,,,,,,4020000,+$4.02M CAP SPACE
+27,2025-02-05,Boston Celtics,Incoming,Pick,,,,2027,2,least favorable of POR/NOP,,,
+27,2025-02-05,Houston Rockets,Outgoing,Cap Space,,,,,,,,-4020000,-$4.02M CAP SPACE
+27,2025-02-05,Houston Rockets,Incoming,Player,Jaden Springer,22,PG,,,4018363,,"Incoming ($4,018,363)"
+27,2025-02-05,Houston Rockets,Incoming,Pick,,,,2030,2,,,,
+28,2025-02-04,Dallas Mavericks,Outgoing,Cap Space,,,,,,,,-3850000,-$3.85M CAP SPACE
+28,2025-02-04,Dallas Mavericks,Incoming,Player,Caleb Martin,29,SF,,,8149001,,"Incoming ($8,149,001)"
+28,2025-02-04,Dallas Mavericks,Incoming,Pick,,,,2030,2,,,,
+28,2025-02-04,Philadelphia 76ers,Incoming,Cap Space,,,,,,,,3850000,+$3.85M CAP SPACE
+28,2025-02-04,Philadelphia 76ers,Incoming,Player,Quentin Grimes,24,SG,,,4296682,,"Incoming ($4,296,682)"
+28,2025-02-04,Philadelphia 76ers,Incoming,Pick,,,,2025,2,PHI pick,,,
+29,2025-02-03,Oklahoma City Thunder,Incoming,Pick,,,,2029,2,PHX pick,,,
+29,2025-02-03,Charlotte Hornets,Incoming,Pick,,,,2030,2,DEN pick,,,
+30,2025-02-03,Chicago Bulls,Incoming,Cap Space,,,,,,,,1860000,+$1.86M CAP SPACE
+30,2025-02-03,Chicago Bulls,Incoming,Player,Kevin Huerter,26,SG,,,16830357,,"Incoming ($16,830,357)"
+30,2025-02-03,Chicago Bulls,Incoming,Player,Zach Collins,27,C,,,16741200,,"Incoming ($16,741,200)"
+30,2025-02-03,Chicago Bulls,Incoming,Player,Tre Jones,25,PG,,,9104167,,"Incoming ($9,104,167)"
+30,2025-02-03,Chicago Bulls,Incoming,Pick,,,,2025,2,CHI pick,,,
+30,2025-02-03,Chicago Bulls,Outgoing,Player,Zach LaVine,,,,44531940,,"Outgoing: $44,531,940"
+30,2025-02-03,Chicago Bulls,Outgoing,Pick,,,,2025,2,,,,
+30,2025-02-03,Sacramento Kings,Incoming,Cap Space,,,,,,,,7340000,+$7.34M CAP SPACE
+30,2025-02-03,Sacramento Kings,Incoming,Player,Zach LaVine,29,SG,,,44531940,,"Incoming ($44,531,940)"
+30,2025-02-03,Sacramento Kings,Incoming,Player,Sidy Cissoko,20,SG,,,1891857,,"Incoming ($1,891,857)"
+30,2025-02-03,Sacramento Kings,Incoming,Pick,,,,2025,1,CHA pick protected,,,
+30,2025-02-03,Sacramento Kings,Incoming,Pick,,,,2025,2,CHI pick,,,
+30,2025-02-03,Sacramento Kings,Incoming,Pick,,,,2027,1,SAS pick,,,
+30,2025-02-03,Sacramento Kings,Incoming,Pick,,,,2028,2,DEN pick protected,,,
+30,2025-02-03,Sacramento Kings,Incoming,Pick,,,,2028,2,CHI pick,,,
+30,2025-02-03,Sacramento Kings,Incoming,Pick,,,,2031,1,MIN pick,,,
+30,2025-02-03,Sacramento Kings,Outgoing,Player,Kevin Huerter,,,,53766216,,"Outgoing: $53,766,216"
+30,2025-02-03,Sacramento Kings,Outgoing,Player,De'Aaron Fox,,,,,,,
+30,2025-02-03,Sacramento Kings,Outgoing,Player,Jordan McLaughlin,,,,,,,
+30,2025-02-03,San Antonio Spurs,Outgoing,Cap Space,,,,,,,,-9200000,-$9.20M CAP SPACE
+30,2025-02-03,San Antonio Spurs,Incoming,Player,De'Aaron Fox,27,PG,,,34848340,,"Incoming ($34,848,340)"
+30,2025-02-03,San Antonio Spurs,Incoming,Player,Jordan McLaughlin,28,PG,,,2087519,,"Incoming ($2,087,519)"
+30,2025-02-03,San Antonio Spurs,Outgoing,Player,Zach Collins,,,,27737224,,"Outgoing: $27,737,224"
+30,2025-02-03,San Antonio Spurs,Outgoing,Player,Tre Jones,,,,,,,
+30,2025-02-03,San Antonio Spurs,Outgoing,Pick,,,,2025,2,,,,
+30,2025-02-03,San Antonio Spurs,Outgoing,Player,Sidy Cissoko,,,,,,,
+30,2025-02-03,San Antonio Spurs,Outgoing,Pick,,,,2025,1,,,,
+30,2025-02-03,San Antonio Spurs,Outgoing,Pick,,,,2027,1,,,,
+30,2025-02-03,San Antonio Spurs,Outgoing,Pick,,,,2028,2,,,,
+30,2025-02-03,San Antonio Spurs,Outgoing,Pick,,,,2028,2,,,,
+30,2025-02-03,San Antonio Spurs,Outgoing,Pick,,,,2031,1,,,,
+31,2025-02-02,Dallas Mavericks,Incoming,Cap Space,,,,,,,,5760000,+$5.76M CAP SPACE
+31,2025-02-02,Dallas Mavericks,Incoming,Player,Anthony Davis,31,C,,,43219440,,"Incoming ($43,219,440)"
+31,2025-02-02,Dallas Mavericks,Incoming,Player,Max Christie,21,SG,,,7142857,,"Incoming ($7,142,857)"
+31,2025-02-02,Dallas Mavericks,Incoming,Cash,,,,,,55000,,$55,000
+31,2025-02-02,Dallas Mavericks,Incoming,Pick,,,,2029,1,,,,
+31,2025-02-02,Dallas Mavericks,Outgoing,Player,Luka Doncic,,,,56119459,,"Outgoing: $56,119,459"
+31,2025-02-02,Dallas Mavericks,Outgoing,Player,Maxi Kleber,,,,,,,
+31,2025-02-02,Dallas Mavericks,Outgoing,Player,Markieff Morris,,,,,,,
+31,2025-02-02,Dallas Mavericks,Outgoing,Pick,,,,2025,2,,,,
+31,2025-02-02,Los Angeles Lakers,Outgoing,Cap Space,,,,,,,,-1880000,-$1.88M CAP SPACE
+31,2025-02-02,Los Angeles Lakers,Incoming,Player,Luka Doncic,25,PG,,,43031940,,"Incoming ($43,031,940)"
+31,2025-02-02,Los Angeles Lakers,Incoming,Player,Maxi Kleber,33,PF,,,11000000,,"Incoming ($11,000,000)"
+31,2025-02-02,Los Angeles Lakers,Incoming,Player,Markieff Morris,35,PF,,,2087519,,"Incoming ($2,087,519)"
+31,2025-02-02,Los Angeles Lakers,Incoming,Cash,,,,,,55000,,$55,000
+31,2025-02-02,Los Angeles Lakers,Outgoing,Player,Anthony Davis,,,,54242137,,"Outgoing: $54,242,137"
+31,2025-02-02,Los Angeles Lakers,Outgoing,Player,Max Christie,,,,,,,
+31,2025-02-02,Los Angeles Lakers,Outgoing,Pick,,,,2029,1,,,,
+31,2025-02-02,Los Angeles Lakers,Outgoing,Player,Jalen Hood-Schifino,,,,,,,
+31,2025-02-02,Los Angeles Lakers,Outgoing,Pick,,,,2025,2,,,,
+31,2025-02-02,Utah Jazz,Outgoing,Cap Space,,,,,,,,-3880000,-$3.88M CAP SPACE
+31,2025-02-02,Utah Jazz,Incoming,Player,Jalen Hood-Schifino,21,PG,,,3879840,,"Incoming ($3,879,840)"
+31,2025-02-02,Utah Jazz,Incoming,Pick,,,,2025,2,LAC pick,,,
+31,2025-02-02,Utah Jazz,Incoming,Pick,,,,2025,2,DAL pick,,,
+32,2025-02-01,LA Clippers,Incoming,Cap Space,,,,,,,,6540000,+$6.54M CAP SPACE
+32,2025-02-01,LA Clippers,Incoming,Player,Drew Eubanks,28,C,,,5000000,,"Incoming ($5,000,000)"
+32,2025-02-01,LA Clippers,Incoming,Player,Patty Mills,36,PG,,,2087519,,"Incoming ($2,087,519)"
+32,2025-02-01,Utah Jazz,Outgoing,Cap Space,,,,,,,,-6540000,-$6.54M CAP SPACE
+32,2025-02-01,Utah Jazz,Incoming,Player,P.J. Tucker,39,PF,,,11539000,,"Incoming ($11,539,000)"
+32,2025-02-01,Utah Jazz,Incoming,Player,Mohamed Bamba,26,C,,,2087519,,"Incoming ($2,087,519)"
+32,2025-02-01,Utah Jazz,Incoming,Cash,,,,,,,,"Cash"
+32,2025-02-01,Utah Jazz,Incoming,Pick,,,,2030,2,LAC pick,,,
+33,2025-01-21,Phoenix Suns,Incoming,Pick,,,,2025,1,least favorable of CLE/MIN,,,
+33,2025-01-21,Phoenix Suns,Incoming,Pick,,,,2027,1,least favorable of CLE/MIN/UTA,,,
+33,2025-01-21,Phoenix Suns,Incoming,Pick,,,,2029,1,least favorable of CLE/MIN/UTA,,,
+33,2025-01-21,Utah Jazz,Incoming,Pick,,,,2031,1,,,,
+34,2025-01-15,Phoenix Suns,Incoming,Cap Space,,,,,,,,3250000,+$3.25M CAP SPACE
+34,2025-01-15,Phoenix Suns,Incoming,Player,Nick Richards,27,C,,,5000000,,"Incoming ($5,000,000)"
+34,2025-01-15,Phoenix Suns,Incoming,Pick,,,,2025,2,least favorable of DEN/PHI,,,
+34,2025-01-15,Charlotte Hornets,Outgoing,Cap Space,,,,,,,,-3250000,-$3.25M CAP SPACE
+34,2025-01-15,Charlotte Hornets,Incoming,Player,Josh Okogie,26,SG,,,8250000,,"Incoming ($8,250,000)"
+34,2025-01-15,Charlotte Hornets,Incoming,Pick,,,,2026,2,DEN pick,,,
+34,2025-01-15,Charlotte Hornets,Incoming,Pick,,,,2031,2,DEN pick,,,
+34,2025-01-15,Charlotte Hornets,Incoming,Pick,,,,2031,2,PHX pick,,,
+35,2024-12-29,Los Angeles Lakers,Incoming,Cap Space,,,,,,,,2780000,+$2.78M CAP SPACE
+35,2024-12-29,Los Angeles Lakers,Incoming,Player,Dorian Finney-Smith,31,PF,,,14924167,,"Incoming ($14,924,167)"
+35,2024-12-29,Los Angeles Lakers,Incoming,Player,Shake Milton,28,SG,,,2875000,,"Incoming ($2,875,000)"
+35,2024-12-29,Brooklyn Nets,Outgoing,Cap Space,,,,,,,,-2780000,-$2.78M CAP SPACE
+35,2024-12-29,Brooklyn Nets,Incoming,Player,D'Angelo Russell,28,PG,,,18692307,,"Incoming ($18,692,307)"
+35,2024-12-29,Brooklyn Nets,Incoming,Player,Maxwell Lewis,22,SF,,,1891857,,"Incoming ($1,891,857)"
+35,2024-12-29,Brooklyn Nets,Incoming,Pick,,,,2027,2,LAL pick,,,
+35,2024-12-29,Brooklyn Nets,Incoming,Pick,,,,2030,2,LAL pick,,,
+35,2024-12-29,Brooklyn Nets,Incoming,Pick,,,,2031,2,LAL pick,,,
+36,2024-12-15,Golden State Warriors,Outgoing,Cap Space,,,,,,,,-200000,-$0.20M CAP SPACE
+36,2024-12-15,Golden State Warriors,Incoming,Player,Dennis Schröder,31,PG,,,13025250,,"Incoming ($13,025,250)"
+36,2024-12-15,Golden State Warriors,Incoming,Pick,,,,2025,2,MIA pick top-37 protected,,,
+36,2024-12-15,Brooklyn Nets,Incoming,Cap Space,,,,,,,,200000,+$0.20M CAP SPACE
+36,2024-12-15,Brooklyn Nets,Incoming,Player,De'Anthony Melton,26,SG,,,12822000,,"Incoming ($12,822,000)"
+36,2024-12-15,Brooklyn Nets,Incoming,Player,Reece Beekman,23,PG,,,,,,
+36,2024-12-15,Brooklyn Nets,Incoming,Pick,,,,2026,2,ATL pick,,,
+36,2024-12-15,Brooklyn Nets,Incoming,Pick,,,,2028,2,ATL pick,,,
+36,2024-12-15,Brooklyn Nets,Incoming,Pick,,,,2029,2,GSW pick,,,
+37,2024-12-15,Indiana Pacers,Outgoing,Cap Space,,,,,,,,-2090000,-$2.09M CAP SPACE
+37,2024-12-15,Indiana Pacers,Incoming,Player,Thomas Bryant,27,C,,,2087519,,"Incoming ($2,087,519)"
+37,2024-12-15,Miami Heat,Incoming,Cap Space,,,,,,,,2090000,+$2.09M CAP SPACE
+37,2024-12-15,Miami Heat,Incoming,Pick,,,,2031,2,MIA right to swap,,,
+38,2024-10-15,Sacramento Kings,Incoming,Cap Space,,,,,,,,4740000,+$4.74M CAP SPACE
+38,2024-10-15,Sacramento Kings,Incoming,Pick,,,,2025,2,,,,
+38,2024-10-15,San Antonio Spurs,Outgoing,Cap Space,,,,,,,,-4740000,-$4.74M CAP SPACE
+38,2024-10-15,San Antonio Spurs,Incoming,Player,Jalen McDaniels,26,SF,,,4741800,,"Incoming ($4,741,800)"
+38,2024-10-15,San Antonio Spurs,Incoming,Cash,,,,,,2000000,,$2 Million
+38,2024-10-15,San Antonio Spurs,Incoming,Pick,,,,2031,2,,,,
+39,2024-10-02,Minnesota Timberwolves,Incoming,Player,Julius Randle,29,PF,,,,,,
+39,2024-10-02,Minnesota Timberwolves,Incoming,Player,Donte DiVincenzo,27,SG,,,,,,
+39,2024-10-02,Minnesota Timberwolves,Incoming,Player,Keita Bates-Diop,28,SF,,,,,,
+39,2024-10-02,Minnesota Timberwolves,Incoming,Pick,,,,2025,1,DET top-13 prot (else top-11 2026, top-9 2027, 2027 2nd),,,
+39,2024-10-02,Minnesota Timberwolves,Outgoing,Player,Karl-Anthony Towns,,,,,,,
+39,2024-10-02,Minnesota Timberwolves,Outgoing,Pick,,,,2025,2,,,,
+39,2024-10-02,New York Knicks,Incoming,Player,Karl-Anthony Towns,28,C,,,,,,
+39,2024-10-02,New York Knicks,Incoming,Player,James Nnaji,20,C,,,,,,
+39,2024-10-02,New York Knicks,Outgoing,Player,Julius Randle,,,,,,,
+39,2024-10-02,New York Knicks,Outgoing,Player,Donte DiVincenzo,,,,,,,
+39,2024-10-02,New York Knicks,Outgoing,Player,Keita Bates-Diop,,,,,,,
+39,2024-10-02,New York Knicks,Outgoing,Pick,,,,2025,1,,,,
+39,2024-10-02,New York Knicks,Outgoing,Player,DaQuan Jeffries,,,,,,,
+39,2024-10-02,New York Knicks,Outgoing,Player,Charlie Brown Jr.,,,,,,,
+39,2024-10-02,New York Knicks,Outgoing,Player,Duane Washington Jr.,,,,,,,
+39,2024-10-02,New York Knicks,Outgoing,Pick,,,,2026,2,,,,
+39,2024-10-02,New York Knicks,Outgoing,Pick,,,,2031,2,,,,
+39,2024-10-02,Charlotte Hornets,Incoming,Player,DaQuan Jeffries,27,SG,,,,,,
+39,2024-10-02,Charlotte Hornets,Incoming,Player,Charlie Brown Jr.,26,SG,,,,,,
+39,2024-10-02,Charlotte Hornets,Incoming,Player,Duane Washington Jr.,24,PG,,,,,,
+39,2024-10-02,Charlotte Hornets,Incoming,Cash,,,,,,7200000,,"$7.2 Million"
+39,2024-10-02,Charlotte Hornets,Incoming,Pick,,,,2025,2,least favorable of DEN/PHI,,,
+39,2024-10-02,Charlotte Hornets,Incoming,Pick,,,,2026,2,via GSW,,,
+39,2024-10-02,Charlotte Hornets,Incoming,Pick,,,,2031,2,,,,
+39,2024-10-02,Charlotte Hornets,Outgoing,Player,James Nnaji,,,,,,,
+40,2024-07-29,Atlanta Hawks,Incoming,Player,David Roddy,23,PF,,,,,,
+40,2024-07-29,Phoenix Suns,Incoming,Player,E.J. Liddell,23,PF,,,,,,
+41,2024-07-19,Memphis Grizzlies,Incoming,Player,Mamadi Diakite,27,PF,,,,,,
+41,2024-07-19,Memphis Grizzlies,Incoming,Player,Nemanja Dangubic,31,SG,,,,,,
+41,2024-07-19,Brooklyn Nets,Incoming,Player,Ziaire Williams,22,SF,,,,,,
+41,2024-07-19,Brooklyn Nets,Incoming,Pick,,,,2030,2,DAL pick,,,
+42,2024-07-18,LA Clippers,Incoming,Player,Kris Dunn,30,PG,,,,,,
+42,2024-07-18,Utah Jazz,Incoming,Player,Russell Westbrook,35,PG,,,,,,
+42,2024-07-18,Utah Jazz,Incoming,Cash,,,,,,4300000,,"$4.3 Million"
+42,2024-07-18,Utah Jazz,Incoming,Player,Balsa Koprivica,24,C,,,,,,
+42,2024-07-18,Utah Jazz,Incoming,Pick,,,,2030,2,UTA right to swap,,,
+43,2024-07-08,Chicago Bulls,Incoming,Player,Chris Duarte,27,SF,,,,,,
+43,2024-07-08,Chicago Bulls,Incoming,Cash,,,,,,,,"Cash"
+43,2024-07-08,Chicago Bulls,Incoming,Player,RaiQuan Gray,25,PF,,,,,,
+43,2024-07-08,Chicago Bulls,Incoming,Pick,,,,2025,2,SAC pick,,,
+43,2024-07-08,Chicago Bulls,Incoming,Pick,,,,2028,2,SAC pick,,,
+43,2024-07-08,Chicago Bulls,Outgoing,Player,DeMar DeRozan,,,,,,,
+43,2024-07-08,Sacramento Kings,Incoming,Player,DeMar DeRozan,34,SF,,,,,,
+43,2024-07-08,Sacramento Kings,Outgoing,Player,Chris Duarte,,,,,,,
+43,2024-07-08,Sacramento Kings,Outgoing,Pick,,,,2025,2,,,,
+43,2024-07-08,Sacramento Kings,Outgoing,Pick,,,,2028,2,,,,
+43,2024-07-08,Sacramento Kings,Outgoing,Player,Harrison Barnes,,,,,,,
+43,2024-07-08,Sacramento Kings,Outgoing,Pick,,,,2031,1,,,,
+43,2024-07-08,San Antonio Spurs,Incoming,Player,Harrison Barnes,32,PF,,,,,,
+43,2024-07-08,San Antonio Spurs,Incoming,Pick,,,,2031,1,SAS right to swap with SAC,,,
+43,2024-07-08,San Antonio Spurs,Outgoing,Player,RaiQuan Gray,,,,,,,
+44,2024-07-06,New York Knicks,Incoming,Player,Mikal Bridges,27,SF,,,,,,
+44,2024-07-06,New York Knicks,Incoming,Player,Keita Bates-Diop,28,SF,,,,,,
+44,2024-07-06,New York Knicks,Incoming,Player,Juan Vaulet,28,SF,,,,,,
+44,2024-07-06,New York Knicks,Incoming,Pick,,,,2026,2,least favorable of DET/MIL/ORL,,,
+44,2024-07-06,Brooklyn Nets,Incoming,Player,Bojan Bogdanovic,35,SF,,,,,,
+44,2024-07-06,Brooklyn Nets,Incoming,Player,Shake Milton,27,SG,,,,,,
+44,2024-07-06,Brooklyn Nets,Incoming,Player,Mamadi Diakite,27,PF,,,,,,
+44,2024-07-06,Brooklyn Nets,Incoming,Pick,,,,2025,1,unprotected,,,
+44,2024-07-06,Brooklyn Nets,Incoming,Pick,,,,2025,1,top-4 protected via MIL,,,
+44,2024-07-06,Brooklyn Nets,Incoming,Pick,,,,2025,2,,,,
+44,2024-07-06,Brooklyn Nets,Incoming,Pick,,,,2027,1,unprotected,,,
+44,2024-07-06,Brooklyn Nets,Incoming,Pick,,,,2028,1,BKN right to swap,,,
+44,2024-07-06,Brooklyn Nets,Incoming,Pick,,,,2029,1,unprotected,,,
+44,2024-07-06,Brooklyn Nets,Incoming,Pick,,,,2031,1,unprotected,,,
+45,2024-07-06,Atlanta Hawks,Incoming,Player,Larry Nance Jr.,31,PF,,,,,,
+45,2024-07-06,Atlanta Hawks,Incoming,Player,Dyson Daniels,21,PG,,,,,,
+45,2024-07-06,Atlanta Hawks,Incoming,Player,E.J. Liddell,23,PF,,,,,,
+45,2024-07-06,Atlanta Hawks,Incoming,Player,Cody Zeller,31,C,,,,,,
+45,2024-07-06,Atlanta Hawks,Incoming,Pick,,,,2025,1,LAL pick,,,
+45,2024-07-06,Atlanta Hawks,Incoming,Pick,,,,2027,1,least favorable of MIL/NOP top-4 protected,,,
+45,2024-07-06,New Orleans Pelicans,Incoming,Player,Dejounte Murray,27,PG,,,,,,
+46,2024-07-06,Detroit Pistons,Incoming,Player,Wendell Moore Jr.,22,SG,,,,,,
+46,2024-07-06,Detroit Pistons,Incoming,Player,Bobi Klintman,21,SF,,,,,,
+46,2024-07-06,Detroit Pistons,Outgoing,Player,Cam Spencer,,,,,,,
+46,2024-07-06,Memphis Grizzlies,Incoming,Player,Cam Spencer,24,SG,,,,,,
+46,2024-07-06,Memphis Grizzlies,Outgoing,Player,Ulrich Chomche,,,,,,,
+46,2024-07-06,Minnesota Timberwolves,Incoming,Pick,,,,,,future 2nd-round,,,
+46,2024-07-06,Minnesota Timberwolves,Incoming,Cash,,,,,,1000000,,"$1 Million"
+46,2024-07-06,Minnesota Timberwolves,Outgoing,Player,Wendell Moore Jr.,,,,,,,
+46,2024-07-06,Minnesota Timberwolves,Outgoing,Player,Bobi Klintman,,,,,,,
+46,2024-07-06,Toronto Raptors,Incoming,Player,Ulrich Chomche,18,PF,,,,,,
+47,2024-07-06,Washington Wizards,Incoming,Player,Jonas Valanciunas,32,C,,,,,,
+47,2024-07-06,New Orleans Pelicans,Incoming,Pick,,,,2027,2,CHI pick top-50 protected,,,
+48,2024-07-06,Portland Trail Blazers,Incoming,Player,Deni Avdija,23,SF,,,,,,
+48,2024-07-06,Washington Wizards,Incoming,Player,Malcolm Brogdon,31,PG,,,,,,
+48,2024-07-06,Washington Wizards,Incoming,Pick,,,,2023,2,,,,"2023 Round 2"
+48,2024-07-06,Washington Wizards,Incoming,Player,Bub Carrington,18,PG,,,,,,
+48,2024-07-06,Washington Wizards,Incoming,Pick,,,,2028,2,,,,
+48,2024-07-06,Washington Wizards,Incoming,Pick,,,,2029,1,second most favorable of POR/BOS/MIL,,,
+49,2024-07-06,Golden State Warriors,Incoming,Cash,,,,,,,,"Cash"
+49,2024-07-06,Portland Trail Blazers,Incoming,Player,Quinten Post,24,C,,,,,,
+50,2024-07-06,San Antonio Spurs,Incoming,Pick,,,,2025,2,NOP pick,,,
+50,2024-07-06,Charlotte Hornets,Incoming,Player,Devonte' Graham,29,PG,,,,,,
+51,2024-07-01,Dallas Mavericks,Incoming,Player,Klay Thompson,34,SG,,,,,,
+51,2024-07-01,Dallas Mavericks,Incoming,Pick,,,,2025,2,,,,
+51,2024-07-01,Dallas Mavericks,Outgoing,Pick,,,,2025,2,,,,
+51,2024-07-01,Dallas Mavericks,Outgoing,Pick,,,,2031,2,,,,
+51,2024-07-01,Dallas Mavericks,Outgoing,Player,Josh Green,,,,,,,
+51,2024-07-01,Denver Nuggets,Incoming,Cash,,,,,,,,"Cash"
+51,2024-07-01,Denver Nuggets,Outgoing,Player,Reggie Jackson,,,,,,,
+51,2024-07-01,Denver Nuggets,Outgoing,Pick,,,,2029,2,,,,
+51,2024-07-01,Denver Nuggets,Outgoing,Pick,,,,2030,2,,,,
+51,2024-07-01,Golden State Warriors,Incoming,Player,Kyle Anderson,30,PF,,,,,,
+51,2024-07-01,Golden State Warriors,Incoming,Player,Buddy Hield,31,SG,,,,,,
+51,2024-07-01,Golden State Warriors,Outgoing,Player,Klay Thompson,,,,,,,
+51,2024-07-01,Golden State Warriors,Outgoing,Pick,,,,2031,2,,,,
+51,2024-07-01,Minnesota Timberwolves,Incoming,Cash,,,,,,,,"Cash"
+51,2024-07-01,Minnesota Timberwolves,Incoming,Pick,,,,2025,2,least favorable of DEN/PHI,,,
+51,2024-07-01,Minnesota Timberwolves,Incoming,Pick,,,,2031,2,GSW pick swap,,,
+51,2024-07-01,Minnesota Timberwolves,Outgoing,Player,Kyle Anderson,,,,,,,
+51,2024-07-01,Philadelphia 76ers,Incoming,Pick,,,,2031,2,,,,
+51,2024-07-01,Philadelphia 76ers,Outgoing,Player,Buddy Hield,,,,,,,
+51,2024-07-01,Charlotte Hornets,Incoming,Player,Josh Green,23,SG,,,,,,
+51,2024-07-01,Charlotte Hornets,Incoming,Player,Reggie Jackson,34,PG,,,,,,
+51,2024-07-01,Charlotte Hornets,Incoming,Pick,,,,2029,2,,,,
+51,2024-07-01,Charlotte Hornets,Incoming,Pick,,,,2030,2,,,,
+51,2024-07-01,Charlotte Hornets,Outgoing,Pick,,,,2025,2,,,,
+52,2024-07-06,Dallas Mavericks,Incoming,Player,Quentin Grimes,24,SG,,,,,,
+52,2024-07-06,Detroit Pistons,Incoming,Player,Tim Hardaway Jr.,32,SG,,,,,,
+52,2024-07-06,Detroit Pistons,Incoming,Pick,,,,2025,2,TOR pick,,,
+52,2024-07-06,Detroit Pistons,Incoming,Pick,,,,2028,2,,,,
+52,2024-07-06,Detroit Pistons,Incoming,Pick,,,,2028,2,,,,
+53,2024-07-06,Indiana Pacers,Incoming,Player,Johnny Furphy,19,SG,,,,,,
+53,2024-07-06,San Antonio Spurs,Incoming,Player,Juan Nunez,20,PG,,,,,,
+53,2024-07-06,San Antonio Spurs,Incoming,Cash,,,,,,,,"Cash"

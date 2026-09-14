@@ -1,0 +1,402 @@
+\chapter{Resultados e Discussão}
+\label{chp:results}
+
+Este capítulo relata os resultados obtidos para cada uma das quatro hipóteses operacionalizadas no Capítulo 3, na mesma ordem em que foram apresentadas: a Seção~\ref{sec:r_h1} trata da primeira hipótese, sobre desigualdade salarial e desempenho; a Seção~\ref{sec:r_h2}, da segunda, sobre o ajuste funcional do jogador adquirido; a Seção~\ref{sec:r_h3}, da terceira, sobre a experiência dos jogadores adquiridos; e a Seção~\ref{sec:r_h4}, da última, sobre a estrutura da negociação. A Seção~\ref{sec:r_context} relata o resultado do objetivo sazonal como variável de contexto, tratado desde o Capítulo 3 como complementar, e não como uma quinta hipótese central. A Seção~\ref{sec:r_synthesis} sintetiza os quatro resultados em conjunto e discute o que eles indicam, lidos lado a lado, sobre o problema de pesquisa proposto na Introdução.
+
+Os quatro resultados não são uniformes, e este capítulo os relata como foram encontrados. Três das quatro hipóteses encontram suporte estatístico em seu teste principal; a quarta não o encontra na forma categórica em que foi originalmente formulada, embora um sinal mais fraco da mesma relação sobreviva em uma versão contínua da mesma variável, como será detalhado na Seção~\ref{sec:r_h2}. Essa heterogeneidade de resultado não é tratada como uma falha do desenho de pesquisa: é precisamente o tipo de informação que um estudo correlacional bem executado deve produzir, e omiti-la produziria um retrato mais bonito, porém menos verdadeiro, do fenômeno estudado.
+
+\section{Evidência a favor da Teoria da Equidade}
+\label{sec:r_h1}
+
+A Hipótese 1 propõe que uma variação na desigualdade salarial em quadra, entre os períodos pré e pós-\textit{trade deadline}, está associada a uma variação no desempenho da equipe nesses mesmos períodos.
+
+\subsection{Adequação da métrica de desigualdade salarial}
+\label{sec:r_h1_metric}
+
+A Subseção~\ref{sec:h1_metric_selection} do Capítulo 3 descreveu os três critérios usados para escolher o Índice de Gini ponderado por minutos entre seis métricas concorrentes de desigualdade salarial. Esta subseção relata o resultado desses três critérios na amostra de 282 times-temporada.
+
+O diagnóstico distribucional (critério descritivo) confirma a adequação do uso uniforme de testes não paramétricos ao longo deste trabalho: das seis métricas, apenas o Gini simples não rejeita a hipótese de normalidade pelo teste de Shapiro-Wilk, e mesmo assim por uma margem estreita ($p = 0{,}0557$). A Tabela~\ref{tab:metric_diagnostics} detalha esse resultado.
+
+\begin{table}[htb]
+    \centering
+    \caption{Diagnóstico distribucional das seis métricas de desigualdade salarial ($n=282$)}
+    \label{tab:metric_diagnostics}
+    \begin{tabular}{|p{4.4cm}|p{2.4cm}|p{1.8cm}|p{2.0cm}|}
+    \hline
+    \textbf{Métrica} & \textbf{Shapiro-Wilk $p$} & \textbf{Normal?} & \textbf{Outliers (IQR)} \\
+    \hline
+    Desvio Padrão & $1{,}15 \times 10^{-18}$ & Não & 37 \\
+    \hline
+    Coeficiente de Variação & $5{,}44 \times 10^{-5}$ & Não & 11 \\
+    \hline
+    Razão Top1/Bottom1 & $7{,}94 \times 10^{-30}$ & Não & 76 \\
+    \hline
+    Proporção Top 3 & $2{,}99 \times 10^{-3}$ & Não & 11 \\
+    \hline
+    Gini Simples & $0{,}0557$ & Sim (margem estreita) & 5 \\
+    \hline
+    Gini Ponderado por Minutos & $4{,}41 \times 10^{-4}$ & Não & 13 \\
+    \hline
+    \end{tabular}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{table}
+
+O critério empírico (confirmatório, aplicado por último e depois de a escolha teórica já estar feita) consiste em correlacionar a variação de cada métrica com a variação da Performance Ajustada. A Figura~\ref{fig:metric_performance} e a Tabela~\ref{tab:metric_performance} mostram que o Gini ponderado por minutos, a métrica já escolhida pelo critério teórico, também é a que tem a correlação mais forte entre as seis, em módulo ($\rho = -0{,}1892$), à frente do desvio-padrão ($\rho = +0{,}1755$) e muito à frente das demais, cujas correlações não são estatisticamente significativas. Essa coincidência é reportada como confirmação de transparência, não como evidência de que o critério teórico precisasse dessa confirmação para ser válido. A métrica já havia sido escolhida antes deste teste ser rodado.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Correlação de cada uma das seis métricas de desigualdade salarial com $\Delta$Performance Ajustada}
+    \label{fig:metric_performance}
+    \includegraphics[width=.80\textwidth]{images/inequality_metric_performance_bar.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+\begin{table}[htb]
+    \centering
+    \caption{Correlação de cada métrica de desigualdade salarial com $\Delta$Performance Ajustada ($n=282$)}
+    \label{tab:metric_performance}
+    \begin{tabular}{|p{4.4cm}|p{2.0cm}|p{2.0cm}|}
+    \hline
+    \textbf{Métrica} & \textbf{Spearman $\rho$} & \textbf{$p$-valor} \\
+    \hline
+    Gini Ponderado por Minutos & $-0{,}1892$ & $0{,}0014$ \\
+    \hline
+    Desvio Padrão & $+0{,}1755$ & $0{,}0031$ \\
+    \hline
+    Proporção Top 3 & $+0{,}0456$ & $0{,}4459$ \\
+    \hline
+    Coeficiente de Variação & $-0{,}0437$ & $0{,}4653$ \\
+    \hline
+    Gini Simples & $-0{,}0433$ & $0{,}4689$ \\
+    \hline
+    Razão Top1/Bottom1 & $+0{,}0057$ & $0{,}9246$ \\
+    \hline
+    \end{tabular}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{table}
+
+Por fim, verificou-se se o Gini ponderado por minutos está de fato medindo algo distinto das outras cinco métricas, ou se é apenas redundante com elas, como mostra a Figura~\ref{fig:metric_correlation}. A correlação entre o Gini ponderado e as demais varia de $\rho = 0{,}12$ (com o desvio-padrão) a $\rho = 0{,}58$ (com o coeficiente de variação), uma correlação moderada, mas longe da redundância. Para efeito de comparação, o coeficiente de variação e o Gini simples correlacionam entre si em $\rho = 0{,}95$, praticamente a mesma informação sob duas fórmulas diferentes; o Gini ponderado por minutos não se comporta assim com nenhuma das outras cinco, o que corrobora que ponderar pelos minutos jogados de fato altera o que a métrica captura, e não é um refinamento cosmético sobre as demais.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Correlação entre as seis métricas de desigualdade salarial (variação pré/pós-\textit{deadline})}
+    \label{fig:metric_correlation}
+    \includegraphics[width=.75\textwidth]{images/inequality_metric_correlation_heatmap.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+\subsection{Caracterização dos arquétipos competitivos}
+\label{sec:r_h1_archetypes}
+
+Antes de relatar o teste central, é necessário caracterizar os quatro arquétipos competitivos derivados por \textit{k-means} (Seção~\ref{sec:archetype_moderation} do Capítulo 3), já que a Subseção~\ref{sec:r_h1_moderation} reporta esse resultado separadamente para cada um deles. A Tabela~\ref{tab:archetypes} resume o perfil médio de cada arquétipo na população completa de 390 times-temporada.
+
+\begin{table}[htb]
+    \centering
+    \caption{Perfil médio dos quatro arquétipos competitivos (390 times-temporada, 2012-13 a 2024-25)}
+    \label{tab:archetypes}
+    \begin{tabular}{|p{2.4cm}|p{1.2cm}|p{2.0cm}|p{2.0cm}|p{2.0cm}|p{2.0cm}|}
+    \hline
+    \textbf{Arquétipo} & \textbf{N} & \textbf{Net Rating médio} & \textbf{Rating Ofensivo} & \textbf{Rating Defensivo} & \textbf{Posses/jogo} \\
+    \hline
+    Reconstrução & 86 & $-6{,}80$ & $105{,}4$ & $112{,}2$ & $98{,}3$ \\
+    \hline
+    Defensivo & 117 & $+1{,}35$ & $109{,}7$ & $108{,}3$ & $97{,}0$ \\
+    \hline
+    Ofensivo & 92 & $-0{,}62$ & $109{,}5$ & $110{,}1$ & $100{,}0$ \\
+    \hline
+    Elite & 95 & $+5{,}05$ & $112{,}6$ & $107{,}6$ & $99{,}2$ \\
+    \hline
+    \end{tabular}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026), a partir de \texttt{team\_season\_clusters.csv}.
+    \end{flushleft}
+\end{table}
+
+Os quatro grupos se ordenam, sobretudo, por qualidade competitiva. Reconstrução reúne as temporadas de pior Net Rating médio ($-6{,}80$), seguidas por Ofensivo ($-0{,}62$), Defensivo ($+1{,}35$) e Elite ($+5{,}05$), a ponta de cima da liga. O ritmo de jogo (posses por jogo) diferencia Ofensivo, o grupo mais acelerado (100,0), de Defensivo, o mais lento (97,0). Essa diferença de estilo só aparece como eixo secundário, depois da qualidade competitiva, na análise de variância que fundamenta a nomeação dos grupos (Seção~\ref{sec:archetype_moderation} do Capítulo 3). Como já enfatizado na descrição metodológica, cada arquétipo descreve o perfil estatístico de uma temporada, não uma identidade fixa de franquia. A mesma equipe passa por arquétipos diferentes ao longo dos treze anos cobertos pela amostra.
+
+\subsection{Resultado central e robustez}
+\label{sec:r_h1_main}
+
+Na amostra de 282 times-temporada descrita na Seção~\ref{sec:sample} do Capítulo 3, a correlação de Spearman entre $\Delta$Gini ponderado por minutos e a variação da Performance Ajustada é $\rho = -0{,}1892$ ($p = 0{,}0014$), estatisticamente significativa, com efeito fraco pela convenção de \citet{cohen1988}. O sinal negativo indica que, em média, equipes cuja folha salarial em quadra se tornou mais concentrada após o \textit{deadline} tenderam a ter desempenho pior no período seguinte, e o inverso também se observa: equipes que reduziram a desigualdade salarial tenderam a melhorar. Elevando $\rho$ ao quadrado ($0{,}189^2 \approx 0{,}036$), a desigualdade salarial explica, grosso modo, 3,6\% da variação no desempenho pós-troca das equipes; os outros 96\% vêm de outros fatores (saúde do elenco, calendário, qualidade técnica, entre outros), o que já situa o achado como uma peça real, mas não central, do quadro. A Figura~\ref{fig:h1_scatter} apresenta a dispersão completa dos 282 casos, com uma curva de tendência local (LOESS) sobreposta.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Dispersão entre $\Delta$Gini ponderado por minutos e $\Delta$Performance Ajustada}
+    \label{fig:h1_scatter}
+    \includegraphics[width=.85\textwidth]{images/salary_inequality_core_scatter.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+Esse resultado favorece, moderadamente, a Teoria da Equidade de \citet{adams1965} sobre a Teoria do Torneio de \citet{lazear1981}, como resume a Figura~\ref{fig:h1_verdict}: o marcador de $\rho$ cai do lado da Equidade da régua, fora da zona cinza de indiferença estatística ($|\rho| < 0{,}117$ para este tamanho de amostra, $\alpha = 0{,}05$). \citet{berri2004} e \citet{katayama2011} não haviam encontrado efeito significativo algum da dispersão salarial sobre o desempenho na NBA, em nenhuma direção; o resultado desta pesquisa vai além disso, ao encontrar um efeito significativo e na direção oposta à prevista pela Teoria do Torneio, o que também não replica o resultado favorável ao torneio relatado por \citet{frick2003}.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Veredito da Hipótese 1 na régua de -1 (Equidade) a +1 (Torneio)}
+    \label{fig:h1_verdict}
+    \includegraphics[width=.90\textwidth]{images/salary_h1_verdict.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+Como variável de contexto adicional, testou-se também a correlação entre a magnitude da troca (número de jogadores movimentados na janela de 30 dias) e cada uma das duas variáveis centrais: nenhuma das duas correlações é significativa ($\rho = 0{,}0776$, $p = 0{,}1940$, com $\Delta$Gini; $\rho = -0{,}0130$, $p = 0{,}8277$, com $\Delta$Performance Ajustada). O tamanho da reformulação de elenco, isoladamente, não ajuda a explicar nem a mudança de desigualdade nem a mudança de desempenho; o que importa é a direção da mudança de desigualdade, não sua magnitude.
+
+Por fim, a Figura~\ref{fig:h1_robustness} confirma que o resultado central não depende da escolha específica da janela de 30 dias usada para qualificar quais times-temporada entram na amostra: recalculada para janelas de 14 a 60 dias, a correlação mantém sinal negativo e significância estatística em todas as cinco larguras testadas, variando apenas entre $\rho = -0{,}175$ e $\rho = -0{,}189$, como detalha a Tabela~\ref{tab:h1_robustez}.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Robustez do resultado da Hipótese 1 a larguras alternativas da janela de troca}
+    \label{fig:h1_robustness}
+    \includegraphics[width=.90\textwidth]{images/trade_window_robustness.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+\begin{table}[htb]
+    \centering
+    \caption{Robustez do resultado da Hipótese 1 a larguras alternativas da janela de troca}
+    \label{tab:h1_robustez}
+    \begin{tabular}{|p{2.6cm}|p{1.6cm}|p{2.0cm}|p{2.2cm}|p{2.6cm}|}
+    \hline
+    \textbf{Janela} & \textbf{N} & \textbf{Spearman $\rho$} & \textbf{$p$-valor} & \textbf{Significativo} \\
+    \hline
+    14 dias & 272 & $-0{,}1746$ & $0{,}0039$ & Sim \\
+    \hline
+    21 dias & 274 & $-0{,}1815$ & $0{,}0026$ & Sim \\
+    \hline
+    30 dias (produção) & 282 & $-0{,}1892$ & $0{,}0014$ & Sim \\
+    \hline
+    45 dias & 291 & $-0{,}1817$ & $0{,}0019$ & Sim \\
+    \hline
+    60 dias & 292 & $-0{,}1813$ & $0{,}0019$ & Sim \\
+    \hline
+    \end{tabular}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{table}
+
+\subsection{Moderação por arquétipo competitivo}
+\label{sec:r_h1_moderation}
+
+Usando os arquétipos caracterizados na Subseção~\ref{sec:r_h1_archetypes}, recalculou-se a associação entre desigualdade salarial e desempenho separadamente dentro de cada grupo, para verificar se o efeito agregado da Subseção~\ref{sec:r_h1_main} se concentra em algum perfil específico de equipe. Esta verificação é exploratória, não faz parte do teste central: por depender do recálculo do arquétipo de cada time-temporada diretamente do banco de dados, ela usa o \textit{Simple Rating System} (SRS) como medida de desempenho, em vez da Performance Ajustada por adversário empregada no teste central, e por isso não deve ser lida como uma repetição exata desse teste, mas como um indício complementar sobre onde a associação se concentra. A Figura~\ref{fig:h1_archetype_moderation} apresenta os quatro painéis, cada um com sua própria correlação de Spearman e curva de tendência local.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Associação entre desigualdade salarial e desempenho, dentro de cada arquétipo competitivo}
+    \label{fig:h1_archetype_moderation}
+    \includegraphics[width=.95\textwidth]{images/pooled_cluster_scatter_loess.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+A correlação só é estatisticamente significativa dentro de um único arquétipo, o Ofensivo, com $\rho = -0{,}271$ ($p = 0{,}0125$, $N = 84$). Nos outros três, não há associação estatística entre desigualdade e desempenho. Defensivo tem $\rho$ praticamente nulo ($\rho = 0{,}014$, $p = 0{,}882$); Reconstrução tem $\rho = -0{,}170$ ($p = 0{,}120$); e Elite tem $\rho = -0{,}045$ ($p = 0{,}667$). Ou seja, o efeito "mais desigualdade, pior desempenho" que aparece na amostra agregada da Subseção~\ref{sec:r_h1_main} não é uniforme entre todos os perfis de equipe. Está concentrado especificamente nos times de perfil ofensivo, de ritmo mais acelerado, e não aparece com força estatística nos times defensivos, em reconstrução ou de elite. Com quatro testes a $\alpha = 0{,}05$, a chance de encontrar pelo menos um resultado "significativo" só por acaso já é de aproximadamente 18,5\% ($1-0{,}95^4$); por isso, esse achado específico do arquétipo Ofensivo deve ser lido como um indício a investigar mais a fundo, por exemplo com correção para múltiplas comparações, não como uma conclusão definitiva sobre esse perfil de equipe.
+
+\section{Suporte não confirmado na forma categórica original}
+\label{sec:r_h2}
+
+A Hipótese 2 sustenta que trocas que preenchem uma lacuna estrutural do elenco produzem impacto de desempenho mais positivo do que trocas que apenas reforçam uma posição já bem servida. Testada na forma categórica descrita na Seção~\ref{sec:h2_wpa_ops} do Capítulo 3, uma comparação, por Mann-Whitney \textit{U} unilateral, entre os eventos classificados como Preenche Lacuna e os classificados como Redundante, a hipótese não encontra suporte estatístico na amostra agrupada das treze temporadas: eventos Preenche Lacuna ($n=250$, mediana de $\Delta$WPA $= +0{,}0251$) têm mediana maior que eventos Redundante ($n=120$, mediana $=+0{,}0050$), na direção prevista, mas a diferença não é distinguível de acaso ($U = 16.149{,}0$, $p = 0{,}1165$, $r = -0{,}0766$, efeito desprezível).
+
+Esse resultado suscita uma pergunta natural: o corte binário em $\Delta P = 0$ pode estar descartando informação real sobre a magnitude da lacuna. Testou-se, por isso, a mesma relação de forma contínua, usando a correlação de Spearman entre o $\Delta P$ pré-troca, sem o corte em zero, e a variação da taxa de WPA da equipe. Essa correlação se revela fraca, porém significativa ($\rho = -0{,}1242$, $p = 0{,}0173$, $n = 367$). O sinal negativo é consistente com a hipótese: quanto mais negativo o $\Delta P$ (lacuna mais severa), maior tende a ser o ganho de desempenho subsequente. A correlação contínua sobrevive, portanto, onde a comparação categórica não encontra suporte. É um padrão que, isoladamente, sugeriria que a hipótese é parcialmente correta, mas apenas quando a magnitude da lacuna, e não somente seu sinal, é levada em conta.
+
+Esse sinal contínuo, no entanto, não é estável ao longo das treze temporadas, como mostra a Tabela~\ref{tab:h2_eras}. A correlação só é significativa, e de magnitude moderada, na janela 2019-2021. É justamente a única em que o WPA e a posição do jogador vêm ambos nativamente da ESPN, a combinação original usada por \citet{sa2025}. Nas outras duas janelas, a correlação não é significativa e, na mais recente (2022-2025), o sinal chega a se inverter. Essa instabilidade coincide, temporada a temporada, com a heterogeneidade de fonte de dado já descrita na Seção~\ref{sec:h2_wpa_ops} do Capítulo 3 e registrada como limitação metodológica na Seção~\ref{sec:method_limitations}: entre 2012-13 e 2017-18, a posição de cada jogador vem de um rótulo estático por temporada, incapaz de capturar mudanças de posição ao longo do ano; entre 2021-22 e 2024-25, o próprio WPA passa a vir de uma fonte diferente da usada para validar a metodologia originalmente. Não é possível, com os dados disponíveis, isolar quanto da instabilidade observada decorre da qualidade do dado posicional e quanto decorre de uma mudança real no comportamento do mercado de trocas ao longo da década. Mas a coincidência entre as duas fronteiras de era é sugestiva o suficiente para não ser ignorada.
+
+\begin{table}[htb]
+    \centering
+    \caption{Correlação contínua entre $\Delta P$ pré-troca e $\Delta$ taxa de WPA da equipe, por era de fonte de dado}
+    \label{tab:h2_eras}
+    \begin{tabular}{|p{4.4cm}|p{1.4cm}|p{2.0cm}|p{2.0cm}|}
+    \hline
+    \textbf{Era} & \textbf{N} & \textbf{Spearman $\rho$} & \textbf{$p$-valor} \\
+    \hline
+    2012-13 a 2017-18 (posição estática) & 139 & $-0{,}0846$ & $0{,}3221$ \\
+    \hline
+    2018-19 a 2020-21 (ESPN nativo) & 90 & $-0{,}3131$ & $0{,}0027$ \\
+    \hline
+    2021-22 a 2024-25 (híbrida) & 138 & $+0{,}0245$ & $0{,}7758$ \\
+    \hline
+    \end{tabular}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{table}
+
+A Figura~\ref{fig:h2_boxplot} resume os dois resultados lado a lado: a distribuição categórica agrupada, que não separa os dois grupos de forma estatisticamente distinguível, e a correlação contínua por era, cuja barra central (2019-2021) se destaca claramente das outras duas.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Ajuste funcional do jogador adquirido: comparação categórica agrupada e correlação contínua por era}
+    \label{fig:h2_boxplot}
+    \includegraphics[width=.90\textwidth]{images/resultados_h2_lacuna_redundante.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+Em sua forma original, categórica, esta hipótese não encontra suporte estatístico quando testada na amostra agrupada de treze temporadas. Um sinal mais fraco da mesma relação, tratada de forma contínua, sobrevive na amostra agrupada, mas não se replica de maneira estável entre as três eras de disponibilidade de dado, sendo mais forte exatamente na janela mais bem instrumentada. A leitura mais honesta é que esta pesquisa encontra indício, mas não confirmação robusta, de que o ajuste funcional de uma troca, indicado por um $\Delta P$ estruturalmente negativo, se relaciona ao seu impacto de desempenho de curto prazo.
+
+\section{Veteranos produzem impacto mais positivo}
+\label{sec:r_h3}
+
+A Hipótese 3 postula que a experiência dos jogadores adquiridos em uma troca está associada ao impacto de desempenho de curto prazo da equipe adquirente. Como a base de dados usada neste trabalho não registra o número de temporadas de NBA efetivamente jogadas por cada atleta, essa experiência é aproximada pela idade do jogador no momento da troca — um \textit{proxy} razoável, mas imperfeito, já que idade cronológica e experiência de carreira não são estritamente equivalentes, uma limitação de validade de construto retomada na Seção~\ref{sec:final_limitations} do Capítulo 5. Diferentemente da hipótese anterior, este resultado é consistente entre as duas formas de teste descritas na Seção~\ref{sec:h3_age} do Capítulo 3. Dividindo os 370 eventos de troca na mediana de idade (27,0 anos) em dois grupos, os eventos classificados como Veteranos ($n=202$, idade média de 29,9 anos, mediana de $\Delta$WPA $=+0{,}0268$) superam os classificados como Jovens ($n=168$, idade média de 24,3 anos, mediana de $\Delta$WPA $=+0{,}0079$), diferença que o teste de Mann-Whitney \textit{U} unilateral confirma como estatisticamente significativa ($U = 18.872{,}5$, $p = 0{,}0315$, efeito fraco). A versão contínua da mesma relação, pela correlação de Spearman entre a idade média dos jogadores adquiridos e a variação de desempenho, aponta na mesma direção e também é significativa ($\rho = +0{,}1099$, $p = 0{,}0346$, $n = 370$, efeito fraco).
+
+A Tabela~\ref{tab:h3_quartis} detalha essa relação por quartil de idade, e revela que ela não é linear ao longo de toda a distribuição etária. Os três primeiros quartis produzem medianas de $\Delta$WPA relativamente próximas entre si (entre $+0{,}0081$ e $+0{,}0204$), e é apenas no quarto quartil, jogadores adquiridos entre 29,7 e 38 anos, que a mediana praticamente dobra em relação ao quartil anterior, chegando a $+0{,}0407$, com a maior proporção de casos positivos entre os quatro grupos (67,0\%). A Figura~\ref{fig:h3_idade} apresenta essa mesma informação em dois painéis: a dispersão completa com uma curva de tendência local, e o gráfico de barras por quartil.
+
+\begin{table}[htb]
+    \centering
+    \caption{Variação da taxa de WPA da equipe, por quartil de idade média dos jogadores adquiridos}
+    \label{tab:h3_quartis}
+    \begin{tabular}{|p{1.2cm}|p{2.6cm}|p{1.2cm}|p{2.6cm}|p{2.0cm}|}
+    \hline
+    \textbf{Quartil} & \textbf{Faixa etária} & \textbf{N} & \textbf{Mediana $\Delta$WPA} & \textbf{\% positivo} \\
+    \hline
+    Q1 & 20,0 a 25,0 anos & 108 & $+0{,}0083$ & 57,4\% \\
+    \hline
+    Q2 & 25,2 a 27,0 anos & 91 & $+0{,}0081$ & 56,0\% \\
+    \hline
+    Q3 & 27,1 a 29,5 anos & 80 & $+0{,}0204$ & 57,5\% \\
+    \hline
+    Q4 & 29,7 a 38,0 anos & 91 & $+0{,}0407$ & 67,0\% \\
+    \hline
+    \end{tabular}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{table}
+
+\begin{figure}[htb]
+    \centering
+    \caption{Variação da taxa de WPA da equipe em função da idade média dos jogadores adquiridos}
+    \label{fig:h3_idade}
+    \includegraphics[width=.90\textwidth]{images/resultados_h3_idade.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+A convergência entre o teste categórico e o contínuo, incomum entre os quatro resultados deste capítulo, dá a esta hipótese o suporte estatístico mais consistente entre as quatro. O padrão concentrado no último quartil também sugere uma leitura mais específica do que "quanto mais velho, melhor". O ganho aparece de forma mais nítida entre os jogadores mais velhos do grupo, não como uma tendência suave ao longo de toda a distribuição etária. O achado é compatível, ainda que não idêntico, ao argumento de \citet{berman2002} sobre o valor do conhecimento tácito acumulado. Os autores estudaram a estabilidade de um mesmo elenco ao longo do tempo, não a idade de um jogador recém-chegado, de modo que o mecanismo aqui não pode ser o mesmo compartilhamento de tempo de jogo entre companheiros. Uma leitura plausível é que jogadores mais velhos, presumivelmente mais experientes, trazem consigo um repertório mais amplo de situações de jogo já vividas em outros sistemas táticos, o que pode reduzir o custo de integração a um elenco novo no meio da temporada. É um cenário que a literatura revisada no Capítulo 2 já havia descrito como incerto: \citet{mcteer1995} encontraram ganhos temporários após trocas, enquanto \citet{audas2002} não encontraram efeito duradouro algum. O resultado desta pesquisa não resolve essa divergência, mas indica que, quando uma troca de fato produz um efeito de curto prazo mensurável, esse efeito tende a estar associado à idade dos jogadores que chegam.
+
+\section{Pacotes maiores para lacunas mais severas}
+\label{sec:r_h4}
+
+A Hipótese 4 afirma que a severidade da lacuna posicional preenchida por uma troca está associada ao tamanho do pacote de jogadores envolvidos nela. Diferentemente das três hipóteses anteriores, esta não compara grupos em busca de qual produz melhor desempenho, mas testa a associação entre duas características da própria transação. Na amostra de 367 eventos de troca com ambas as variáveis disponíveis, a correlação de Spearman entre o $\Delta P$ mínimo entre os jogadores adquiridos e o número de jogadores adquiridos no mesmo evento é $\rho = -0{,}2797$ ($p < 0{,}0001$). É a mais forte das quatro correlações reportadas neste capítulo, ainda que classificada como efeito fraco pela convenção de Cohen, por uma margem estreita em relação ao limiar de efeito moderado ($|\rho| = 0{,}30$). O sinal negativo confirma a direção prevista: quanto mais severa a lacuna (mais negativo o $\Delta P$), maior tende a ser o número de jogadores movimentados para supri-la.
+
+A Tabela~\ref{tab:h4_quartis} e a Figura~\ref{fig:h4_severidade} tornam essa relação legível além do coeficiente único. Ao dividir a amostra em quartis de severidade, a mediana do tamanho do pacote cai exatamente no ponto em que o $\Delta P$ cruza zero: os dois quartis com lacunas reais (Q1 e Q2, ambos com $\Delta P$ negativo) têm mediana de 2 jogadores adquiridos por evento, enquanto os dois quartis sem lacuna real (Q3 e Q4, com $\Delta P$ próximo de zero ou positivo) têm mediana de apenas 1 jogador. Esse corte natural, encontrado de forma independente aqui, reforça, sob um ângulo completamente diferente, o mesmo limiar de $\Delta P = 0$ já usado na segunda hipótese para separar Preenche Lacuna de Redundante (Seção~\ref{sec:h2_wpa_ops} do Capítulo 3).
+
+\begin{table}[htb]
+    \centering
+    \caption{Tamanho do pacote de troca, por quartil de severidade da lacuna preenchida}
+    \label{tab:h4_quartis}
+    \begin{tabular}{|p{1.2cm}|p{4.4cm}|p{1.2cm}|p{2.8cm}|}
+    \hline
+    \textbf{Quartil} & \textbf{Faixa de $\Delta P$ mínimo} & \textbf{N} & \textbf{Mediana de jogadores} \\
+    \hline
+    Q1 (mais severa) & $-0{,}1608$ a $-0{,}0096$ & 92 & 2 \\
+    \hline
+    Q2 & $-0{,}0094$ a $-0{,}0021$ & 92 & 2 \\
+    \hline
+    Q3 & $-0{,}0021$ a $0{,}0013$ & 91 & 1 \\
+    \hline
+    Q4 (mais redundante) & $0{,}0013$ a $0{,}1459$ & 92 & 1 \\
+    \hline
+    \end{tabular}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{table}
+
+\begin{figure}[htb]
+    \centering
+    \caption{Tamanho do pacote de troca em função da severidade da lacuna posicional preenchida}
+    \label{fig:h4_severidade}
+    \includegraphics[width=.90\textwidth]{images/resultados_h4_severidade_pacote.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+Este resultado não afirma que pacotes maiores produzem melhores resultados, uma pergunta diferente, fora do escopo desta análise, mas apenas que a severidade da necessidade e o tamanho da resposta caminham juntos. Uma leitura econômica plausível, ainda que não testada diretamente por este trabalho, é que corrigir uma deficiência estrutural real tende a custar mais em moeda de troca do que reforçar uma posição já adequada: se o jogador visado representa um recurso valioso e relativamente raro, na acepção de \citet{barney1991}, é razoável que a equipe cedente exija mais contrapartidas para se desfazer dele, e que a equipe adquirente precise mobilizar mais peças, como jogadores adicionais ou jogadores de maior valor percebido, para viabilizar o negócio. Times com objetivos distintos, como descrito por \citet{zimbalist2003}, também tendem a negociar de forma diferente. Uma equipe disposta a pagar o preço de um pacote maior geralmente está tentando resolver um problema que considera urgente, não apenas otimizar marginalmente um elenco já equilibrado.
+
+\section{Objetivo sazonal}
+\label{sec:r_context}
+
+Como descrito na Seção~\ref{sec:archetype_moderation} do Capítulo 3, o objetivo sazonal da equipe adquirente, \textit{contender}, intermediário ou \textit{tanking} conforme sua posição na conferência no momento da troca, foi tratado desde a etapa de operacionalização como uma variável de contexto exploratória para a segunda hipótese, e não como uma quinta hipótese central do trabalho, justamente pela preocupação com o poder estatístico de dividir uma amostra já modesta em três grupos. Essa cautela se confirma nos resultados: o teste de Kruskal-Wallis entre os três grupos (\textit{contenders}, $n=115$; intermediários, $n=91$; \textit{tanking}, $n=164$) não encontra diferença estatisticamente significativa entre eles ($H = 1{,}0698$, $p = 0{,}5857$, $\eta^2 \approx 0$).
+
+A Tabela~\ref{tab:sazonal} detalha o teste de postos sinalizados de Wilcoxon aplicado separadamente a cada grupo, contra a hipótese nula de que sua mediana de $\Delta$WPA é igual a zero. É o teste que examina literalmente as duas previsões feitas pela hipótese original. A previsão para \textit{contenders}, de que suas trocas produzem melhora de curto prazo, não se confirma: a mediana é positiva ($+0{,}0192$), mas o teste não rejeita a hipótese de mediana zero ($p = 0{,}0985$). Já a previsão para times em \textit{tanking}, de que suas trocas produzem impacto neutro ou negativo, não apenas não se confirma como se inverte. A mediana observada é positiva e o teste rejeita a hipótese de mediana zero ($p = 0{,}0087$), indicando uma melhora estatisticamente discernível exatamente no grupo para o qual a hipótese previa o oposto. O contraste direto entre os dois grupos, \textit{contender} contra \textit{tanking}, tampouco é significativo ($U = 9.303{,}0$, $p = 0{,}5762$).
+
+\begin{table}[htb]
+    \centering
+    \caption{Variação da taxa de WPA da equipe, por objetivo sazonal}
+    \label{tab:sazonal}
+    \begin{tabular}{|p{2.6cm}|p{1.2cm}|p{2.4cm}|p{2.6cm}|}
+    \hline
+    \textbf{Objetivo sazonal} & \textbf{N} & \textbf{Mediana $\Delta$WPA} & \textbf{Wilcoxon $p$-valor} \\
+    \hline
+    \textit{Contender} & 115 & $+0{,}0192$ & $0{,}0985$ \\
+    \hline
+    Intermediário & 91 & $+0{,}0394$ & $0{,}0071$ \\
+    \hline
+    \textit{Tanking} & 164 & $+0{,}0178$ & $0{,}0087$ \\
+    \hline
+    \end{tabular}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{table}
+
+A Figura~\ref{fig:sazonal} ilustra essa inversão: dos três grupos, o único com previsão explícita de piora ou estagnação é justamente aquele com a diferença mais claramente positiva em relação a zero.
+
+Essa inversão levanta uma pergunta natural: seria a melhora do \textit{tanking} apenas regressão à média, times que partem de uma taxa de WPA pré-troca mais baixa tendo, estatisticamente, mais espaço para subir, independentemente do objetivo sazonal? Testou-se essa possibilidade diretamente, correlacionando a taxa de WPA da equipe antes da troca com o ganho obtido depois dela, separadamente dentro de cada grupo. A correlação é negativa e significativa nos três: \textit{contenders} ($\rho = -0{,}213$, $p = 0{,}0225$, $n = 115$), intermediários ($\rho = -0{,}231$, $p = 0{,}0280$, $n = 91$) e \textit{tanking} ($\rho = -0{,}292$, $p = 0{,}0001$, $n = 164$), a mais forte das três. Como times em \textit{tanking} partem, por definição, do nível mais baixo dos três grupos, eles têm mais espaço estatístico para subir; parte da melhora relatada na Tabela~\ref{tab:sazonal} é, portanto, explicável por regressão à média, e não por um efeito específico do objetivo sazonal. Esse resultado não anula o achado de que o \textit{tanking} melhora de forma estatisticamente significativa, mas o qualifica. O mesmo padrão de recuperação a partir de uma base mais baixa aparece nos três grupos, o que é consistente com um efeito estatístico geral. Equipes com desempenho pior do que o habitual antes da troca (por lesões, sequências de resultados ruins, ou outras causas temporárias) tendem a voltar perto de seu próprio padrão depois; não é evidência de que trocas de reconstrução funcionem melhor do que trocas de \textit{contenders}. De qualquer forma, o padrão observado reforça a decisão, já justificada na Seção~\ref{sec:archetype_moderation} do Capítulo 3, de não elevar o objetivo sazonal à condição de hipótese central: o resultado é instável demais, e a amostra pequena demais, para sustentar uma afirmação direcional forte. O achado incidental de que o grupo intermediário, para o qual a hipótese original não fazia previsão, também melhora de forma significativa, reforça ainda mais essa cautela.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Distribuição da variação da taxa de WPA da equipe, por objetivo sazonal}
+    \label{fig:sazonal}
+    \includegraphics[width=.85\textwidth]{images/resultados_objetivo_sazonal.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+\section{Síntese dos resultados}
+\label{sec:r_synthesis}
+
+A Tabela~\ref{tab:sintese_resultados} reúne o veredito das quatro hipóteses centrais. Três delas, desigualdade salarial (H1), experiência dos jogadores adquiridos (H3) e estrutura da negociação (H4), encontram suporte estatístico em seu teste principal, com efeito fraco em todos os casos pela convenção de \citet{cohen1988}, e o mais próximo de moderado sendo o de H4. A segunda hipótese, sobre o ajuste funcional do jogador adquirido, não encontra suporte em sua forma categórica original, ainda que um sinal mais fraco e menos estável da mesma relação sobreviva em sua versão contínua.
+
+\begin{table}[htb]
+    \centering
+    \caption{Síntese dos resultados das quatro hipóteses centrais}
+    \label{tab:sintese_resultados}
+    \begin{tabular}{|p{1.0cm}|p{3.4cm}|p{3.2cm}|p{2.2cm}|p{2.8cm}|}
+    \hline
+    \textbf{Hip.} & \textbf{Teste principal} & \textbf{Resultado} & \textbf{Efeito} & \textbf{Veredito} \\
+    \hline
+    H1 & Spearman $\rho$ ($n=282$) & $\rho=-0{,}189$, $p=0{,}0014$ & Fraco & Suporte estatístico \\
+    \hline
+    H2 & Mann-Whitney $U$ unilateral ($n=370$) & $r=-0{,}077$, $p=0{,}1165$ & Desprezível & Sem suporte (forma categórica) \\
+    \hline
+    H3 & Mann-Whitney $U$ unilateral ($n=370$) & $r$ fraco, $p=0{,}0315$ & Fraco & Suporte estatístico \\
+    \hline
+    H4 & Spearman $\rho$ ($n=367$) & $\rho=-0{,}280$, $p<0{,}0001$ & Fraco (limítrofe) & Suporte estatístico \\
+    \hline
+    \end{tabular}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{table}
+
+Lidos em conjunto, os quatro resultados sustentam uma leitura coerente do problema de pesquisa, mesmo com o resultado misto da segunda hipótese. A forma como a folha salarial em quadra se reorganiza depois de uma troca (H1) está associada ao desempenho subsequente da equipe, com uma direção que favorece moderadamente a Teoria da Equidade sobre a do Torneio. Quem especificamente chega numa troca também importa. Jogadores mais velhos, usados aqui como \textit{proxy} de experiência, tendem a se associar a um impacto de curto prazo mais positivo (H3), e o tamanho do compromisso que a equipe adquirente estava disposta a assumir acompanha a severidade da necessidade que buscava resolver (H4). O elo mais frágil da cadeia é justamente a pergunta mais central da metodologia da Contribuição Relativa: se a troca de fato mirava uma lacuna posicional diagnosticável antes do fato. Este trabalho encontra essa relação apenas parcialmente, de forma inconsistente entre eras de disponibilidade de dado, um problema que a Seção~\ref{sec:method_limitations} do Capítulo 3 já havia identificado como limitação antes mesmo de os testes serem rodados.
+
+Nenhum dos quatro efeitos encontrados é grande em termos absolutos. Todos se classificam como fracos pela convenção de Cohen, mesmo quando estatisticamente significativos. Essa magnitude modesta é consistente com o argumento revisado no Capítulo 2, de que nenhum fator isolado de composição de elenco explica a maior parte da variação de desempenho na NBA: \citet{berrischmidt2010} já haviam mostrado que o talento individual, sozinho, explica menos de 10\% da variação de vitórias na liga. Trocas de meio de temporada, sua estrutura salarial resultante e o perfil dos jogadores movimentados parecem se somar a esse quadro como um fator entre vários, mensurável e replicável nos dados analisados, mas não determinante isoladamente. O próximo e último capítulo retoma essas quatro respostas à luz dos objetivos específicos definidos na Introdução e discute os limites do que pode, e do que não pode, ser concluído a partir delas.

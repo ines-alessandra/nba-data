@@ -1,0 +1,283 @@
+team_id,team,season_end_year,n_trades,n_players_in,n_players_out,n_players_moved
+1610612737,Atlanta Hawks,2013,2,2,0,2
+1610612766,Charlotte Hornets,2013,1,1,0,1
+1610612742,Dallas Mavericks,2013,1,1,0,1
+1610612744,Golden State Warriors,2013,2,0,0,0
+1610612745,Houston Rockets,2013,1,3,4,7
+1610612763,Memphis Grizzlies,2013,2,3,0,3
+1610612748,Miami Heat,2013,1,1,0,1
+1610612749,Milwaukee Bucks,2013,1,3,0,3
+1610612752,New York Knicks,2013,1,0,0,0
+1610612760,Oklahoma City Thunder,2013,2,2,0,2
+1610612753,Orlando Magic,2013,2,4,0,4
+1610612755,Philadelphia 76ers,2013,1,1,0,1
+1610612756,Phoenix Suns,2013,1,1,0,1
+1610612757,Portland Trail Blazers,2013,1,1,0,1
+1610612758,Sacramento Kings,2013,1,3,3,6
+1610612761,Toronto Raptors,2013,1,2,0,2
+1610612737,Atlanta Hawks,2014,1,1,0,1
+1610612751,Brooklyn Nets,2014,3,3,0,3
+1610612766,Charlotte Hornets,2014,1,2,0,2
+1610612741,Chicago Bulls,2014,1,1,0,1
+1610612739,Cleveland Cavaliers,2014,1,1,0,1
+1610612743,Denver Nuggets,2014,2,2,1,3
+1610612744,Golden State Warriors,2014,1,1,0,1
+1610612745,Houston Rockets,2014,1,1,0,1
+1610612754,Indiana Pacers,2014,1,2,0,2
+1610612746,LA Clippers,2014,2,0,0,0
+1610612747,Los Angeles Lakers,2014,1,2,0,2
+1610612748,Miami Heat,2014,1,0,0,0
+1610612749,Milwaukee Bucks,2014,1,2,0,2
+1610612740,New Orleans Hornets,2014,1,1,0,1
+1610612755,Philadelphia 76ers,2014,4,5,0,5
+1610612758,Sacramento Kings,2014,2,3,0,3
+1610612759,San Antonio Spurs,2014,1,1,0,1
+1610612761,Toronto Raptors,2014,1,1,0,1
+1610612764,Washington Wizards,2014,1,1,2,3
+1610612737,Atlanta Hawks,2015,1,0,0,0
+1610612738,Boston Celtics,2015,2,3,0,3
+1610612751,Brooklyn Nets,2015,1,1,0,1
+1610612766,Charlotte Hornets,2015,1,2,0,2
+1610612743,Denver Nuggets,2015,2,3,0,3
+1610612765,Detroit Pistons,2015,2,2,2,4
+1610612745,Houston Rockets,2015,2,2,0,2
+1610612748,Miami Heat,2015,1,2,4,6
+1610612749,Milwaukee Bucks,2015,1,3,2,5
+1610612750,Minnesota Timberwolves,2015,3,3,0,3
+1610612740,New Orleans Hornets,2015,2,5,1,6
+1610612752,New York Knicks,2015,1,1,0,1
+1610612760,Oklahoma City Thunder,2015,2,4,4,8
+1610612755,Philadelphia 76ers,2015,3,3,1,4
+1610612756,Phoenix Suns,2015,3,5,4,9
+1610612757,Portland Trail Blazers,2015,1,2,0,2
+1610612758,Sacramento Kings,2015,1,1,0,1
+1610612762,Utah Jazz,2015,1,3,2,5
+1610612764,Washington Wizards,2015,1,1,0,1
+1610612737,Atlanta Hawks,2016,1,1,2,3
+1610612766,Charlotte Hornets,2016,1,1,2,3
+1610612741,Chicago Bulls,2016,1,1,1,2
+1610612739,Cleveland Cavaliers,2016,2,1,0,1
+1610612743,Denver Nuggets,2016,1,2,0,2
+1610612765,Detroit Pistons,2016,1,1,0,1
+1610612745,Houston Rockets,2016,1,1,0,1
+1610612746,LA Clippers,2016,2,3,0,3
+1610612763,Memphis Grizzlies,2016,2,3,1,4
+1610612748,Miami Heat,2016,3,1,1,2
+1610612740,New Orleans Hornets,2016,1,1,0,1
+1610612760,Oklahoma City Thunder,2016,1,1,0,1
+1610612753,Orlando Magic,2016,2,3,0,3
+1610612756,Phoenix Suns,2016,1,2,0,2
+1610612757,Portland Trail Blazers,2016,2,2,0,2
+1610612762,Utah Jazz,2016,1,1,0,1
+1610612764,Washington Wizards,2016,1,1,0,1
+1610612737,Atlanta Hawks,2017,2,1,0,1
+1610612751,Brooklyn Nets,2017,2,3,0,3
+1610612766,Charlotte Hornets,2017,2,2,0,2
+1610612741,Chicago Bulls,2017,1,3,0,3
+1610612739,Cleveland Cavaliers,2017,1,0,0,0
+1610612742,Dallas Mavericks,2017,1,1,0,1
+1610612743,Denver Nuggets,2017,2,2,0,2
+1610612745,Houston Rockets,2017,3,2,0,2
+1610612747,Los Angeles Lakers,2017,2,3,0,3
+1610612749,Milwaukee Bucks,2017,2,2,0,2
+1610612740,New Orleans Hornets,2017,1,2,0,2
+1610612760,Oklahoma City Thunder,2017,1,2,0,2
+1610612753,Orlando Magic,2017,1,1,0,1
+1610612755,Philadelphia 76ers,2017,2,3,0,3
+1610612756,Phoenix Suns,2017,2,2,0,2
+1610612757,Portland Trail Blazers,2017,1,1,0,1
+1610612758,Sacramento Kings,2017,1,3,0,3
+1610612761,Toronto Raptors,2017,2,2,0,2
+1610612764,Washington Wizards,2017,1,2,0,2
+1610612737,Atlanta Hawks,2018,2,2,0,2
+1610612751,Brooklyn Nets,2018,2,2,0,2
+1610612766,Charlotte Hornets,2018,1,1,0,1
+1610612741,Chicago Bulls,2018,3,5,0,5
+1610612739,Cleveland Cavaliers,2018,3,5,4,9
+1610612742,Dallas Mavericks,2018,1,1,1,2
+1610612743,Denver Nuggets,2018,1,1,1,2
+1610612765,Detroit Pistons,2018,3,5,0,5
+1610612746,LA Clippers,2018,1,3,0,3
+1610612747,Los Angeles Lakers,2018,1,2,0,2
+1610612763,Memphis Grizzlies,2018,1,1,0,1
+1610612748,Miami Heat,2018,2,2,0,2
+1610612749,Milwaukee Bucks,2018,1,1,0,1
+1610612740,New Orleans Hornets,2018,2,2,0,2
+1610612752,New York Knicks,2018,2,2,1,3
+1610612753,Orlando Magic,2018,1,0,0,0
+1610612756,Phoenix Suns,2018,1,1,0,1
+1610612757,Portland Trail Blazers,2018,1,0,0,0
+1610612758,Sacramento Kings,2018,2,4,2,6
+1610612761,Toronto Raptors,2018,1,1,0,1
+1610612762,Utah Jazz,2018,1,2,2,4
+1610612764,Washington Wizards,2018,1,0,0,0
+1610612737,Atlanta Hawks,2019,2,2,0,2
+1610612738,Boston Celtics,2019,1,0,0,0
+1610612751,Brooklyn Nets,2019,1,1,0,1
+1610612741,Chicago Bulls,2019,3,4,0,4
+1610612739,Cleveland Cavaliers,2019,2,4,3,7
+1610612742,Dallas Mavericks,2019,2,6,0,6
+1610612765,Detroit Pistons,2019,2,2,1,3
+1610612745,Houston Rockets,2019,4,4,2,6
+1610612754,Indiana Pacers,2019,1,3,0,3
+1610612746,LA Clippers,2019,3,7,0,7
+1610612747,Los Angeles Lakers,2019,2,2,0,2
+1610612763,Memphis Grizzlies,2019,3,5,0,5
+1610612748,Miami Heat,2019,1,1,0,1
+1610612749,Milwaukee Bucks,2019,1,1,2,3
+1610612740,New Orleans Hornets,2019,2,3,1,4
+1610612752,New York Knicks,2019,1,3,0,3
+1610612760,Oklahoma City Thunder,2019,1,0,0,0
+1610612753,Orlando Magic,2019,1,1,0,1
+1610612755,Philadelphia 76ers,2019,4,7,0,7
+1610612756,Phoenix Suns,2019,1,2,0,2
+1610612757,Portland Trail Blazers,2019,2,2,0,2
+1610612758,Sacramento Kings,2019,3,3,1,4
+1610612761,Toronto Raptors,2019,3,1,0,1
+1610612764,Washington Wizards,2019,2,3,0,3
+1610612737,Atlanta Hawks,2020,5,7,1,8
+1610612739,Cleveland Cavaliers,2020,1,1,0,1
+1610612742,Dallas Mavericks,2020,2,2,0,2
+1610612743,Denver Nuggets,2020,2,5,3,8
+1610612765,Detroit Pistons,2020,1,2,0,2
+1610612744,Golden State Warriors,2020,3,1,0,1
+1610612745,Houston Rockets,2020,2,3,3,6
+1610612746,LA Clippers,2020,2,2,2,4
+1610612763,Memphis Grizzlies,2020,2,4,3,7
+1610612748,Miami Heat,2020,1,3,3,6
+1610612750,Minnesota Timberwolves,2020,4,9,6,15
+1610612752,New York Knicks,2020,1,2,1,3
+1610612760,Oklahoma City Thunder,2020,1,1,0,1
+1610612753,Orlando Magic,2020,1,1,0,1
+1610612755,Philadelphia 76ers,2020,2,2,0,2
+1610612757,Portland Trail Blazers,2020,2,3,0,3
+1610612758,Sacramento Kings,2020,2,4,0,4
+1610612764,Washington Wizards,2020,2,2,2,4
+1610612737,Atlanta Hawks,2021,1,1,0,1
+1610612738,Boston Celtics,2021,2,3,2,5
+1610612766,Charlotte Hornets,2021,1,1,0,1
+1610612741,Chicago Bulls,2021,2,5,3,8
+1610612739,Cleveland Cavaliers,2021,1,1,0,1
+1610612742,Dallas Mavericks,2021,1,2,0,2
+1610612743,Denver Nuggets,2021,2,3,0,3
+1610612765,Detroit Pistons,2021,2,2,0,2
+1610612744,Golden State Warriors,2021,2,1,0,1
+1610612745,Houston Rockets,2021,2,4,0,4
+1610612746,LA Clippers,2021,2,1,0,1
+1610612748,Miami Heat,2021,3,3,0,3
+1610612749,Milwaukee Bucks,2021,2,2,0,2
+1610612740,New Orleans Hornets,2021,1,2,0,2
+1610612752,New York Knicks,2021,1,3,2,5
+1610612760,Oklahoma City Thunder,2021,3,4,1,5
+1610612753,Orlando Magic,2021,3,5,0,5
+1610612755,Philadelphia 76ers,2021,1,2,4,6
+1610612756,Phoenix Suns,2021,1,1,0,1
+1610612757,Portland Trail Blazers,2021,1,1,0,1
+1610612758,Sacramento Kings,2021,4,5,0,5
+1610612759,San Antonio Spurs,2021,1,1,0,1
+1610612761,Toronto Raptors,2021,3,2,0,2
+1610612762,Utah Jazz,2021,1,1,0,1
+1610612764,Washington Wizards,2021,1,2,2,4
+1610612737,Atlanta Hawks,2022,1,1,0,1
+1610612738,Boston Celtics,2022,4,4,1,5
+1610612751,Brooklyn Nets,2022,1,3,0,3
+1610612766,Charlotte Hornets,2022,1,1,0,1
+1610612739,Cleveland Cavaliers,2022,1,1,0,1
+1610612742,Dallas Mavericks,2022,1,2,0,2
+1610612743,Denver Nuggets,2022,1,1,2,3
+1610612765,Detroit Pistons,2022,1,1,2,3
+1610612745,Houston Rockets,2022,1,3,0,3
+1610612754,Indiana Pacers,2022,3,5,0,5
+1610612746,LA Clippers,2022,2,5,2,7
+1610612748,Miami Heat,2022,1,0,0,0
+1610612749,Milwaukee Bucks,2022,1,1,4,5
+1610612740,New Orleans Hornets,2022,1,3,0,3
+1610612752,New York Knicks,2022,1,2,0,2
+1610612760,Oklahoma City Thunder,2022,1,1,0,1
+1610612753,Orlando Magic,2022,1,2,0,2
+1610612755,Philadelphia 76ers,2022,1,2,0,2
+1610612756,Phoenix Suns,2022,2,2,0,2
+1610612757,Portland Trail Blazers,2022,3,9,2,11
+1610612758,Sacramento Kings,2022,2,8,2,10
+1610612759,San Antonio Spurs,2022,4,5,2,7
+1610612761,Toronto Raptors,2022,1,2,0,2
+1610612762,Utah Jazz,2022,1,2,2,4
+1610612764,Washington Wizards,2022,3,3,0,3
+1610612737,Atlanta Hawks,2023,2,3,1,4
+1610612738,Boston Celtics,2023,1,1,0,1
+1610612751,Brooklyn Nets,2023,3,7,3,10
+1610612766,Charlotte Hornets,2023,2,2,1,3
+1610612742,Dallas Mavericks,2023,1,2,0,2
+1610612743,Denver Nuggets,2023,1,1,2,3
+1610612765,Detroit Pistons,2023,1,1,1,2
+1610612744,Golden State Warriors,2023,1,1,1,2
+1610612745,Houston Rockets,2023,2,4,1,5
+1610612754,Indiana Pacers,2023,1,3,1,4
+1610612746,LA Clippers,2023,3,3,2,5
+1610612747,Los Angeles Lakers,2023,3,6,5,11
+1610612763,Memphis Grizzlies,2023,1,1,1,2
+1610612748,Miami Heat,2023,1,0,0,0
+1610612749,Milwaukee Bucks,2023,1,1,3,4
+1610612750,Minnesota Timberwolves,2023,1,2,1,3
+1610612740,New Orleans Hornets,2023,1,1,0,1
+1610612752,New York Knicks,2023,1,3,4,7
+1610612760,Oklahoma City Thunder,2023,2,2,0,2
+1610612753,Orlando Magic,2023,1,1,1,2
+1610612755,Philadelphia 76ers,2023,1,1,1,2
+1610612756,Phoenix Suns,2023,2,3,3,6
+1610612757,Portland Trail Blazers,2023,2,6,5,11
+1610612758,Sacramento Kings,2023,1,1,0,1
+1610612759,San Antonio Spurs,2023,3,3,0,3
+1610612761,Toronto Raptors,2023,1,1,0,1
+1610612762,Utah Jazz,2023,1,3,4,7
+1610612764,Washington Wizards,2023,1,1,0,1
+1610612738,Boston Celtics,2024,3,2,0,2
+1610612751,Brooklyn Nets,2024,2,5,1,6
+1610612766,Charlotte Hornets,2024,3,6,0,6
+1610612742,Dallas Mavericks,2024,3,2,0,2
+1610612743,Denver Nuggets,2024,1,0,0,0
+1610612765,Detroit Pistons,2024,5,10,0,10
+1610612744,Golden State Warriors,2024,1,0,0,0
+1610612745,Houston Rockets,2024,1,1,0,1
+1610612754,Indiana Pacers,2024,4,5,1,6
+1610612746,LA Clippers,2024,1,1,0,1
+1610612763,Memphis Grizzlies,2024,3,4,2,6
+1610612748,Miami Heat,2024,1,1,0,1
+1610612749,Milwaukee Bucks,2024,2,2,0,2
+1610612750,Minnesota Timberwolves,2024,1,1,0,1
+1610612740,New Orleans Hornets,2024,1,0,0,0
+1610612752,New York Knicks,2024,1,2,0,2
+1610612760,Oklahoma City Thunder,2024,2,1,0,1
+1610612755,Philadelphia 76ers,2024,4,2,2,4
+1610612756,Phoenix Suns,2024,1,2,4,6
+1610612757,Portland Trail Blazers,2024,1,1,0,1
+1610612758,Sacramento Kings,2024,1,1,0,1
+1610612759,San Antonio Spurs,2024,1,1,1,2
+1610612761,Toronto Raptors,2024,3,6,0,6
+1610612762,Utah Jazz,2024,2,4,0,4
+1610612764,Washington Wizards,2024,2,3,0,3
+1610612737,Atlanta Hawks,2025,3,5,0,5
+1610612738,Boston Celtics,2025,1,0,0,0
+1610612766,Charlotte Hornets,2025,4,4,0,4
+1610612741,Chicago Bulls,2025,1,3,1,4
+1610612739,Cleveland Cavaliers,2025,1,1,0,1
+1610612742,Dallas Mavericks,2025,2,3,3,6
+1610612765,Detroit Pistons,2025,2,3,1,4
+1610612744,Golden State Warriors,2025,1,1,4,5
+1610612745,Houston Rockets,2025,2,2,0,2
+1610612754,Indiana Pacers,2025,1,0,0,0
+1610612746,LA Clippers,2025,3,4,0,4
+1610612747,Los Angeles Lakers,2025,2,4,3,7
+1610612763,Memphis Grizzlies,2025,1,2,2,4
+1610612748,Miami Heat,2025,1,3,2,5
+1610612749,Milwaukee Bucks,2025,2,3,4,7
+1610612740,New Orleans Hornets,2025,2,2,0,2
+1610612752,New York Knicks,2025,1,2,2,4
+1610612760,Oklahoma City Thunder,2025,2,1,0,1
+1610612755,Philadelphia 76ers,2025,3,2,0,2
+1610612756,Phoenix Suns,2025,3,3,0,3
+1610612758,Sacramento Kings,2025,3,4,5,9
+1610612759,San Antonio Spurs,2025,2,3,3,6
+1610612761,Toronto Raptors,2025,3,3,1,4
+1610612762,Utah Jazz,2025,4,5,1,6
+1610612764,Washington Wizards,2025,4,8,4,12

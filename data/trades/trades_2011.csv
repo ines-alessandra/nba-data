@@ -1,0 +1,15 @@
+trade_id,date,team,direction,asset_type,player_name,player_age,player_position,pick_year,pick_round,pick_condition,cash,cap_space,notes
+1,2012-06-30,Atlanta Hawks,Incoming,Player,Sofoklis Schortsanitis,27,PF,,,,,,
+1,2012-06-30,LA Clippers,Incoming,Player,Willie Green,30,SF,,,,,,
+2,2012-06-26,Detroit Pistons,Incoming,Player,Corey Maggette,32,SF,,,,,,
+2,2012-06-26,Charlotte Hornets,Incoming,Player,Ben Gordon,29,SG,,,,,,
+2,2012-06-26,Charlotte Hornets,Incoming,Pick,,,,2014,1,protected top 14 in 2013 / top 8 in 2014,,
+3,2012-03-15,Cleveland Cavaliers,Incoming,Player,Luke Walton,31,SF,,,,,,
+3,2012-03-15,Cleveland Cavaliers,Incoming,Player,Jason Kapono,31,SF,,,,,,
+3,2012-03-15,Cleveland Cavaliers,Incoming,Pick,,,,2012,1,Jared Cunningham,,
+3,2012-03-15,Cleveland Cavaliers,Incoming,Pick,,,,2013,1,,,
+3,2012-03-15,Los Angeles Lakers,Incoming,Player,Ramon Sessions,25,PG,,,,,,
+3,2012-03-15,Los Angeles Lakers,Incoming,Player,Christian Eyenga,22,PG,,,,,,
+4,2011-12-13,Minnesota Timberwolves,Incoming,Player,Robert Vaden,26,SG,,,,,,
+4,2011-12-13,Minnesota Timberwolves,Incoming,Pick,,,,,,Two Future Draft Picks,,"Text 'Two Future Draft Picjs' interpreted as two future picks"
+4,2011-12-13,Oklahoma City Thunder,Incoming,Player,Lazar Hayward,25,PF,,,,,,

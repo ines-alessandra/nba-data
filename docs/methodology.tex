@@ -1,0 +1,197 @@
+\chapter{Metodologia}
+\label{chp:methodology}
+
+Este capítulo descreve como cada uma das quatro hipóteses apresentadas nos objetivos específicos deste trabalho (Subseção~\ref{sec:specific_objectives}) foi operacionalizada, ou seja, transformada em variáveis mensuráveis e em procedimentos estatísticos concretos. A Seção~\ref{sec:research_design} caracteriza o tipo de pesquisa. A Seção~\ref{sec:sample} descreve a população de times-temporada e eventos de troca utilizada, e como as duas amostras finais foram construídas a partir dela. As quatro seções seguintes tratam de cada hipótese separadamente: a Seção~\ref{sec:h1_gini} descreve a primeira, sobre desigualdade salarial e desempenho, incluindo a seleção entre seis métricas concorrentes de desigualdade salarial (Subseção~\ref{sec:h1_metric_selection}), a construção do Índice de Gini ponderado por minutos (Subseção~\ref{sec:h1_gini_formula}), da Performance Ajustada (Subseção~\ref{sec:h1_adjusted_perf}) e o teste de robustez da janela de troca (Subseção~\ref{sec:h1_robustness}); a Seção~\ref{sec:h2_wpa_ops} descreve a segunda, sobre o ajuste funcional do jogador adquirido, detalhando a cadeia de cálculo da Contribuição Relativa e as três eras de disponibilidade de dado que ela precisa conciliar; a Seção~\ref{sec:h3_age} descreve a terceira, sobre a experiência dos jogadores adquiridos; e a Seção~\ref{sec:h4_structure} descreve a última, sobre a estrutura da negociação. A Seção~\ref{sec:archetype_moderation} apresenta os arquétipos competitivos como variável moderadora da primeira hipótese e o objetivo sazonal da equipe como variável de contexto complementar. A Seção~\ref{sec:stats_synthesis} sintetiza, em uma única tabela, a correspondência entre cada hipótese, suas variáveis e o teste estatístico empregado. Por fim, a Seção~\ref{sec:method_limitations} reúne as limitações metodológicas identificadas ao longo da implementação.
+
+\section{Tipo e desenho da pesquisa}
+\label{sec:research_design}
+
+Esta é uma pesquisa quantitativa, de caráter correlacional e não experimental, logo, nenhuma equipe é designada aleatoriamente a fazer ou não uma troca, as trocas já ocorreram e são observadas retrospectivamente. O desenho é longitudinal, cobrindo treze temporadas regulares da NBA (2012-13 a 2024-25), e opera em dois níveis de análise distintos, cada um associado a um subconjunto das quatro hipóteses. O primeiro nível é o time-temporada, usado pela primeira hipótese, em que cada observação resume o comportamento de uma equipe em uma temporada específica. O segundo nível é o evento de troca, usado pelas outras três, em que cada observação é uma transação específica realizada por uma equipe em uma data específica, podendo envolver um ou mais jogadores adquiridos simultaneamente.
+
+Essa divisão em dois níveis não é uma inconsistência do desenho, mas um reflexo de que as quatro hipóteses respondem perguntas de naturezas diferentes. A primeira hipótese pergunta se uma mudança na composição salarial do elenco, ao longo de uma janela de tempo, está associada a uma mudança no desempenho da equipe naquela mesma janela. Por isso, sua unidade natural é a equipe-temporada, com uma medição antes e outra depois do \textit{trade deadline}. Já as outras perguntam sobre características de trocas específicas, se preenchem uma lacuna, se envolvem jogadores mais ou menos experientes, se a severidade da lacuna se relaciona ao tamanho do pacote. São perguntas que só fazem sentido no nível do evento individual. A arquitetura de dados em nível de jogo descrita no Capítulo 2 (Seção~\ref{sec:data_engineering}) é o que permite reconstruir os dois níveis a partir da mesma base de eventos brutos, em vez de depender de agregados fixos por temporada.
+
+\section{População, amostra e recorte temporal}
+\label{sec:sample}
+
+A população de referência é o conjunto de equipes-temporada da NBA entre as temporadas 2012-13 e 2024-25, totalizando 390 times-temporada (30 equipes por temporada, ao longo de treze temporadas). A temporada 2011-12, do \textit{lockout}, foi excluída por ser atipicamente curta (66 jogos, em vez de 82), o que distorceria qualquer métrica calculada por médias de temporada. Essa população de 390 times-temporada já dispõe, para todos os seus membros, de dados válidos de composição salarial e de Performance Ajustada nos períodos pré e pós-\textit{deadline}. Ou seja, nenhum time-temporada é descartado por dado faltante nesse estágio.
+
+A amostra final da primeira hipótese restringe essa população aos times-temporada com pelo menos uma troca de jogador registrada nos 30 dias que antecedem o \textit{trade deadline} daquela temporada (Subseção~\ref{sec:measuring_success} do Capítulo 2), resultando em 282 times-temporada. Essa restrição é necessária porque a hipótese trata do efeito de uma troca sobre a desigualdade e o desempenho; incluir equipes que não trocaram ninguém na janela mediria outra coisa: a variação natural do elenco entre dois pontos do calendário, não o efeito de uma transação.
+
+As demais hipóteses, por sua vez, partem diretamente do conjunto de eventos de troca de temporada regular entre as temporadas 2012-13 e 2024-25: 370 eventos, entendidos como pares equipe-data de troca, que juntos somam 663 jogadores adquiridos. A diferença entre as duas contagens existe porque um mesmo evento pode envolver mais de um jogador chegando à mesma equipe na mesma data (mediana de 1 jogador por evento, no máximo 8). A Figura~\ref{fig:funil_amostra} resume a construção das duas amostras lado a lado.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Construção das amostras da Hipótese 1 e das Hipóteses 2 a 4}
+    \label{fig:funil_amostra}
+    \includegraphics[width=.85\textwidth]{images/metodologia_funil_amostra.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+\section{Desigualdade salarial e desempenho}
+\label{sec:h1_gini}
+
+A Hipótese 1 propõe que uma variação na desigualdade salarial em quadra, entre os períodos pré e pós-\textit{trade deadline}, está associada a uma variação no desempenho da equipe nesses mesmos períodos. Sua operacionalização depende de duas variáveis explicativas construídas separadamente: o Índice de Gini ponderado por minutos, já justificado teoricamente na Subseção~\ref{sec:gini_index}, e a Performance Ajustada, que controla o desempenho bruto pela força do calendário enfrentado.
+
+\subsection{Seleção entre métricas concorrentes de desigualdade salarial}
+\label{sec:h1_metric_selection}
+
+O Índice de Gini ponderado por minutos não foi a única métrica de desigualdade salarial considerada. Antes de decidir por ela, este trabalho comparou seis candidatas, calculadas a partir do mesmo elenco ativo em cada período: o desvio-padrão dos salários, o coeficiente de variação, a razão entre o maior e o menor salário do elenco (\textit{Top1/Bottom1}), a proporção da folha salarial concentrada nos três maiores contratos, o Índice de Gini simples e o Índice de Gini ponderado por minutos. A escolha entre elas segue três critérios, aplicados nesta ordem específica, decisiva, descritiva e, por último, confirmatória, justamente para que a métrica final não seja escolhida por já favorecer o resultado que vai testar.
+
+O primeiro critério, teórico, é decisivo por si só: das seis métricas, apenas o Gini ponderado por minutos pesa cada jogador pelos minutos que efetivamente jogou. Nas outras cinco, um reserva de contrato alto que joga poucos minutos conta o mesmo que um titular de contrato equivalente que joga a maior parte da temporada. Ou seja, elas descrevem a folha salarial nominal do elenco, não a desigualdade que os jogadores efetivamente vivem em quadra, o constructo de interesse desta pesquisa (Subseção~\ref{sec:gini_index}). Essa escolha teórica é feita antes de qualquer teste envolvendo as seis métricas.
+
+O segundo critério é descritivo, não decisivo: um diagnóstico de normalidade (teste de Shapiro-Wilk) e uma contagem de valores atípicos pelo método do intervalo interquartil, aplicados à variação pré/pós de cada uma das seis métricas. Esse diagnóstico não serve para eleger uma métrica "vencedora"; serve para confirmar, com as seis à mostra, que o uso uniforme de testes não paramétricos ao longo deste trabalho (Subseção~\ref{sec:corr_techniques}) é adequado também aqui, e não apenas para o Índice de Gini ponderado especificamente.
+
+O terceiro critério é empírico, e deliberadamente o último a ser aplicado: a correlação de Spearman entre a variação de cada uma das seis métricas e a variação da Performance Ajustada (Subseção~\ref{sec:h1_adjusted_perf}), na amostra de times-temporada com troca real na janela do \textit{deadline} (Seção~\ref{sec:sample}). Calcular essa correlação antes de decidir a métrica, e escolher a que melhor corrobora o resultado esperado, constituiria uma forma de \textit{specification search} circular, ou seja, testar a hipótese com a variável definida, em parte, pelo próprio resultado que ela vai produzir. Por isso, essa correlação é reportada no Capítulo 4 apenas como confirmação de transparência, depois de a escolha teórica já estar feita, nunca como a regra de decisão. Pela mesma lógica, também se verifica se o Gini ponderado por minutos correlaciona fortemente com as outras cinco métricas, o que indicaria que a ponderação por minutos não acrescenta nenhuma informação nova, ou se capta algo distinto delas, resultado também reportado no Capítulo 4.
+
+\subsection{Construção do Índice de Gini ponderado por minutos}
+\label{sec:h1_gini_formula}
+
+O cálculo segue a definição geométrica usual do coeficiente de Gini como duas vezes a área entre a curva de Lorenz e a diagonal de igualdade perfeita, mas os dois eixos da curva mudam de significado dependendo da versão do índice. No Gini simples, o eixo horizontal é a fração acumulada de \textit{jogadores} sob contrato, ordenados do menor para o maior salário, de modo que cada jogador, independentemente de quanto joga, contribui igualmente para essa fração. No Gini ponderado por minutos, o mesmo eixo passa a ser a fração acumulada de \textit{minutos jogados}, de modo que um jogador que atuou pouco pesa pouco na curva, e um titular que jogou a maior parte da temporada pesa muito, ainda que os dois recebam salários parecidos. A Figura~\ref{fig:curva_lorenz} ilustra essa diferença com um elenco fictício de oito jogadores, deliberadamente construído com um reserva bem pago mas com poucos minutos em quadra, para deixar visível o efeito da ponderação sobre o formato da curva.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Curva de Lorenz do Gini simples e do Gini ponderado por minutos (elenco ilustrativo)}
+    \label{fig:curva_lorenz}
+    \includegraphics[width=.85\textwidth]{images/metodologia_curva_lorenz.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026), com dados ilustrativos.
+    \end{flushleft}
+\end{figure}
+
+Na prática, o cálculo é feito separadamente para cada equipe, em cada um dos dois períodos (pré e pós-\textit{deadline}) de cada temporada, a partir de uma consulta que recupera o elenco ativo, jogadores com pelo menos um minuto registrado no período, e seus respectivos salários e minutos jogados. A diferença entre o Gini ponderado do período pós e o do período pré é a variável explicativa central, chamada de $\Delta$Gini ao longo deste trabalho.
+
+\subsection{Performance Ajustada}
+\label{sec:h1_adjusted_perf}
+
+A variável de desfecho é a variação no \textit{Net Rating} de cada equipe entre os dois períodos, mas o \textit{Net Rating} bruto carrega um viés de calendário: os adversários enfrentados antes e depois do \textit{deadline} não são os mesmos, e essa diferença de dificuldade pode, por si só, mover o \textit{Net Rating} observado sem qualquer relação com uma troca. Para neutralizar esse viés, cada jogo é ponderado pelo \textit{Simple Rating System} (SRS) do adversário naquela temporada. O SRS é uma medida de força de time que já incorpora o próprio \textit{Net Rating} do adversário ajustado pela força dos times que ele enfrentou. O peso atribuído a cada jogo é o SRS do adversário deslocado por uma constante (o SRS mínimo da temporada, mais um), de modo que equipes muito mais fracas que a média ainda recebam peso positivo, e não peso próximo de zero ou negativo. A Performance Ajustada de um período é, então, a média do \textit{Net Rating} de cada jogo daquele período, ponderada por esse peso; a diferença entre a Performance Ajustada pós e a pré-\textit{deadline} é a variável de desfecho desta hipótese.
+
+\subsection{Procedimento de teste e robustez da janela de 30 dias}
+\label{sec:h1_robustness}
+
+A associação entre $\Delta$Gini e a variação da Performance Ajustada é testada por correlação de postos de Spearman, na amostra de 282 times-temporada descrita na Seção~\ref{sec:sample}, seguindo a justificativa não paramétrica apresentada na Subseção~\ref{sec:corr_techniques}. Como variável de contexto adicional, também se testa a correlação entre a magnitude da troca (número de jogadores movimentados na janela, somando entradas e saídas) e cada uma das duas variáveis centrais, para verificar se o tamanho da reformulação de elenco, isoladamente, ajuda a explicar o resultado.
+
+A janela de 30 dias que antecede o \textit{trade deadline}, usada para qualificar quais times-temporada entram na amostra (Subseção~\ref{sec:measuring_success}), foi originalmente uma escolha de desenho razoável, mas não validada empiricamente contra larguras vizinhas. Por isso, o mesmo teste de Spearman é recalculado para janelas alternativas de 14, 21, 45 e 60 dias, mantendo o restante do procedimento idêntico: apenas o critério de quais times-temporada contam como tendo tido atividade de troca qualificante muda; a Performance Ajustada e o Gini ponderado, calculados diretamente a partir da data do \textit{deadline}, não dependem da largura da janela. O objetivo desse procedimento é verificar se a direção e a significância do resultado central se sustentam para larguras de janela distintas de 30 dias, e não apenas para o valor de produção.
+
+\section{Ajuste funcional do jogador adquirido}
+\label{sec:h2_wpa_ops}
+
+A Hipótese 2 propõe que trocas que preenchem uma lacuna estrutural do elenco produzem impacto de desempenho mais positivo do que trocas que apenas reforçam uma posição já bem servida. Sua operacionalização segue, passo a passo, a metodologia da Contribuição Relativa proposta por \citet{sa2025} e já apresentada conceitualmente na Subseção~\ref{sec:wpa_metric}: uma cadeia de cinco grandezas, cada uma calculada a partir da anterior, que termina na classificação binária de cada aquisição. A Figura~\ref{fig:cadeia_wpa} resume essa cadeia.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Cadeia de cálculo da Contribuição Relativa, do WPA individual à classificação da troca}
+    \label{fig:cadeia_wpa}
+    \includegraphics[width=.95\textwidth]{images/metodologia_cadeia_wpa.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+O ponto de partida, $WPA_{acc}$, é a soma do \textit{Win Probability Added} por jogo de um jogador ao longo de um período. Agregando o $WPA_{acc}$ de todos os jogadores do mesmo grupo posicional (armadores, alas ou pivôs) dentro de uma equipe, obtém-se $WPA_{pos}$; dividindo-o pelo WPA total da equipe no mesmo período, obtém-se $RCP_{pos}$, a fração da contribuição do time que veio daquele grupo posicional. Como equipes disputam números diferentes de jogos até uma data de corte, $RCP_{pos}$ é normalizado pelo número de jogos do time, gerando $\overline{RCP}_{pos}$, o que permite comparar frações de contribuição entre equipes em pontos distintos do calendário. Por fim, subtraindo de $\overline{RCP}_{pos}$ a média da mesma grandeza entre as 30 equipes da liga na mesma data de corte ($\mu_P$), obtém-se $\Delta P$: positivo quando o grupo posicional contribui acima da média da liga, negativo quando contribui abaixo dela.
+
+A classificação de cada jogador adquirido usa apenas jogos estritamente anteriores à data da troca, nunca dados posteriores, o que violaria a lógica de diagnóstico ao usar informação que só existe depois do evento que se pretende explicar. Se o $\Delta P$ pré-troca da posição do jogador adquirido é negativo, a aquisição é classificada como \textbf{Preenche Lacuna}; se é zero ou positivo, como \textbf{Redundante}. Quando um evento de troca envolve mais de um jogador, o evento como um todo é classificado como Preenche Lacuna se ao menos um dos jogadores adquiridos preencher uma lacuna real. A variável de desfecho é a variação na taxa de WPA da equipe entre os períodos pré e pós-troca; a associação entre a classificação binária e essa variação é testada por Mann-Whitney \textit{U} unilateral, já que a hipótese, lida literalmente, prevê uma direção específica (Preenche Lacuna produz impacto maior que Redundante), não apenas alguma diferença entre os dois grupos.
+
+Uma particularidade desta hipótese, que não se repete nas demais, é que a janela de treze temporadas (2012-13 a 2024-25) usada para testá-la não é servida por uma única fonte de dado. A ESPN publicou o WPA por jogo apenas nas temporadas 2018-19, 2019-20 e 2020-21; fora dessa janela, o \textit{Win Probability Added} precisa ser obtido do site \textit{inpredictable.com}, e a variável de posição do jogador (necessária para agrupar o WPA por armadores, alas e pivôs) muda de fonte e de granularidade conforme a temporada. A Figura~\ref{fig:fontes_wpa_era} resume as três combinações de fonte usadas.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Fontes de dado do WPA e da posição do jogador, por era (2012-13 a 2024-25)}
+    \label{fig:fontes_wpa_era}
+    \includegraphics[width=.90\textwidth]{images/metodologia_fontes_wpa_por_era.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+Entre as temporadas 2018-19 e 2020-21, tanto o WPA quanto a posição (\textit{dAvgPos}, uma posição defensiva contínua, ponderada por minutos e calculada jogo a jogo) vêm da própria ESPN. É a combinação mais completa, e a única usada por \citet{sa2025} em sua proposta original. Entre as temporadas 2021-22 e 2024-25, a ESPN deixou de publicar o WPA, mas continuou publicando o \textit{dAvgPos}; por isso, o WPA passa a vir do \textit{inpredictable.com}, enquanto a posição continua vindo da ESPN, uma combinação híbrida entre as duas fontes, unida pelo identificador de jogo e de jogador (com uma taxa de correspondência de 99,8\%). Já entre as temporadas 2012-13 e 2017-18, nenhuma das duas fontes publica posição jogo a jogo; a alternativa encontrada foi usar o rótulo posicional estático do \textit{inpredictable.com}, que atribui uma única posição por jogador em toda a temporada. É uma aproximação mais fraca, incapaz de detectar uma eventual mudança de posição do jogador ao longo da temporada, embora empiricamente essa mudança nunca tenha sido observada nos rótulos dessa fonte para o período testado.
+
+\section{Experiência dos jogadores adquiridos}
+\label{sec:h3_age}
+
+A Hipótese 3 postula que a experiência dos jogadores adquiridos em uma troca, medida pela idade, está associada ao impacto de desempenho de curto prazo da equipe adquirente. Para cada evento de troca, calcula-se a idade média entre todos os jogadores adquiridos naquela data, a partir do campo de idade registrado no momento da transação. A variável de desfecho é a mesma variação na taxa de WPA da equipe usada na segunda hipótese (Seção~\ref{sec:h2_wpa_ops}), o que permite comparar diretamente a força da experiência com a força do ajuste funcional sobre o mesmo desfecho.
+
+O procedimento de teste segue o mesmo padrão duplo, categórico e contínuo, já usado na hipótese anterior: de um lado, os eventos são divididos pela mediana de idade em dois grupos, "Veteranos" e "Jovens", comparados por Mann-Whitney \textit{U} unilateral (a hipótese prevê que veteranos produzem impacto maior); de outro, testa-se a versão contínua da mesma relação por correlação de Spearman entre a idade média dos jogadores adquiridos e a variação de desempenho, complementada por uma comparação da mesma amostra dividida em quartis de idade, útil para verificar se a relação é aproximadamente monotônica ao longo de toda a distribuição etária ou concentrada apenas nos extremos.
+
+\section{Estrutura da negociação}
+\label{sec:h4_structure}
+
+A Hipótese 4 afirma que a severidade da lacuna posicional preenchida por uma troca está associada ao tamanho do pacote de jogadores envolvidos nela. Diferentemente das três hipóteses anteriores, esta não compara grupos em busca de qual produz melhor desempenho; ela testa a associação entre duas características da própria negociação, sem que exista um grupo "melhor" a priori. A severidade da lacuna é medida pelo $\Delta P$ mais negativo entre os jogadores adquiridos em um mesmo evento (Seção~\ref{sec:h2_wpa_ops}): quanto mais distante de zero, mais severa a lacuna que a equipe buscava preencher. O tamanho do pacote é o número de jogadores adquiridos naquele mesmo evento.
+
+Por se tratar de uma hipótese de associação entre duas variáveis contínuas da própria transação, e não de comparação entre grupos, o procedimento de teste é a correlação de postos de Spearman entre as duas variáveis, na amostra completa de eventos de troca (Seção~\ref{sec:sample}), acompanhada de uma comparação por quartis de severidade para tornar a relação legível independentemente da concentração natural de eventos em torno de pacotes pequenos.
+
+\section{Arquétipos competitivos e objetivo sazonal como variáveis de contexto}
+\label{sec:archetype_moderation}
+
+Além de testar cada uma das quatro hipóteses isoladamente, este trabalho verifica se o resultado da primeira hipótese se sustenta igualmente entre diferentes perfis de equipe, em vez de assumir que a liga se comporta como um bloco homogêneo. Essa verificação depende dos arquétipos competitivos derivados por \textit{k-means} já apresentados conceitualmente na Seção~\ref{sec:clustering}. Concretamente, o pipeline de clusterização parte de aproximadamente 59 variáveis por time-temporada, entre elas médias e desvios-padrão de estatísticas de jogo tradicionais, indicadores avançados de eficiência ofensiva e defensiva, ritmo de jogo, tendência de desempenho ao longo da temporada, desempenho em jogos decididos por poucos pontos e o próprio \textit{Net Rating} ajustado pela força do adversário. Essas 59 variáveis são calculadas sobre a temporada regular completa de cada time, sem distinguir jogos anteriores e posteriores a uma eventual troca realizada durante ela: o arquétipo busca capturar a identidade estilística predominante da equipe ao longo de toda a temporada, e não uma fotografia do time restrita a um recorte temporal específico. Em seguida, imputa os valores faltantes pela mediana, padroniza cada variável em relação à própria temporada (e não ao conjunto de treze temporadas), aplica Análise de Componentes Principais retendo 95\% da variância e, por fim, agrupa o resultado por \textit{k-means} com $k=4$. A Figura~\ref{fig:pipeline_clusterizacao} resume esse pipeline, incluindo a validação cruzada por agrupamento hierárquico aglomerativo (ligação de Ward) mencionada na Seção~\ref{sec:clustering}.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Pipeline de clusterização dos arquétipos competitivos}
+    \label{fig:pipeline_clusterizacao}
+    \includegraphics[width=.95\textwidth]{images/metodologia_pipeline_clusterizacao.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+A escolha de $k=4$ não corresponde ao ponto ótimo isolado de nenhuma das duas métricas clássicas de validação: a curva de inércia (WCSS) nunca deixa de cair, por construção, e o coeficiente de silhueta é maximizado em $k=2$, decrescendo de forma monotônica a partir daí. O que a justifica é, em vez disso, uma mudança de regime visível, de forma independente, nas duas curvas: entre $k=2$ e esse ponto, a inércia cai, em média, cerca de 887 pontos por passo, e a silhueta cai cerca de 0,020 por passo; dali em diante, essas quedas médias se reduzem para aproximadamente 303 pontos e 0,004, respectivamente, cerca de um terço e um quinto da taxa anterior. Esse é o sentido clássico do método do cotovelo: o ponto em que o ganho marginal de adicionar mais um grupo passa a ser sistematicamente menor, e não um pico isolado em uma única métrica. O índice de Davies-Bouldin reforça essa leitura: embora seu valor mais baixo ocorra em $k=2$ ($DB=2{,}51$), o valor correspondente a essa escolha ($DB=2{,}74$) representa um mínimo local frente aos vizinhos $k=3$ ($DB=2{,}95$) e $k=5$ ($DB=2{,}89$). Por fim, esse mesmo número de grupos também é o mais facilmente interpretável em termos de basquete, associado a rótulos qualitativos consolidados (Reconstrução, Defensivo, Ofensivo e Elite); esse critério, no entanto, é secundário e não substitui a validação quantitativa anterior.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Justificativa de $k=4$: mudança de regime nas curvas de inércia e silhueta}
+    \label{fig:k4_justificativa}
+    \includegraphics[width=.95\textwidth]{images/justificativa_k4_elbow_silhouette.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+A padronização por temporada, em vez de por todo o período de treze anos, existe porque o próprio jogo mudou. O ritmo médio e o volume de arremessos de três pontos de 2024-25 não são comparáveis, em termos absolutos, aos de 2012-13. Sem essa correção, o agrupamento tende a separar equipes por época em vez de por estilo. Um time rápido para os padrões de 2013 e um time rápido para os padrões de 2024 apareceriam em grupos diferentes, quando na verdade compartilham o mesmo perfil relativo ao seu tempo. Cada um dos quatro grupos resultantes recebe um nome interpretável, derivado do centróide de \textit{Net Rating} e ritmo do próprio grupo (nunca de um rótulo fixo, já que a ordem numérica que o algoritmo atribui a cada grupo não é estável entre execuções): Reconstrução, Defensivo, Ofensivo e Elite. Uma vez nomeados, a correlação central estudada na Seção~\ref{sec:h1_gini} é recalculada separadamente dentro de cada um dos quatro arquétipos, para verificar se a força da associação entre desigualdade salarial e desempenho se concentra em algum perfil específico de equipe ou se distribui igualmente entre todos.
+
+Cada evento de troca também recebe, quando disponível, o arquétipo competitivo pré e pós-troca da própria equipe adquirente, útil como leitura descritiva complementar no Capítulo 4. Serve, por exemplo, para verificar se a troca coincidiu com uma mudança de perfil competitivo da equipe. Diferentemente dessa moderação, que usa a clusterização completa (Figura~\ref{fig:pipeline_clusterizacao}), essa marcação por evento depende de um cruzamento adicional entre a base de trocas e a base de arquétipos que, por ora, cobre apenas parte das treze temporadas. Essa é uma limitação detalhada na Seção~\ref{sec:method_limitations}.
+
+Um segundo eixo de contexto, complementar ao arquétipo competitivo, é o objetivo sazonal da equipe adquirente no momento da troca, já introduzido na Seção~\ref{sec:trade_strategy}: \textit{contender} (posições 1 a 6 da conferência), intermediário (7 a 10) e \textit{tanking} (11 a 15). Diferentemente do arquétipo competitivo, que modera a primeira hipótese, o objetivo sazonal é usado como variável de contexto exploratória para a segunda, comparando a variação de desempenho de trocas feitas por \textit{contenders} e por times em \textit{tanking} através do teste de Kruskal-Wallis (três grupos independentes), do contraste direto entre esses dois grupos (Mann-Whitney \textit{U} unilateral, \textit{contender} $>$ \textit{tanking}) e, para as previsões diretas de cada grupo (\textit{contenders} melhoram; times em \textit{tanking} têm impacto neutro ou negativo), do teste de postos sinalizados de Wilcoxon de uma amostra. Essa análise é tratada como complementar, e não como uma quinta hipótese central do trabalho, por uma razão de honestidade metodológica. Como o objetivo sazonal dilui ainda mais uma amostra já pequena em três grupos, seu resultado é reportado no Capítulo 4 com o devido cuidado quanto ao poder estatístico disponível.
+
+\section{Síntese dos procedimentos estatísticos}
+\label{sec:stats_synthesis}
+
+A Tabela~\ref{tab:hipoteses_testes} reúne, para as quatro hipóteses centrais deste trabalho, a variável explicativa, a variável de desfecho e o teste estatístico correspondente, sintetizando o que as Seções~\ref{sec:h1_gini} a~\ref{sec:h4_structure} descreveram em detalhe. Em todos os casos, o tamanho de efeito é interpretado pelas faixas convencionais de \citet{cohen1988}: para os coeficientes de correlação (Spearman $\rho$ e a correlação bisserial por postos $r$, derivada do Mann-Whitney \textit{U}), as faixas de $-1$ a $1$ já apresentadas na Subseção~\ref{sec:corr_techniques}; para o teste de Kruskal-Wallis, o $\eta^2$ (eta ao quadrado), que vive em uma escala diferente, de 0 a aproximadamente 1.
+
+\begin{table}[htb]
+    \centering
+    \caption{Correspondência entre hipótese, variáveis e teste estatístico}
+    \label{tab:hipoteses_testes}
+    \begin{tabular}{|p{2.0cm}|p{5.0cm}|p{4.3cm}|p{3.3cm}|}
+    \hline
+    \textbf{Hipótese} & \textbf{Variável explicativa} & \textbf{Variável de desfecho} & \textbf{Teste} \\
+    \hline
+    H1 & $\Delta$Gini ponderado por minutos & $\Delta$Performance Ajustada & Spearman $\rho$ \\
+    \hline
+    H2 & Classificação Preenche Lacuna / Redundante ($\Delta P$ pré-troca) & $\Delta$ taxa de WPA da equipe & Mann-Whitney $U$ (unilateral) \\
+    \hline
+    H3 & Idade média dos jogadores adquiridos & $\Delta$ taxa de WPA da equipe & Mann-Whitney $U$ (unilateral) + Spearman $\rho$ \\
+    \hline
+    H4 & Severidade da lacuna ($\Delta P$ mínimo adquirido) & Tamanho do pacote de troca & Spearman $\rho$ \\
+    \hline
+    \end{tabular}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{table}
+
+\section{Limitações metodológicas}
+\label{sec:method_limitations}
+
+Quatro limitações identificadas durante a implementação merecem registro explícito. A primeira é a heterogeneidade de fonte do WPA discutida na Seção~\ref{sec:h2_wpa_ops}: o rótulo posicional estático usado entre as temporadas 2012-13 e 2017-18 é uma aproximação mais fraca do que o sinal jogo a jogo disponível nas demais temporadas, ainda que empiricamente estável para o período testado.
+
+A segunda está relacionada à cobertura do arquétipo competitivo pré-troca anexado a cada evento (Seção~\ref{sec:archetype_moderation}): esse cruzamento específico, entre a base de trocas e a clusterização de times-temporada, ainda cobre apenas as temporadas 2018-19 a 2020-21 no momento da escrita deste trabalho, de modo que o campo aparece ausente para as trocas registradas nas outras dez temporadas. Isso não compromete os testes formais das demais hipóteses, que não dependem dessa marcação, mas limita seu uso como leitura descritiva complementar no Capítulo 4 a esse subconjunto de trocas; a extensão desse cruzamento para a janela completa de 2012-13 a 2024-25, já disponível para a moderação da primeira hipótese, é um passo de engenharia de dados ainda pendente.
+
+A terceira diz respeito ao poder estatístico da análise por objetivo sazonal (Seção~\ref{sec:archetype_moderation}): ao dividir uma amostra já de porte moderado em três grupos competitivos, cada célula resultante fica pequena o suficiente para que um resultado não significativo, ou mesmo um resultado significativo isolado, precise ser interpretado com cautela adicional. Essa é uma ressalva retomada com mais detalhe ao relatar o resultado correspondente no Capítulo 4.
+
+A quarta diz respeito à janela temporal usada para calcular o arquétipo competitivo que modera a primeira hipótese (Seção~\ref{sec:archetype_moderation}): as aproximadamente 59 variáveis de estilo são calculadas sobre a temporada regular completa de cada time, sem isolar os jogos anteriores de uma eventual troca dos jogos posteriores a ela. Como esse mesmo arquétipo modera a relação entre desigualdade salarial e desempenho, medida especificamente na janela pré/pós-\textit{deadline} (Seção~\ref{sec:h1_gini}), existe uma possibilidade teórica de que o próprio desempenho de uma equipe após uma troca influencie, ainda que marginalmente, o arquétipo que lhe é atribuído naquela temporada, uma forma de vazamento temporal entre a variável moderadora e o desfecho que ela modera. Este trabalho não isola esse efeito, e trata o arquétipo como uma característica estilística razoavelmente estável ao longo da temporada, e não como uma variável calculada especificamente para o período anterior a cada troca.
+
+\vspace{1em} % Espaçamento para destacar o encerramento da seção
+
+Em suma, este capítulo traduziu o modelo multidimensional apresentado na Introdução em quatro procedimentos concretos e replicáveis, cada um construído sobre a arquitetura de dados e o referencial teórico descritos no Capítulo 2. O próximo capítulo aplica esses procedimentos aos dados coletados e relata os resultados obtidos para cada hipótese, incluindo os casos em que o poder estatístico disponível limita o alcance da conclusão.

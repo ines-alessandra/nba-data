@@ -1,0 +1,189 @@
+\chapter{Modelagem e Orquestração do Pipeline de Dados}
+\label{chp:apendice_pipeline}
+
+Este apêndice documenta, com artefatos concretos, o segundo objetivo específico deste trabalho (Subseção~\ref{sec:specific_objectives}): projetar a modelagem multidimensional dos dados e orquestrar o \textit{pipeline} de processamento utilizando SQL e Python. O Capítulo 2 (Seção~\ref{sec:data_engineering}) apresenta os fundamentos conceituais dessa arquitetura, a arquitetura \textit{Medallion Lakehouse}, a modelagem multidimensional e a orquestração via \texttt{Makefile}; as seções a seguir mostram os artefatos reais que implementam cada uma dessas partes.
+
+\section{Modelo multidimensional}
+\label{sec:apendice_dimensional}
+
+A Figura~\ref{fig:apendice_modelo_dimensional} ilustra, em um recorte de três tabelas, o padrão dimensão/fato descrito na Subseção~\ref{sec:dimensional_modeling}: duas tabelas de dimensão do \textit{schema} \texttt{silver}, \texttt{dim\_teams} (times) e \texttt{dim\_games} (jogos), ligadas por chave estrangeira à tabela de fato \texttt{fact\_team\_gamelogs}, que armazena uma linha por combinação time-jogo com as estatísticas daquela partida. O schema completo tem mais dimensões (\texttt{dim\_players}) e mais fatos (\texttt{fact\_player\_gamelogs}, \texttt{fact\_player\_trades}, \texttt{fact\_player\_salaries}, entre outros), mas o mesmo padrão se repete em todos eles.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Recorte do modelo multidimensional: duas dimensões e uma tabela de fato}
+    \label{fig:apendice_modelo_dimensional}
+    \includegraphics[width=.95\textwidth]{images/apendice_modelo_dimensional.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026), a partir de \texttt{src/sql/create\_silver.sql}.
+    \end{flushleft}
+\end{figure}
+
+O Quadro~\ref{cod:ddl_silver} reproduz a definição SQL dessas duas tabelas, exatamente como executada pelo \textit{pipeline} (\texttt{src/sql/create\_silver.sql}), incluindo as duas chaves estrangeiras que materializam as setas da Figura~\ref{fig:apendice_modelo_dimensional}.
+
+\begin{codelisting}[htb]
+\makeatletter
+\refstepcounter{codelisting}
+\@makecaption{Quadro~\thecodelisting}{DDL das tabelas \texttt{dim\_teams} e \texttt{fact\_team\_gamelogs}}
+\makeatother
+\label{cod:ddl_silver}
+\begin{verbatim}
+-- src/sql/create_silver.sql (trecho)
+
+CREATE TABLE silver.dim_teams (
+    team_id INT PRIMARY KEY,
+    team_abbreviation VARCHAR(10) NOT NULL,
+    team_name VARCHAR(100) NOT NULL,
+    team_city VARCHAR(100),
+    team_tricode VARCHAR(10),
+    team_slug VARCHAR(100)
+);
+
+CREATE TABLE silver.fact_team_gamelogs (
+    game_id VARCHAR(20) REFERENCES silver.dim_games(game_id),
+    team_id INT REFERENCES silver.dim_teams(team_id),
+    opponent_team_id INT REFERENCES silver.dim_teams(team_id),
+    is_home BOOLEAN NOT NULL,
+    wl CHAR(1),
+    pts INT,
+    pts_allowed INT,
+    off_rating FLOAT,
+    def_rating FLOAT,
+    net_rating FLOAT,
+    minutes FLOAT,
+    fgm INT, fga INT, fg_pct FLOAT,
+    fg3m INT, fg3a INT, fg3_pct FLOAT,
+    ftm INT, fta INT, ft_pct FLOAT,
+    oreb INT, dreb INT, reb INT,
+    ast INT, tov INT, stl INT, blk INT, pf INT,
+    plus_minus FLOAT,
+    PRIMARY KEY (game_id, team_id)
+);
+\end{verbatim}
+\begin{flushleft}
+\footnotesize Fonte: elaborada pela autora (2026), a partir de \texttt{src/sql/create\_silver.sql}.
+\end{flushleft}
+\end{codelisting}
+
+\section{Transformações estruturais em SQL}
+\label{sec:apendice_sql}
+
+Além de definir o schema, a camada Ouro é povoada por consultas SQL que cruzam as tabelas de fato e dimensão da camada Prata em métricas prontas para análise. O Quadro~\ref{cod:sql_gold} mostra um trecho de \texttt{src/sql/create\_gold.sql}: a consulta que agrega o desempenho de cada equipe antes de uma troca, unindo a tabela de trocas (\texttt{fact\_player\_trades}) aos jogos disputados por aquele time antes da data da transação. A consulta completa, omitida aqui por extensão, repete essa mesma lógica para o período pós-troca e junta as duas metades no resultado final.
+
+\begin{codelisting}[htb]
+\makeatletter
+\refstepcounter{codelisting}
+\@makecaption{Quadro~\thecodelisting}{Trecho da consulta analítica \texttt{gold.team\_trade\_performance}}
+\makeatother
+\label{cod:sql_gold}
+\begin{verbatim}
+-- src/sql/create_gold.sql (trecho)
+
+CREATE TABLE gold.team_trade_performance AS
+WITH team_trades AS (
+    SELECT season_end_year, trade_date,
+           old_team_id AS team_id, 'Sent Out' AS trade_role,
+           player_id
+    FROM silver.fact_player_trades
+    UNION ALL
+    SELECT season_end_year, trade_date,
+           new_team_id AS team_id, 'Acquired' AS trade_role,
+           player_id
+    FROM silver.fact_player_trades
+),
+team_pre_stats AS (
+    SELECT tt.team_id, tt.season_end_year, tt.trade_date,
+           COUNT(*) AS games_pre,
+           AVG(tg.net_rating) AS net_rating_pre
+    FROM team_trades tt
+    JOIN silver.fact_team_gamelogs tg ON tt.team_id = tg.team_id
+    JOIN silver.dim_games g ON tg.game_id = g.game_id
+    WHERE g.game_date < tt.trade_date
+      AND g.season_end_year = tt.season_end_year
+      AND g.game_type = 'Regular Season'
+    GROUP BY tt.team_id, tt.season_end_year, tt.trade_date
+)
+-- (continua: team_post_stats espelha esta CTE para o período
+--  pós-troca, e um SELECT final une as duas metades)
+\end{verbatim}
+\begin{flushleft}
+\footnotesize Fonte: elaborada pela autora (2026), a partir de \texttt{src/sql/create\_gold.sql}.
+\end{flushleft}
+\end{codelisting}
+
+\section{Orquestração do pipeline em Python}
+\label{sec:apendice_orquestracao}
+
+A Subseção~\ref{sec:pipeline_orchestration} descreve a orquestração do \textit{pipeline} por um \texttt{Makefile}, com cada etapa correspondendo a um \textit{script} Python independente. As Figuras~\ref{fig:apendice_orquestracao_1} e~\ref{fig:apendice_orquestracao_2} mostram essa cadeia de dependências concretamente, para os alvos que produzem os dados usados nas quatro hipóteses centrais deste trabalho, divididas em duas figuras para manter o texto de cada caixa legível: a primeira cobre a carga inicial (\texttt{db-load}) e as duas trilhas que partem diretamente dela, a construção dos arquétipos competitivos e o teste da Hipótese 1; a segunda cobre a Contribuição Relativa (Hipóteses 2 a 4), que depende tanto da carga inicial quanto da clusterização de arquétipos já mostrada na primeira figura — por isso essas duas etapas aparecem ali como caixas tracejadas, apenas para indicar a dependência, sem repetir o conteúdo.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Grafo de dependências do pipeline analítico: arquétipos competitivos e Hipótese 1}
+    \label{fig:apendice_orquestracao_1}
+    \includegraphics[width=\textwidth]{images/apendice_orquestracao_pipeline_1.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026), a partir da seção \texttt{Pipeline analítico (TCC)} do \texttt{Makefile}.
+    \end{flushleft}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \caption{Grafo de dependências do pipeline analítico: Hipóteses 2 a 4 (WPA)}
+    \label{fig:apendice_orquestracao_2}
+    \includegraphics[width=\textwidth]{images/apendice_orquestracao_pipeline_2.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026), a partir da seção \texttt{Pipeline analítico (TCC)} do \texttt{Makefile}.
+    \end{flushleft}
+\end{figure}
+
+Cada alvo do \texttt{Makefile} chama um único \textit{script} Python, sem parâmetros, o que garante que a ordem de execução declarada no próprio arquivo seja a única fonte de verdade sobre as dependências entre etapas. O Quadro~\ref{cod:py_kmeans} reproduz a função que a trilha de arquétipos competitivos executa (chamada por \texttt{fit\_clusters.py}, entre outros): a mesma sequência descrita na Seção~\ref{sec:clustering} do Capítulo 2, imputação pela mediana, padronização \textit{z-score} relativa à própria temporada, Análise de Componentes Principais retendo 95\% da variância e, por fim, \textit{k-means} com $k=4$.
+
+\begin{codelisting}[htb]
+\makeatletter
+\refstepcounter{codelisting}
+\@makecaption{Quadro~\thecodelisting}{Função de pré-processamento e clusterização compartilhada por todos os \textit{scripts} de agrupamento (\texttt{src/team\_clustering\_common.py})}
+\makeatother
+\label{cod:py_kmeans}
+\begin{verbatim}
+# src/team_clustering_common.py (trecho)
+
+def season_relative_zscore(df_features, season_series):
+    """Z-score each feature within its own season instead of
+    pooled across all years (see module docstring)."""
+    season_values = pd.Series(season_series.values,
+                               index=df_features.index)
+    grouped = df_features.groupby(season_values)
+    means = grouped.transform('mean')
+    stds = grouped.transform('std').replace(0, 1.0)
+    return (df_features - means) / stds
+
+
+def fit_pooled_clusters(df_features_raw, season_series,
+                         k=4, random_state=42):
+    """Impute -> season-relative z-score -> PCA (95% variance)
+    -> KMeans(k)."""
+    feature_names = df_features_raw.columns.tolist()
+
+    imputer = SimpleImputer(strategy='median')
+    imputed = pd.DataFrame(
+        imputer.fit_transform(df_features_raw),
+        columns=feature_names, index=df_features_raw.index)
+
+    scaled = season_relative_zscore(imputed, season_series)
+
+    pca = PCA(n_components=0.95, random_state=random_state)
+    features_pca = pca.fit_transform(scaled.values)
+
+    kmeans = KMeans(n_clusters=k, random_state=random_state,
+                     n_init=10)
+    labels = kmeans.fit_predict(features_pca)
+
+    return labels, features_pca, pca, feature_names, imputed.values
+\end{verbatim}
+\begin{flushleft}
+\footnotesize Fonte: elaborada pela autora (2026), a partir de \texttt{src/team\_clustering\_common.py}.
+\end{flushleft}
+\end{codelisting}
+
+Essa mesma função é reaproveitada, sem duplicação de código, por todo \textit{script} deste trabalho que precisa agrupar times-temporada por estilo de jogo, o que garante que a padronização por temporada e a escolha $k=4$, justificada na Seção~\ref{sec:archetype_moderation} do Capítulo 3, sejam aplicadas de forma idêntica em cada uma dessas etapas.
+
+Em conjunto, o versionamento de todo o \textit{pipeline} via \textit{Git}, a definição explícita de dependências entre etapas no \texttt{Makefile} (Figuras~\ref{fig:apendice_orquestracao_1} e~\ref{fig:apendice_orquestracao_2}) e a separação de cada transformação em um \textit{script} independente garantem, na prática, o que o objetivo específico documentado neste apêndice enuncia: reprodutibilidade, qualquer pessoa pode repetir a análise inteira a partir dos dados brutos, executando \texttt{make pipeline}, e rastreabilidade analítica, cada número reportado no Capítulo 4 pode ser encadeado, etapa por etapa, até sua origem nos dados brutos extraídos na camada Bronze.

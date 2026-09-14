@@ -1,0 +1,17 @@
+escopo,cluster_name,n,mediana_delta_WPA_time,n_preenche_lacuna,n_redundante
+2019,Defensivo / Ritmo Lento,1,-0.1976796296296296,0,1
+2019,Elite / Contenders,11,0.0331814296241709,9,2
+2019,Ofensivo / Ritmo Alto,10,-0.03472904056161395,5,5
+2019,Rebuilding,16,0.0900753097176317,14,2
+2020,Defensivo / Ritmo Lento,4,-0.1547369680168067,2,2
+2020,Elite / Contenders,7,-0.1118549266669683,5,2
+2020,Ofensivo / Ritmo Alto,5,0.0305985714285714,4,1
+2020,Rebuilding,9,0.13255,5,4
+2021,Defensivo / Ritmo Lento,12,-0.00503632480917165,6,6
+2021,Elite / Contenders,2,0.1280187489941239,2,0
+2021,Ofensivo / Ritmo Alto,3,0.0475477871642857,2,1
+2021,Rebuilding,10,-0.09427398436901235,7,3
+Pooled 2019-2021,Defensivo / Ritmo Lento,17,-0.0139847883249999,8,9
+Pooled 2019-2021,Elite / Contenders,20,-0.0027731950362433,16,4
+Pooled 2019-2021,Ofensivo / Ritmo Alto,18,0.0153373294022671,11,7
+Pooled 2019-2021,Rebuilding,35,0.0673817834117647,26,9

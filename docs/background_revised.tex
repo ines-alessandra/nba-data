@@ -1,0 +1,243 @@
+\chapter{Fundamentação Teórica}
+\label{chp:background}
+
+Esta seção apresenta os conceitos e referenciais teóricos que sustentam a análise proposta neste trabalho. Inicialmente, discute-se o ecossistema da NBA (Seção~\ref{sec:nba_ecosystem}), abordando as características institucionais e estratégicas da liga. Em seguida, explora-se a dinâmica de aquisição de talentos (Seção~\ref{sec:talent_acquisition}), distinguindo o \textit{Draft} como mecanismo de renovação de longo prazo e as trocas como instrumentos de ajuste imediato. A seção sobre cronograma e estratégia das trocas na NBA (Seção~\ref{sec:trade_strategy}) analisa a sazonalidade das transações e os diferentes objetivos competitivos das franquias.
+
+O eixo economia do desempenho e disparidade salarial (Seção~\ref{sec:salary_economy}) detalha as estruturas salariais e a coesão do time (Subseção~\ref{sec:wage_structures}), além do uso do Índice de Gini para mensurar a desigualdade financeira (Subseção~\ref{sec:gini_index}). Na sequência, a seção de análise estatística e métricas de performance (Seção~\ref{sec:stats_metrics}) discute o ajuste funcional do jogador adquirido por meio do \textit{Win Probability Added} (WPA) e da Contribuição Relativa, em contraste com as limitações do \textit{Player Efficiency Rating} (PER) (Subseção~\ref{sec:wpa_metric}), as técnicas de correlação e testes estatísticos empregados neste trabalho (Subseção~\ref{sec:corr_techniques}) e a metodologia para medir o sucesso das trocas por meio da performance ajustada e de janelas temporais (Subseção~\ref{sec:measuring_success}). A Seção~\ref{sec:clustering} apresenta os métodos de agrupamento utilizados para identificar arquétipos competitivos entre os times.
+
+Por fim, a seção de engenharia de dados para análise esportiva (Seção~\ref{sec:data_engineering}) descreve a arquitetura \textit{Medallion Lakehouse} (Subseção~\ref{sec:medallion}), a modelagem multidimensional (Subseção~\ref{sec:dimensional_modeling}), a orquestração do \textit{pipeline} (Subseção~\ref{sec:pipeline_orchestration}) e a integração de dados via APIs e fontes complementares (Subseção~\ref{sec:api_integration}). Essa organização permite uma compreensão progressiva dos fundamentos teóricos e técnicos que embasam a análise empírica do impacto das trocas de elenco na performance dos times da NBA.
+
+\section{Ecossistema da NBA}
+\label{sec:nba_ecosystem}
+
+A NBA opera como um ambiente de negócios singular, onde o sucesso em quadra está intimamente ligado à capacidade de gestão de recursos escassos. Diferente de outras indústrias, as ligas esportivas profissionais enfrentam uma tensão estrutural, pois para que os jogos sejam atraentes, é necessário que exista um mínimo de equilíbrio competitivo entre as equipes. Caso contrário, a previsibilidade dos resultados afasta o público \citep{rottenberg1956, neale1964}. Foi com esse objetivo que a NBA introduziu, a partir da temporada 1984-1985, mecanismos como o teto salarial (\textit{salary cap}) e o imposto de luxo (\textit{luxury tax}), concebidos para limitar o poder de compra das franquias mais ricas e evitar a concentração de talentos em poucos times \citep{fort1995, kesenne2000}. O teto salarial define um valor máximo que cada equipe pode gastar com salários, enquanto a \textit{luxury tax} impõe uma penalidade financeira progressiva sobre os gastos que ultrapassam determinado limite, de modo a criar um desincentivo adicional ao acúmulo de estrelas.
+
+No entanto, a eficácia desses mecanismos é objeto de debate. \citet{berrischmidt2010} mostraram que a relação entre folha de pagamento e desempenho é mais fraca do que se imagina. O talento individual, por si só, explica menos de 10\% da variação de vitórias na NBA. Isso significa que times com altos salários nem sempre vencem, e franquias com orçamentos modestos podem, com boa gestão, superar expectativas. Essa constatação força os \textit{front offices} a buscarem vantagens competitivas não apenas na contratação de estrelas, mas também na forma como constroem e mantêm seus elencos, o que inclui decisões sobre renovação de contratos, escolhas de \textit{Draft} e, principalmente, trocas de jogadores.
+
+A literatura de estratégia empresarial, aplicada ao esporte, oferece uma lente para entender essas vantagens. \citet{barney1991} propôs que a vantagem competitiva sustentável surge da exploração de recursos internos que sejam simultaneamente valiosos, raros, imperfeitamente imitáveis e organizacionais, o chamado modelo VRIO. No contexto da NBA, um desses recursos é o conhecimento tácito desenvolvido por jogadores que atuam juntos por longos períodos \citep{berman2002}. O conhecimento tácito é um tipo de saber prático que não pode ser facilmente articulado ou transferido, pois se trata da capacidade de antecipar os movimentos dos companheiros sem comunicação explícita, fruto da experiência compartilhada. Esse conhecimento coletivo melhora o desempenho da equipe, mas leva tempo para se formar. \citet{berman2002} mostraram, analisando dados da NBA entre 1980 e 1994, que times com maior estabilidade de elenco apresentavam melhor desempenho, justamente por acumularem esse tipo de capital relacional.
+
+Diante disso, surge um dilema estratégico para os gestores, dado que eles podem manter o núcleo do elenco para preservar a coesão e o conhecimento tácito, ou realizar trocas para corrigir deficiências imediatas. E a resposta não é trivial, pois envolve ponderar benefícios de curto prazo com o ganho de talento ou o ajuste funcional, contra os custos de longo prazo que podem gerar a perda de entrosamento. É nesse dilema que se insere a presente pesquisa, ao propor uma análise sistemática do impacto das trocas sob múltiplas dimensões.
+
+\section{Dinâmica de aquisição de talentos}
+\label{sec:talent_acquisition}
+
+As franquias da NBA dispõem de dois mecanismos principais para adquirir talentos, o \textit{Draft} anual e as trocas (\textit{trades}). Cada um deles atende a lógicas distintas de planejamento e temporalidade.
+
+O \textit{Draft} ocorre ao final de cada temporada, no qual as 30 equipes selecionam jogadores elegíveis, geralmente atletas universitários norte-americanos ou internacionais com pelo menos 19 anos de idade e um ano afastados do ensino médio. A ordem de escolha é inversamente proporcional à classificação da temporada anterior, ou seja, o time com o pior desempenho escolhe primeiro, e o campeão escolhe por último. Esse sistema, conhecido como \textit{reverse-order draft}, foi institucionalizado na NBA em 1947 e tem como objetivo teórico promover o equilíbrio competitivo, dando às equipes mais fracas a oportunidade de recrutar os melhores talentos disponíveis \citep{berri2011}. Na prática, no entanto, o \textit{Draft} passou por várias reformas. Em 1985, a liga introduziu o \textit{Draft Lottery} (sorteio) para as três primeiras escolhas, a fim de desestimular a perda deliberada de jogos. Atualmente, as 14 equipes que não chegam aos \textit{playoffs} participam de um sorteio com probabilidades decrescentes conforme melhor sua campanha, reduzindo, mas não eliminando, o incentivo para perder.
+
+Apesar desses ajustes, a literatura aponta que o \textit{Draft} ainda gera incentivos perversos. \citet{taylor2002} cunharam o termo \textit{tournament incentive} para descrever o fenômeno em que times já eliminados da corrida pelos \textit{playoffs} reduzem seu esforço em campo para melhorar suas posições no \textit{Draft}. Os autores analisaram três temporadas da NBA e encontraram evidências de que equipes matematicamente eliminadas perdiam aproximadamente duas vezes mais jogos do que aquelas ainda com chances de classificação. Esse comportamento contradiz o espírito competitivo, mas é racional do ponto de vista econômico, dado que uma escolha mais alta no \textit{Draft} pode significar a contratação de um jogador gerador de muito mais valor futuro do que uma vitória a mais em uma temporada já perdida. O \textit{Draft} representa, portanto, uma estratégia de longo prazo, focada no desenvolvimento de jovens promessas e na construção de um elenco sustentável ao longo de vários anos.
+
+As trocas, por outro lado, são instrumentos de ajuste imediato. Uma troca ocorre quando duas ou mais equipes negociam jogadores, escolhas de \textit{Draft} ou dinheiro. Diferente do \textit{Draft}, as trocas podem acontecer a qualquer momento da temporada, dentro de uma janela que vai do início do campeonato até a \textit{trade deadline}, geralmente em fevereiro. Elas permitem que uma equipe corrija deficiências funcionais, desde adquirir um especialista defensivo, ou aliviar a folha salarial através da troca de um jogador caro por contratos mais baratos, ou até adquirir ativos futuros com escolhas de \textit{Draft} em troca de jogadores veteranos. Esse tipo de movimentação é favorecido pela flexibilidade do \textit{soft cap} da NBA, que permite exceções, como a \textit{Bird Exception}, e facilita negociações que em outras ligas seriam inviáveis \citep{katayama2011}. Como mostra a Figura~\ref{fig:volume_trocas} do Capítulo 1, o volume de jogadores movimentados na janela que antecede a \textit{trade deadline} mais que triplicou entre as temporadas 2012-13 e 2024-25, uma tendência de crescimento consistente com essa maior flexibilidade contratual.
+
+Diferentemente do \textit{Draft}, que insere um jogador novo em um ambiente estável, a \textit{off-season}, uma troca de meio de temporada exige adaptação imediata, sob pressão de jogos e com pouco tempo de treino. Essa característica torna os efeitos das trocas mais difíceis de prever e mais dependentes do contexto, um tema que será explorado ao longo deste trabalho.
+
+\section{Cronograma e estratégia das trocas na NBA}
+\label{sec:trade_strategy}
+
+A temporada da NBA possui dois momentos distintos para transações. Um deles é a \textit{off-season}, período de maior movimento, ela ocorre entre junho e outubro, quando agentes livres são contratados e trocas são negociadas sem a pressão de jogos imediatos. Já durante a temporada regular, as trocas são permitidas apenas até a \textit{trade deadline}, geralmente em fevereiro, o que concentra as movimentações em um período crítico, quando as equipes já avaliam suas deficiências e decidem se reforçam o elenco ou iniciam uma reconstrução.
+
+As trocas de meio de temporada são particularmente desafiadoras, pois o novo jogador tem poucos dias para se integrar ao sistema tático e aos companheiros. Embora a literatura sobre mudanças de técnicos ofereça uma analogia às trocas de jogadores, sugerindo que substituições no meio da temporada tendem a ter efeitos negativos ou nulos no curto prazo \citep{grusky1963, gamson1964}, os resultados para o basquetebol são mistos. Enquanto \citet{mcteer1995} encontraram ganhos temporários após trocas, \citet{audas2002} não detectaram efeitos duradouros. Esses resultados indicam que o \textit{timing} da troca e o tempo de adaptação disponível moderam seu impacto.
+
+Nem todas as trocas, no entanto, perseguem os mesmos objetivos. Existem as equipes que podem ser classificadas como \textit{contenders}, com aspirações reais ao título, e as chamadas \textit{tanking/rebuilding}, que são as franquias em reconstrução, aquelas que priorizam ativos futuros. Para um \textit{contender}, uma troca bem-sucedida é aquela que aumenta a porcentagem de vitórias e o \textit{net rating} nas semanas seguintes. Já para um time em reconstrução, uma troca pode ser considerada bem-sucedida mesmo que piore o desempenho imediato, desde que gere valor futuro \citep{zimbalist2003}.
+
+\citet{katayama2011} operacionalizaram essa distinção usando probabilidades de \textit{playoffs} divulgadas por sites especializados em previsões estatísticas de esportes. Eles classificaram times com menos de 5\% de chance de chegar aos \textit{playoffs} como \textit{tanking}, e aqueles com mais de 90\% como \textit{contenders}. Os resultados mostraram que a dispersão salarial impactava positivamente o desempenho apenas no grupo dos \textit{contenders}, enquanto nos times \textit{tanking} não houve efeito significativo, evidenciando que o contexto competitivo modera a relação entre desigualdade salarial e sucesso em quadra.
+
+Neste trabalho, adota-se uma operacionalização mais simples desse contexto competitivo, já que a base de dados utilizada não inclui probabilidades de \textit{playoffs} de terceiros. A classificação é feita pela posição do time na classificação da conferência no momento da troca, com três categorias em vez de duas: \textit{contender} (posições 1 a 6), intermediário (7 a 10) e \textit{tanking} (11 a 15). A categoria intermediária, ausente na dicotomia original de \citet{katayama2011}, evita descartar da análise os times que não se enquadram nos dois extremos competitivos, e permite testar a hipótese com o teste de Kruskal-Wallis para três grupos, apresentado na Subseção~\ref{sec:corr_techniques}.
+
+\section{Economia do desempenho e disparidade salarial}
+\label{sec:salary_economy}
+
+\subsection{Estruturas salariais e coesão do time}
+\label{sec:wage_structures}
+
+A forma como os salários são distribuídos entre os jogadores de uma equipe pode afetar a motivação, a cooperação e, em última instância, o desempenho. Duas teorias concorrentes, oriundas da psicologia organizacional e da economia do trabalho, explicam essa relação de formas opostas.
+
+Uma delas é a Teoria da Equidade, proposta por \citet{adams1965}, que argumenta que os indivíduos não avaliam suas recompensas de forma absoluta, mas sim em comparação com o que outros, em situações semelhantes, recebem. Quando uma pessoa percebe que a razão entre suas contribuições e suas recompensas é desfavorável em relação a um colega, ela experimenta um estado de tensão chamado inequidade. Uma vez nesse estado, o indivíduo pode reduzir seu esforço, aumentar suas faltas, pedir aumento ou até mesmo abandonar a organização, para restaurar o equilíbrio. Levando isso para o contexto esportivo, a Teoria da Equidade prevê que disparidades salariais excessivas geram percepções de injustiça entre os jogadores menos pagos, reduzindo a coesão do grupo, a cooperação em quadra e o esforço coletivo. Times com estrutura salarial muito concentrada, com um ou dois superastros ganhando muito mais que os demais, tenderiam, segundo essa teoria, a ter pior desempenho do que times com distribuição mais equilibrada.
+
+A segunda teoria, conhecida como Teoria do Torneio e desenvolvida pelos economistas \citet{lazear1981}, oferece uma perspectiva diametralmente oposta. Inspirada em competições esportivas e em sistemas de promoção hierárquica dentro de empresas, a teoria propõe que os salários não devem refletir apenas a produtividade absoluta, mas sim a posição relativa do trabalhador em uma hierarquia. Quanto maior a diferença de remuneração entre o vencedor e os perdedores de um torneio interno, por exemplo, entre o jogador mais valioso e os reservas, maior o esforço despendido por todos para tentar alcançar o prêmio maior. A teoria argumenta, portanto, que grandes diferenças salariais funcionam como incentivo, estimulando todos os jogadores, tanto os bem pagos a fim de justificarem seus salários, quanto os mal pagos para se esforçarem mais e ganharem posições. No basquetebol, isso implicaria que times com um superastro e salários muito desiguais poderiam ter desempenho superior, pois a promessa de recompensas futuras ou o temor de ser trocado manteria a motivação em alta.
+
+Os estudos empíricos na NBA, no entanto, não produziram um consenso sobre qual das duas teorias prevalece. \citet{frick2003} analisaram quatro ligas norte-americanas (NBA, NFL, NHL, MLB) e encontraram uma relação positiva entre dispersão salarial e desempenho apenas na NBA, o que apoiaria a Teoria do Torneio. \citet{berri2004} e \citet{katayama2011} não encontraram efeito significativo da dispersão salarial sobre o desempenho, sugerindo que outros fatores como qualidade do técnico ou estabilidade do elenco seriam mais relevantes.
+
+Mais recentemente, \citet{ching2019}, em sua dissertação de mestrado intitulada \textit{The effect of wage dispersion on performance in the NBA}, trouxe uma contribuição importante. Utilizando dados de folha de pagamento da NBA de 2008 a 2018 e modelos de regressão com dados em painel, Ching identificou uma relação em forma de U invertido entre dispersão salarial e desempenho. Isso significa que, em níveis baixos de desigualdade, aumentos na dispersão salarial estão associados à melhor desempenho, consistente com a Teoria do Torneio. Porém, a partir de um certo ponto, quando a diferença entre o maior e os menores salários se torna muito acentuada, os efeitos negativos da inequidade começam a se sobrepor, reduzindo o desempenho. Esse resultado reconciliou, em parte, as duas teorias concorrentes. Ou seja, ambas estariam corretas, mas em faixas diferentes da distribuição salarial. Ching também mostrou que a inclusão da dispersão salarial melhorava o poder preditivo de modelos de resultados de jogos, embora o ganho fosse modesto em comparação com modelos que usavam apenas vantagem de jogar em casa e folha de pagamento total.
+
+Essa controvérsia empírica indica que o efeito da dispersão salarial provavelmente depende de fatores contextuais, como a magnitude da disparidade, o tamanho do elenco, o grau de interdependência entre os jogadores e o momento competitivo da equipe \citep{beaumont2003}. É justamente essa dependência contextual que justifica a inclusão da desigualdade salarial como uma das dimensões do modelo multidimensional proposto neste trabalho.
+
+\subsection{O Índice de Gini}
+\label{sec:gini_index}
+
+Para mensurar a desigualdade salarial, a literatura econômica e de gestão do esporte tem utilizado com frequência o coeficiente de Gini. Criado em 1912 pelo estatístico italiano Corrado Gini, em sua obra \textit{Variabilità e Mutabilità} (Variabilidade e Mutabilidade), o índice foi originalmente concebido para analisar a distribuição de renda em uma sociedade. A escala do coeficiente varia de 0 a 1, em que o valor 0 representa a igualdade perfeita, todos os membros de um grupo recebem a mesma parcela do total, enquanto o valor 1 representa a desigualdade máxima, portanto, um único membro concentra toda a renda ou recurso.
+
+Formalmente, para um conjunto de $n$ valores $x_1, x_2, \ldots, x_n$, com média $\bar{x}$, como os salários dos $n$ jogadores de um elenco, o coeficiente de Gini é definido como
+
+\begin{equation}
+G = \frac{\sum_{i=1}^{n} \sum_{j=1}^{n} |x_i - x_j|}{2n^2\bar{x}}
+\label{eq:gini}
+\end{equation}
+
+isto é, a média das diferenças absolutas entre todos os pares de valores do conjunto, normalizada pelo dobro da média desse conjunto. Essa formulação algébrica é equivalente à definição geométrica mais usual do índice, obtida a partir da curva de Lorenz, a curva que relaciona a fração acumulada da população, ordenada do menor para o maior valor, à fração acumulada do recurso que ela detém: o coeficiente de Gini corresponde a duas vezes a área entre essa curva e a diagonal de igualdade perfeita. A Subseção~\ref{sec:h1_gini_formula} do Capítulo 3 retoma essa definição geométrica para apresentar formalmente a variante ponderada por minutos jogados, empregada como métrica central deste trabalho.
+
+Desde a sua criação, o Gini se consolidou como uma das medidas de desigualdade mais utilizadas globalmente, com aplicações que vão da sociologia e economia à ciência de dados e, mais recentemente, ao mundo dos esportes.
+
+No contexto esportivo, o uso do coeficiente de Gini se justifica pela necessidade de quantificar de forma objetiva o quão concentrados estão os recursos financeiros dentro de um elenco. No entanto, sua aplicação direta, sem ajustes, pode apresentar limitações. O Gini simples, que considera o salário de todos os jogadores sob contrato, pode ser enganoso porque jogadores que não entram em quadra ou que atuam por poucos minutos têm impacto limitado no desempenho, mas seus salários entram no cálculo da desigualdade \citep{larsen2006}.
+
+Uma alternativa amplamente adotada para contornar essa limitação é o Índice de Gini ponderado por minutos jogados. Este indicador atribui um peso maior aos salários dos jogadores que efetivamente contribuem em quadra. A lógica é que a desigualdade que realmente importa para o desempenho do time é aquela entre os atletas que participam ativamente das partidas. \citet{katayama2011} foram pioneiros ao adotar essa abordagem em sua análise em nível de jogo, mostrando que a dispersão salarial entre os jogadores ativos é um preditor mais preciso do desempenho do que a dispersão sobre todo o elenco. Outros estudos recentes, como o de \citet{strazicich2024}, também utilizam o coeficiente de Gini e a curva de Lorenz para analisar a evolução da distribuição salarial na NBA ao longo de 33 anos, identificando períodos distintos de aumento e redução da desigualdade. Da mesma forma, a pesquisa de \citet{plante2025} emprega o coeficiente de Gini como uma variável central em modelos preditivos, sugerindo que equipes com folhas salariais mais equitativas podem apresentar melhores taxas de vitória.
+
+Diante desse contexto, este trabalho propõe uma contribuição metodológica ao avaliar o Índice de Gini ponderado por minutos frente a outras cinco métricas candidatas de desigualdade salarial: o desvio padrão dos salários, o coeficiente de variação, a razão entre o salário do jogador mais bem pago e o do menos bem pago do elenco, a proporção da folha salarial concentrada nos três maiores contratos e o Índice de Gini simples. A escolha da métrica ponderada por minutos é, antes de tudo, teórica: das seis, é a única que pesa o salário de cada jogador pelo tempo que ele efetivamente esteve em quadra, capturando a desigualdade que o elenco de fato vive durante a temporada, e não apenas a distribuição nominal da folha de pagamento. Essa escolha é feita antes de qualquer verificação empírica, justamente para evitar o problema conhecido na literatura estatística como \textit{specification search}: selecionar, entre várias métricas candidatas, aquela que mais favorece o resultado que se pretende demonstrar, depois de já conhecê-lo. O procedimento completo de comparação entre as seis métricas é detalhado no Capítulo 3 (Subseção~\ref{sec:h1_metric_selection}). O resultado dessa comparação, a correlação de Spearman entre cada métrica e a variação de desempenho, é relatado no Capítulo 4 (Subseção~\ref{sec:r_h1_metric}); ela serve apenas para confirmar, com transparência, se a escolha teórica também se sustenta empiricamente, nunca para decidir entre as métricas.
+
+\section{Análise estatística e métricas de performance}
+\label{sec:stats_metrics}
+
+\subsection{Win Probability Added (WPA) e Contribuição Relativa}
+\label{sec:wpa_metric}
+
+Uma métrica amplamente utilizada para resumir a contribuição estatística de um jogador é o \textit{Player Efficiency Rating} (PER), criado pelo analista John Hollinger e publicado pela ESPN. O PER pondera ações positivas, como pontos, assistências, rebotes, roubos e bloqueios, e negativas, como \textit{turnovers}, faltas e arremessos errados, resumindo-as em um único número por minuto jogado, padronizado para que a média da liga em cada temporada seja fixada em 15,0 \citep{hollinger2007}. Apesar de sua ampla adoção, o PER captura predominantemente o desempenho ofensivo e, mais relevante para os fins deste trabalho, não penaliza o acúmulo de talento redundante: a chegada de um jogador com alto PER que exerce a mesma função de outro já consolidado no elenco pode não gerar ganho proporcional no desempenho coletivo, pois os atletas competem pelos mesmos minutos e pelo mesmo protagonismo, e a complementaridade funcional entre eles é ignorada pela métrica. Por essas limitações, este trabalho não adota o PER como critério de avaliação dos jogadores adquiridos em trocas, recorrendo em vez disso a uma métrica de ajuste funcional, apresentada a seguir.
+
+A distinção entre acumular talento bruto e promover um ajuste funcional encontra respaldo na Teoria do \textit{O-ring}, formulada pelo economista \citet{kremer1993}. O nome da teoria faz referência ao acidente com o ônibus espacial Challenger, cuja explosão foi causada pela falha de um pequeno componente de vedação, o anel-O (\textit{O-ring}). Kremer generalizou essa lógica para processos produtivos complexos: se uma tarefa depende da execução bem-sucedida de várias etapas, a qualidade do resultado final é determinada pelo elo mais fraco, correspondente à etapa com maior probabilidade de falha.
+
+Aplicando essa lógica ao basquetebol, um time pode ser visto como uma cadeia de ações interdependentes. A conclusão bem-sucedida de uma jogada ofensiva, por exemplo, depende do passe certo, do posicionamento, da recepção e da finalização. Se um desses elos é deficiente, seja um jogador que não protege a bola, um que se posiciona mal ou outro que erra arremessos decisivos, todo o esforço coletivo pode ser comprometido. A Teoria do \textit{O-ring} sugere, portanto, que times com talento homogeneamente distribuído, sem pontos fracos evidentes, tendem a superar aqueles que concentram recursos em uma única superestrela e mantêm um elenco deficiente em outras funções. \citet{ching2019}, em sua dissertação de mestrado, foi um dos primeiros a aplicar essa teoria ao basquetebol profissional, demonstrando que a complementaridade entre os jogadores pode ser mais decisiva para o sucesso do que o simples acúmulo de talentos individuais.
+
+Essa perspectiva se alinha com os \textit{Four Factors} (Quatro Fatores) desenvolvidos por \citet{oliver2004} e consolidados por \citet{kubatko2007}. Oliver decompôs a performance vitoriosa em quatro componentes: aproveitamento nos arremessos, controle de \textit{turnovers}, rebotes ofensivos e lances livres. Cada um desses fatores pode ser atacado por um tipo específico de jogador, o que sugere que, em vez de acumular talentos com funções sobrepostas, uma estratégia mais eficiente para as franquias seria identificar suas próprias lacunas estatísticas e buscar jogadores que as preencham.
+
+O desafio prático dessa perspectiva teórica é medir, de forma sistemática e reprodutível, se um jogador de fato preenche uma lacuna posicional ou apenas acumula talento redundante. Uma resposta a esse desafio é o \textit{Win Probability Added} (WPA), métrica que atribui a cada jogador a variação que suas ações produzem na probabilidade de vitória da equipe ao longo da partida, proposta originalmente para jogadores da NBA por \citet{deshpande2016}. Diferentemente de estatísticas de contagem, como pontos ou rebotes, o WPA pondera cada ação pelo contexto do jogo em que ela ocorre: um arremesso decisivo nos segundos finais de uma partida disputada pesa mais do que um arremesso equivalente em uma vitória já definida, aproximando a métrica daquilo que de fato decide um jogo.
+
+É sobre essa lógica que se apoia a Contribuição Relativa, metodologia proposta por \citet{sa2025} e adotada nesta pesquisa. A proposta consiste em agregar o WPA de todos os jogadores de um mesmo grupo posicional, armadores, alas e pivôs, dentro de uma equipe, e comparar a fração do WPA total do time gerada por esse grupo com a fração média observada entre os times da liga no mesmo período. A diferença entre essas duas frações, chamada de $\Delta P$, é positiva quando o grupo posicional contribui acima da média da liga, e negativa quando contribui abaixo dela, sinalizando uma lacuna estrutural do elenco naquela posição. Com essa métrica, é possível classificar uma troca de forma mais precisa do que permitiria o PER: uma aquisição que reforça um grupo posicional com $\Delta P$ negativo tende a preencher uma lacuna real do elenco, enquanto uma aquisição que reforça um grupo posicional já com $\Delta P$ positivo tende a ser redundante, ainda que o jogador adquirido apresente estatísticas individuais elevadas.
+
+\subsection{Técnicas de correlação e testes estatísticos}
+\label{sec:corr_techniques}
+
+As variáveis empregadas neste trabalho, como a variação de desempenho de um time, os índices de desigualdade salarial e a Contribuição Relativa por posição, não seguem, em geral, distribuição normal, um padrão esperado em métricas esportivas e financeiras, que tendem a ser assimétricas e sensíveis a valores extremos. Diagnósticos de normalidade sobre as principais variáveis do estudo, como o teste de Shapiro-Wilk \citep{shapirowilk1965}, confirmam esse padrão, o que motiva a adoção de um conjunto de técnicas não paramétricas ao longo de toda a análise, em vez de testes que assumem normalidade, como o teste \textit{t} de Student ou a correlação de Pearson.
+
+Para relações entre duas variáveis contínuas, como a associação entre a variação da desigualdade salarial e a variação de desempenho de um time após uma troca, utiliza-se a correlação de postos de Spearman ($\rho$), proposta por \citet{spearman1904}. Diferentemente da correlação de Pearson, que mede a associação linear entre os valores brutos de duas variáveis, o coeficiente de Spearman mede o grau de associação monotônica entre os postos (\textit{ranks}) das observações, sendo menos sensível a valores extremos e a relações não lineares, uma vantagem relevante ao lidar com métricas de desempenho esportivo. Para $n$ pares de observações, o coeficiente é definido como
+
+\begin{equation}
+\rho = 1 - \frac{6\sum_{i=1}^{n} d_i^2}{n(n^2-1)}
+\label{eq:spearman}
+\end{equation}
+
+em que $d_i$ é a diferença entre os postos das duas variáveis para a $i$-ésima observação.
+
+Para comparar dois grupos independentes, como trocas classificadas como preenchimento de lacuna posicional contra trocas classificadas como redundantes, aplica-se o teste \textit{U} de Mann-Whitney \citep{mannwhitney1947}, que avalia se as distribuições de duas amostras independentes diferem entre si sem assumir normalidade. Para amostras de tamanho $n_1$ e $n_2$, a estatística é definida como
+
+\begin{equation}
+U = n_1 n_2 + \frac{n_1(n_1+1)}{2} - R_1
+\label{eq:mannwhitney}
+\end{equation}
+
+em que $R_1$ é a soma dos postos atribuídos às observações da primeira amostra, calculados sobre as duas amostras combinadas.
+
+Quando a comparação envolve três ou mais grupos independentes, como a distinção entre times \textit{contenders}, intermediários e em processo de \textit{tanking} (Seção~\ref{sec:trade_strategy}), o teste de Kruskal-Wallis \citep{kruskalwallis1952} generaliza essa mesma lógica para múltiplos grupos, indicando se ao menos um deles difere significativamente dos demais, por meio da estatística
+
+\begin{equation}
+H = \frac{12}{N(N+1)} \sum_{i=1}^{k} \frac{R_i^2}{n_i} - 3(N+1)
+\label{eq:kruskalwallis}
+\end{equation}
+
+em que $N$ é o número total de observações, $k$ é o número de grupos comparados, e $n_i$ e $R_i$ são, respectivamente, o tamanho e a soma dos postos do grupo $i$.
+
+Por fim, para comparações pareadas, como o desempenho de uma mesma equipe antes e depois de uma troca, utiliza-se o teste de postos sinalizados de Wilcoxon \citep{wilcoxon1945}, apropriado quando as duas medições comparadas pertencem à mesma unidade observacional \citep{siegelcastellan1988}, cuja estatística é
+
+\begin{equation}
+W = \sum_{i=1}^{n} \operatorname{sinal}(x_i) \, R_i
+\label{eq:wilcoxon}
+\end{equation}
+
+em que $x_i$ é a diferença entre as duas medições pareadas na $i$-ésima observação e $R_i$ é o posto atribuído a $|x_i|$.
+
+A Figura~\ref{fig:decisao_testes} resume essa correspondência entre a estrutura de cada comparação e a técnica estatística empregada, com o padrão típico de dados que caracteriza cada caso.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Correspondência entre a estrutura da comparação e a técnica estatística utilizada}
+    \label{fig:decisao_testes}
+    \includegraphics[width=.95\textwidth]{images/fundamentacao_decisao_testes_estatisticos.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+\subsection{Medindo o sucesso da troca}
+\label{sec:measuring_success}
+
+Para avaliar o impacto de uma troca de elenco, é imprescindível definir uma métrica de sucesso que vá além das estatísticas tradicionais. O ponto de partida é o \textit{Net Rating} (NetRtg), uma das contribuições mais influentes do estatístico Dean Oliver. \citet{oliver2004} apresentou sistematicamente o conceito em sua obra seminal \textit{Basketball on Paper}, onde propôs medir a eficiência de times e jogadores com base no desempenho por posse de bola. O \textit{Net Rating} é calculado pela diferença entre a eficiência ofensiva (\textit{Offensive Rating}) e a eficiência defensiva (\textit{Defensive Rating}) de uma equipe, o número de pontos que ela marca e sofre, respectivamente, a cada 100 posses de bola. Ao padronizar a análise por 100 posses, a métrica elimina distorções causadas pelo ritmo de jogo, uma vez que times que jogam em alta velocidade naturalmente geram mais oportunidades de pontuação, mas também mais oportunidades para o adversário.
+
+No entanto, comparar o \textit{Net Rating} bruto de uma equipe antes e depois de uma troca introduz um viés relevante: os adversários enfrentados em cada um dos dois períodos tendem a ser diferentes, e essa diferença de força de calendário pode, por si só, alterar o \textit{Net Rating} observado, sem qualquer relação com a troca realizada. Para controlar esse efeito, este trabalho utiliza a Performance Ajustada, que pondera o \textit{Net Rating} de cada partida pela força do adversário enfrentado naquele jogo específico, medida pelo \textit{Simple Rating System} (SRS) da própria temporada. Um adversário mais forte que a média da liga aumenta o peso atribuído àquele resultado, e um adversário mais fraco o reduz, de modo que times com calendários mais difíceis em um dos dois períodos não sejam penalizados ou beneficiados artificialmente na comparação.
+
+A comparação em si segue a lógica de janelas temporais consolidada na literatura: a Performance Ajustada de cada equipe é calculada separadamente no período que antecede e no período que sucede a \textit{trade deadline} da temporada, e a diferença entre esses dois valores é interpretada como o impacto agregado das trocas realizadas por aquele time naquela janela. Como nem toda equipe realiza uma troca relevante a cada temporada, define-se ainda uma janela de qualificação: somente entram na amostra principal de análise os times com movimentação de elenco registrada nos 30 dias que antecedem a \textit{trade deadline}. A robustez dessa escolha específica de 30 dias é testada recalculando a correlação central do estudo para larguras de janela alternativas, de 14 a 60 dias, de modo a confirmar que os resultados não dependem criticamente desse valor pontual, um procedimento equivalente, em espírito, ao uso de múltiplas larguras de janela empregado por \citet{katayama2011} em sua análise em nível de jogo.
+
+\section{Métodos de agrupamento}
+\label{sec:clustering}
+
+Além de comparar médias e correlações agregadas para a liga como um todo, este trabalho verifica se os efeitos observados se sustentam igualmente entre diferentes perfis de equipe, o que exige, antes, identificar esses perfis de forma sistemática, em vez de recorrer a categorias informais como "time ofensivo" ou "time defensivo". A técnica utilizada para essa identificação é o agrupamento por \textit{k-means}, proposto por \citet{macqueen1967}, um algoritmo não supervisionado que particiona um conjunto de observações em $k$ grupos, atribuindo cada observação ao grupo cujo centro (centroide) lhe é mais próximo, e recalculando iterativamente os centroides até a convergência. Formalmente, o algoritmo busca a partição $\{C_1, \ldots, C_k\}$ que minimiza a soma das distâncias quadráticas entre cada observação e o centroide do seu grupo,
+
+\begin{equation}
+J = \sum_{i=1}^{k} \sum_{x \in C_i} \lVert x - \mu_i \rVert^2
+\label{eq:kmeans}
+\end{equation}
+
+em que $\mu_i$ é o centroide do grupo $C_i$, dado pela média das observações que o compõem.
+
+Como as variáveis de estilo de jogo utilizadas, como ritmo, dependência de arremessos de três pontos e agressividade ofensiva, são numerosas e parcialmente correlacionadas entre si, aplica-se antes uma Análise de Componentes Principais (PCA) \citep{jolliffe2002}, técnica que reduz a dimensionalidade dos dados projetando-os em um número menor de componentes ortogonais que preservam a maior parte da variância original, evitando que variáveis redundantes tenham peso desproporcional no agrupamento resultante.
+
+A escolha do número de grupos $k$ não é arbitrária: ela combina o método do cotovelo, que observa em que ponto o ganho marginal de adicionar mais um grupo deixa de compensar a perda de interpretabilidade, com o coeficiente de silhueta \citep{rousseeuw1987} e o índice de Davies-Bouldin \citep{daviesbouldin1979}, duas métricas que avaliam, respectivamente, o quão bem cada observação se encaixa no seu próprio grupo em comparação aos demais, e o grau de separação entre os centroides dos grupos. Para uma observação $i$, o coeficiente de silhueta é definido como
+
+\begin{equation}
+s(i) = \frac{b(i) - a(i)}{\max\{a(i), b(i)\}}
+\label{eq:silhueta}
+\end{equation}
+
+em que $a(i)$ é a distância média entre $i$ e as demais observações do seu próprio grupo, e $b(i)$ é a menor distância média entre $i$ e as observações de um grupo vizinho; o coeficiente varia de $-1$ a $1$, e valores mais próximos de $1$ indicam um agrupamento mais bem definido. Como forma adicional de validação, compara-se o resultado do \textit{k-means} com o de um agrupamento hierárquico aglomerativo, de ligação de Ward, verificando se dois algoritmos com lógicas distintas convergem para uma solução semelhante.
+
+Uma vez definidos os grupos, cada um é caracterizado por seu perfil médio nas variáveis de estilo, o que permite nomeá-los de forma interpretável, por exemplo, um arquétipo de equipes que priorizam o ritmo acelerado de jogo e o volume de arremessos de três pontos, ou um arquétipo de equipes com jogo mais posicional e defensivo. Essa classificação é então utilizada para verificar se a relação entre desigualdade salarial e desempenho, discutida na Seção~\ref{sec:salary_economy}, se mantém igualmente forte em todos os arquétipos ou se concentra em perfis específicos de equipe.
+
+\section{Engenharia de dados para análise esportiva}
+\label{sec:data_engineering}
+
+\subsection{Arquitetura Medallion Lakehouse}
+\label{sec:medallion}
+
+A arquitetura \textit{Medallion Lakehouse} foi concebida pela \citet{databricks_medallion} como um padrão de \textit{design} para organizar dados em três camadas progressivas, Bronze, Prata e Ouro, dentro de um ambiente de \textit{data lakehouse}. Esse modelo surgiu para resolver os problemas de governança em \textit{data lakes}, que frequentemente se tornavam "pântanos de dados" pela falta de estrutura. Embora o padrão tenha origem em plataformas gerenciadas de nuvem, seus princípios, separação por camadas, idempotência e rastreabilidade, são independentes de uma tecnologia específica, o que permite adotá-lo também sobre um banco de dados relacional convencional, como feito neste trabalho.
+
+A camada Bronze armazena os dados brutos extraídos das fontes descritas na Subseção~\ref{sec:api_integration}, sem qualquer transformação. A camada Prata aplica limpeza, deduplicação, correção de tipos e cálculo de variáveis derivadas, como o Índice de Gini e as janelas pré e pós-troca. A camada Ouro contém os dados agregados por time-temporada em métricas analíticas prontas para consumo, como a Performance Ajustada e a Contribuição Relativa por grupo posicional. A Figura~\ref{fig:arquitetura_dados} ilustra essa progressão entre as três camadas.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Progressão das camadas da arquitetura Medallion}
+    \label{fig:arquitetura_dados}
+    \includegraphics[width=.85\textwidth]{images/fundamentacao_arquitetura_dados.png}
+    \begin{flushleft}
+    \footnotesize Fonte: elaborada pela autora (2026).
+    \end{flushleft}
+\end{figure}
+
+As principais vantagens dessa arquitetura são a rastreabilidade (\textit{data lineage}), que permite saber a origem de cada métrica; a possibilidade de reprocessamento a partir da camada Bronze em caso de erros; e a reutilização das camadas intermediárias para diferentes finalidades. Como desvantagens, destacam-se a latência introduzida pelo processamento em múltiplas camadas, os maiores custos de armazenamento devido à manutenção de réplicas dos dados e a necessidade de um planejamento complementar para segurança e governança. Apesar dessas limitações, as vantagens em qualidade, confiabilidade e rastreabilidade são decisivas para o rigor acadêmico deste trabalho, ao assegurar que os cálculos do Índice de Gini, da Contribuição Relativa e da Performance Ajustada sejam processados de forma reprodutível e auditável.
+
+\subsection{Modelagem multidimensional}
+\label{sec:dimensional_modeling}
+
+Para que as análises propostas neste trabalho sejam executadas de forma eficiente, os dados organizados na camada Ouro precisam seguir uma estrutura que facilite consultas complexas. Com isso, se faz necessário aplicar a modelagem multidimensional, uma abordagem consolidada na literatura de \textit{business intelligence} \citep{kimball2013}. Essa modelagem organiza as informações em dois tipos complementares de tabelas: de um lado, as tabelas que armazenam eventos ou medidas quantitativas, como pontos marcados em uma partida, minutos jogados por um atleta, ou o WPA de um jogador naquela noite; do outro, as tabelas que descrevem as entidades envolvidas nesses eventos, jogadores (com seus atributos: posição, idade, salário), times (cidade, conferência, folha salarial), jogos (data, local, resultado, adversário) e contratos (valor, duração, tipo).
+
+A escolha dessa modelagem se justifica pela natureza das perguntas de pesquisa. Calcular o Índice de Gini ponderado por minutos em uma determinada janela de jogos exige cruzar rapidamente informações de salários, minutos em quadra e datas. Em um modelo normalizado, essa consulta exigiria múltiplos \textit{joins} complexos e lentos. No modelo multidimensional, as métricas relevantes já estão pré-agregadas em tabelas de eventos, e as de entidades fornecem os filtros necessários (período de tempo, conjunto de jogadores ativos), permitindo consultas eficientes mesmo com grandes volumes de dados históricos.
+
+Além do ganho de desempenho, a modelagem multidimensional traz clareza conceitual para o trabalho. Cada hipótese de pesquisa pode ser traduzida diretamente em uma combinação de tabelas de eventos e entidades. Comparar as seis métricas de desigualdade salarial, avaliar o impacto das trocas pela Contribuição Relativa e pela Performance Ajustada, ou verificar a moderação do arquétipo competitivo, tornam-se operações simples e transparentes. Assim, as variáveis discutidas ao longo da fundamentação, dispersão salarial, contribuição posicional, eficiência coletiva e momento competitivo, tornam-se colunas concretas nas tabelas, prontas para a análise estatística que será detalhada na metodologia.
+
+\subsection{Orquestração do pipeline}
+\label{sec:pipeline_orchestration}
+
+Para que o \textit{pipeline} de dados funcione de forma automatizada, confiável e repetível, é necessário um sistema que orquestre as transformações entre as camadas da arquitetura \textit{Medallion}. Neste trabalho, essa orquestração é realizada por um conjunto de \textit{scripts} em Python, executados em sequência definida por um arquivo \texttt{Makefile}, ferramenta de automação de tarefas amplamente utilizada em projetos de engenharia de software e dados \citep{gnu_make}. Cada etapa do \textit{pipeline} corresponde a um \textit{script} independente, responsável por uma transformação específica, carregar os dados brutos para a camada Bronze, calcular o Índice de Gini para a camada Prata, ou agregar a Performance Ajustada para a camada Ouro, com as dependências entre etapas expressas diretamente na ordem de execução do \texttt{Makefile}.
+
+Essa abordagem, mais simples do que orquestradores dedicados como o \textit{Apache Airflow} ou serviços gerenciados de nuvem, foi escolhida por três razões. Primeiro, o volume de dados deste trabalho não exige a infraestrutura distribuída que esses orquestradores endereçam. Segundo, o versionamento de todo o \textit{pipeline} via \textit{Git} garante a reprodutibilidade da pesquisa, pois qualquer pessoa pode consultar exatamente quais transformações foram aplicadas aos dados e em qual ordem. Terceiro, a simplicidade da abordagem reduz a superfície de possíveis falhas, um critério relevante para um projeto acadêmico individual, sem uma equipe dedicada à manutenção de infraestrutura.
+
+Como o banco de dados relacional PostgreSQL é o destino final de cada transformação, a comunicação entre os \textit{scripts} Python e o banco é feita por meio da biblioteca SQLAlchemy, que permite tanto executar consultas SQL diretamente quanto carregar e ler tabelas inteiras como \textit{dataframes} do \textit{pandas}. Assim, a orquestração garante que os cálculos centrais deste estudo sejam processados na ordem correta sempre que novos dados de jogos ou contratações forem extraídos, liberando a pesquisadora de tarefas manuais repetitivas.
+
+\subsection{APIs e integração de dados}
+\label{sec:api_integration}
+
+A extração dos dados brutos é realizada a partir de múltiplas fontes, de modo a garantir a cobertura das variáveis necessárias. A fonte primária é a API oficial da NBA, acessada por meio do \textit{wrapper} Python \textit{nba\_api}, que fornece \textit{endpoints} estruturados para estatísticas de jogos, incluindo \textit{box scores}, informações de jogadores, calendário de temporadas e resultados de partidas.
+
+Como a API oficial não disponibiliza o \textit{Win Probability Added} por jogador e por partida, essencial para o cálculo da Contribuição Relativa (Subseção~\ref{sec:wpa_metric}), utilizam-se duas fontes complementares, cujo peso relativo varia conforme a temporada. A ESPN, provedora amplamente referenciada na literatura de \textit{sports analytics} \citep{kubatko2007}, publica estatísticas avançadas por partida, incluindo os \textit{Four Factors} de Oliver (Subseção~\ref{sec:wpa_metric}), mas interrompeu a publicação dos componentes ofensivo e defensivo do WPA a partir da temporada 2021-22, mantendo apenas o dado de posição do jogador. O site \textit{inpredictable.com}, especializado em modelos de probabilidade de vitória para esportes norte-americanos, supre o WPA nas temporadas em que a ESPN não o disponibiliza, além de fornecer a posição predominante de cada jogador nas temporadas em que nenhuma das duas fontes publica esse dado por partida. O detalhamento de qual fonte alimenta cada temporada é apresentado no Capítulo 3 (Seção~\ref{sec:h2_wpa_ops}).
+
+Após a extração, os dados brutos de cada fonte são carregados na camada Bronze do banco de dados relacional (Subseção~\ref{sec:medallion}), preservando seu formato original. A partir da camada Bronze, o \textit{pipeline} orquestrado (Subseção~\ref{sec:pipeline_orchestration}) executa as transformações que limpam, enriquecem e modelam os dados, movendo-os sucessivamente pelas camadas Prata e Ouro, até que estejam prontos para as análises de impacto das trocas apresentadas nos Capítulos 3 e 4.
+
+\vspace{1em} % Espaçamento para destacar o encerramento da seção
+
+Em suma, como visto ao longo desta fundamentação, a literatura sobre trocas de elenco na NBA apresenta controvérsias empíricas e lacunas teóricas, especialmente quanto à integração entre dispersão salarial, ajuste funcional e contexto competitivo. As técnicas estatísticas não paramétricas e os métodos de agrupamento apresentados neste capítulo, combinados a uma arquitetura de dados em nível de jogo, oferecem os meios para testar essas relações de forma mais precisa do que as análises agregadas por temporada permitem. Com base nesse arcabouço, o próximo capítulo descreve a metodologia empregada para coletar, processar e analisar os dados, operacionalizando as hipóteses formuladas e respondendo à pergunta de pesquisa.
